@@ -2,6 +2,8 @@
 
 ## Unreleased — public repository preparation
 
+- Recorded the canonical sRGB brand color, Cowabunga Turquoise (#23C7C3 / RGB 35, 199, 195), and a recommended shared CSS token in docs/branding.md.
+
 - Locked the owner-approved rotated turquoise shaka identity; preserved the source PNG and added a simplified SVG shared by the favicon, workbench header and README, with visual guidance in docs/branding.md.
 
 - Added shared AGENTS.md onboarding and a CLAUDE.md import, covering architecture, evidence, license boundaries, local-data protection and validation; corrected the roadmap's outdated open-licensing status.

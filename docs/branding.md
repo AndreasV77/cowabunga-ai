@@ -15,6 +15,26 @@ gesture as the visual direction for the logo and favicon.
 - No faces, headphones, extra music symbols, borders or background shapes in the
   primary mark. Keep transparent space around the gesture.
 
+## Canonical brand color
+
+Use this reference for the tool, websites and future brand assets:
+
+| Name | Color space | HEX | RGB | CSS |
+|---|---|---|---|---|
+| Cowabunga Turquoise | sRGB | `#23C7C3` | `35, 199, 195` | `rgb(35, 199, 195)` |
+
+For shared stylesheets, the recommended token is:
+
+```css
+--cowabunga-turquoise: #23C7C3;
+```
+
+This documents a reusable token name; it does not claim that every application
+already defines it. Use the exact reference value rather than sampling a resized
+logo, an anti-aliased edge or the tonal variations in the source PNG. Any later
+light/dark or accessibility variants should have separate names and documented
+values; they must not silently replace the canonical brand color.
+
 ## Assets and use
 
 | Asset | Purpose |
