@@ -2,6 +2,8 @@
 
 ## Unreleased — public repository preparation
 
+- Added shared AGENTS.md onboarding and a CLAUDE.md import, covering architecture, evidence, license boundaries, local-data protection and validation; corrected the roadmap's outdated open-licensing status.
+
 - Named the public project Cowabunga AI, updated branding and permission links to AndreasV77/cowabunga-ai, and retained existing package/application identifiers for compatibility.
 
 - Adopted custom Personal Use and Integration License 1.0 under AndreasV, with GitHub Issues for integration requests and explicit third-party exclusions.

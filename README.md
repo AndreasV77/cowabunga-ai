@@ -292,6 +292,12 @@ Technical references: [Pydantic models](https://docs.pydantic.dev/latest/concept
 [Python sqlite3](https://docs.python.org/3/library/sqlite3.html).
 
 
+## Working with coding assistants
+
+Shared project instructions are in [AGENTS.md](AGENTS.md). [CLAUDE.md](CLAUDE.md)
+imports that same file for Claude Code, keeping architecture, evidence boundaries
+and working conventions in one place. Start assistants in the repository root.
+
 ## Code license
 
 Copyright (c) 2026 AndreasV. The custom [Personal Use and Integration License](LICENSE)

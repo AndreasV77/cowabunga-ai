@@ -39,7 +39,9 @@ change the integration priority above.
 
 No MCP server, skill package or host plugin is implemented yet. Their concrete
 protocol/host requirements will be checked against current official documentation
-when implementation begins. Hosted deployment and project licensing remain open.
+when implementation begins. Hosted deployment remains open. Project code licensing
+is defined in `LICENSE`; `docs/licensing.md` explains individual use, creative
+monetization, integration permissions and separate third-party rights.
 
 Video, LRC, alignment and audio analysis stay external reusable modules. The closed
 Cuddlecore challenge evaluation remains a completed development-step exercise;
