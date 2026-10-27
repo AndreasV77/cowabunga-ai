@@ -1,7 +1,7 @@
 {
   "source_id": "band-manager",
   "revision": "73c52379833af51e9d3ce7731746d3bfff3f5266",
-  "changes": "Selected source excerpts; added English explanatory adaptations, categories and explicit evidence limits; normalized recipe section order. No independent musical-effect verification. Source orientation and record-level model basis reviewed for the 0.4 V6 core; targeting is not test evidence.",
+  "changes": "Selected source excerpts; added English explanatory adaptations, categories and explicit evidence limits; normalized recipe section order. No independent musical-effect verification. Source orientation and record-level model basis reviewed for the 0.4 V6 core; targeting is not test evidence. Foundation expansion 2026-10-27: selected missing vocabulary and scoped guidance; retained uncertainty, field distinctions and negation/tempo limitations. Previous selection archived; no independent effects verified.",
   "entries": [
     {
       "id": "pre-chorus",
@@ -1607,6 +1607,103 @@
         "model_basis": "unspecified"
       },
       "input_field": "style"
+    },
+    {
+      "id": "choir",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "| `[Choir]` / `[Choir Vocals]` | Full choir sound |",
+      "text": "[Choir]",
+      "meaning": "A sung ensemble choral texture; neither a measured voice count nor a synonym for shouted responses.",
+      "category": "vocals",
+      "input_field": "lyrics",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "Publisher vocabulary; no independent effect test",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "Definition is an editorial adaptation; source wording is not generation verification.",
+        "model_basis": "unspecified"
+      }
+    },
+    {
+      "id": "gospel-choir",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "| `[Gospel Choir]` | Gospel-style choir (HIGH) |",
+      "text": "[Gospel Choir]",
+      "meaning": "A gospel-associated sung choir color; the source HIGH label is publisher confidence, not an independently tested execution rate.",
+      "category": "vocals",
+      "input_field": "lyrics",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "Publisher vocabulary; no independent effect test",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "Definition is an editorial adaptation; source wording is not generation verification.",
+        "model_basis": "unspecified"
+      }
+    },
+    {
+      "id": "tempo-feel-limits",
+      "kind": "guidance",
+      "path": "src/skills/suno-style-prompt-builder/references/v6-build-core.md",
+      "excerpt": "**Tempo as feel.** State one BPM for the whole song and pair every number with feel words (\"72 BPM feel with a slow heavy backbeat\"), since a bare number is often ignored (COMMUNITY). Carry section contrast as half-time or double-time drum feel and sparse or dense arrangement over that pulse, in the same scene-naming phrases in the style prompt and the lyric section cues (VENDOR + COMMUNITY; LOCAL: heard as \"a LOT better\"). A feel switch lands sometimes, not reliably.",
+      "text": "Tempo as feel.",
+      "meaning": "Use a stated pulse with section-specific drum feel and arrangement density. The source explicitly says feel switches land sometimes, not reliably; do not infer that actual tempo change is impossible.",
+      "category": "rhythm",
+      "input_field": null,
+      "evidence": {
+        "status": "working_hypothesis",
+        "source_label": "Mixed community/vendor/local guidance; V6 feel switch unreliable",
+        "independently_verified": false,
+        "model_scope": [
+          "v6"
+        ],
+        "test_count": null,
+        "context": "V6 application with mixed historical and community support. Related research notes retain pre-V6 and confounded observations; no clean general law or known sample count. More absolute metatag-file wording is not adopted.",
+        "model_basis": "v6_targeted"
+      }
+    },
+    {
+      "id": "positive-instrument-filling",
+      "kind": "guidance",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "### Strategy 1: Positive Instrument Filling\nTell Suno what instruments a section SHOULD have — this fills the \"instrument attention\" and crowds out unwanted elements:\n```\n[Verse 3]\n[Instrument: heavy distorted guitar, crushing bass]\n```\nBy specifying the instruments you want, there's less room for unwanted instruments to creep in.",
+      "text": "Positive Instrument Filling",
+      "meaning": "Specify which instruments should occupy a section. The proposed attention/crowding explanation is a publisher heuristic, not established model internals or reliable instrument exclusion.",
+      "category": "arrangement",
+      "input_field": null,
+      "evidence": {
+        "status": "working_hypothesis",
+        "source_label": "Publisher method proposal; context-specific, not verified",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "Definition is an editorial adaptation; source wording is not generation verification.",
+        "model_basis": "unspecified"
+      }
+    },
+    {
+      "id": "negation-context-caveat",
+      "kind": "guidance",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "**Unresolved exception:** the author of the ghost-vocal mumbling work reports explicit negatives working **inside compound pipe tags** (`[Break | Instrumental Only | No Vocals | ...]`). Standalone-bracket versus pipe-tag context is a plausible reconciliation but nobody has tested it. Until someone does: standalone negatives are known-bad, pipe-tag negatives are unproven, and Exclude Styles is the path that works.",
+      "text": "Unresolved exception",
+      "meaning": "Reports distinguish standalone negative brackets from an unresolved compound pipe-tag exception. Do not infer that every negative in every input field behaves the same way.",
+      "category": "controls",
+      "input_field": null,
+      "evidence": {
+        "status": "working_hypothesis",
+        "source_label": "Community reports with unresolved exception",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "Source context names COMMUNITY 2026-08 and one exception report. Model version and independent replication are not established for this selection; no universal parser rule is admitted.",
+        "model_basis": "unspecified"
+      }
     }
   ],
   "recipes": [],

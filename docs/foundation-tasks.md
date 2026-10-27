@@ -14,7 +14,7 @@ Eleven briefs cover all eight reference categories. Each has explicit source
 record IDs and their limited contribution, missing information, an evidence
 boundary, a future assistant criterion and a separate listening question.
 
-Thirty-one lexical probes check required and forbidden records, two spellings of
+Thirty-four lexical probes check required and forbidden records, two spellings of
 Mongolian overtone terminology, `sax/saxophone`, core versus supplementary scope,
 an unknown query and two known retrieval losses. Expected IDs are evaluated in
 the complete pinned corpus, not against the owner's working database. Every
@@ -34,7 +34,7 @@ whole brief. Full IDs and missing information are in the JSON task set.
 |---|---|---|---|
 | pulse-and-subdivision | Rhythm, vocals, arrangement | `band-manager:half-time`, `cookbook:four-on-floor`, MUSAI Power Metal | Independent vocal pulse and drum subdivision; gallop recall |
 | instrument-relationships | Instrumentation, rhythm, arrangement | `cookbook:locked-bass`, `band-manager:palm-muted` | Exact guitar-to-kick / bass-to-guitar relationships |
-| ensemble-and-section-scope | Vocals, harmony, arrangement, structure | `band-manager:stacked-harmonies`, `band-manager:call-response`, `cookbook:wider-group-vocals` | Ensemble distinctions, modifier effects and independent section scope |
+| ensemble-and-section-scope | Vocals, harmony, arrangement, structure | `band-manager:choir`, `lil-synn:call-response`, `cookbook:wider-group-vocals` | Modifier effects, ensemble realization and independent section scope remain untested |
 | change-one-layer | Vocals, rhythm, arrangement, structure | `cookbook:four-on-floor`, `cookbook:locked-bass`, `band-manager:instrumental-break` | Vocal-only gap with invariant rhythm section; timing reliability |
 | rough-clear-vocal | Vocals, production | `lil-synn:grainy`, `band-manager:raspy`, `cookbook:clear-consonants` | Desired timbre/delivery outcome without shouting |
 | cross-genre-drive | Rhythm, instrumentation, arrangement | `band-manager:breakbeat`, `band-manager:trap-hihats`, MUSAI Breakbeat | Continuous movement without unwanted genre drift |
@@ -55,8 +55,9 @@ candidate-source decisions required by FND-01 remain pending.
 | Finding | Disposition |
 |---|---|
 | `gallop` misses the Power Metal recipe found by `galloping` | Open retrieval loss. Review a narrow word-form treatment; do not apply blanket semantic equivalence. |
-| `exclude` misses experimental avoidance guidance found by `negative` | Open query-vocabulary loss. Review aliases/searchable descriptions; the source does not guarantee field equivalence. |
-| Call-and-response, breakbeat, Mongolian technique and unresolved harmony have empty strict-core queries in this set | Explicit scope boundaries, not missing full-corpus vocabulary. Some V6-targeted Band Manager material remains outside core because source orientation is mixed. |
+| `exclude` finds new Cookbook field guidance but still misses the experimental avoidance entry found by `negative` | The original query-vocabulary loss remains open. Adding a different useful record does not fix it; the source does not guarantee field equivalence. |
+| Call-and-response now has a V6-native core hit; the Band Manager entry remains supplementary | Explicit reviewed selection expansion, without upgrading the old entry's source/model scope. |
+| Breakbeat, Mongolian technique and unresolved harmony have empty strict-core queries in this set | Explicit scope boundaries, not missing full-corpus vocabulary. Some V6-targeted Band Manager material remains outside core because source orientation is mixed. |
 | `khoomei` and `khöömei` both find the Mongolian recipe | Supported for this pinned record; not proof of general transliteration support. |
 | `sax` and `saxophone` both find the tenor-sax entry | Text and explanation cover both forms; not a synonym engine. |
 | Tibetan material remains searchable but is excluded from the specific Mongolian query expectations | Tradition boundary, not a global ban on Tibetan references. |
@@ -67,7 +68,7 @@ If a missing record becomes findable, the observation fails until its dispositio
 is explicitly reviewed and updated. Green tests preserve a known finding; they
 do not accept the defect or silently close FND-02.
 
-Validation on 2026-10-27: the strict command passed **137 tests, zero skips**,
+Initial validation on 2026-10-27: the strict command passed **137 tests, zero skips**,
 including all 31 probes, complete source reconstruction and negative tests for
 stale pins, missing records and changed required/forbidden hits. Its ignored
 report is `data/audits/foundation-tasks-20261027-a.json`; the existing
@@ -92,7 +93,7 @@ surrounding context. No curation edits or source activations were made.
 | `lil-synn:avoidance-experimental` | Source calls exclusion wording experimental. Style-field candidate, not proof that a separate Exclude Styles field behaves identically. |
 
 This limited semantic review identifies valid interpretation boundaries. It does
-not complete the 150-entry review, representative recipe review or FND-04. It
+not complete the full entry review, representative recipe review or FND-04. It
 does not turn existing community claims into independently verified techniques.
 
 ## How to run and continue
@@ -108,7 +109,9 @@ controls, and continue item-level semantic review. Retain generation questions
 separately; running this software audit does not authorize or require paid Suno
 experiments, an AI adapter or UI work.
 
-The [first selected-source gap review](foundation-gap-review.md) now distinguishes
-concrete selection candidates from unresolved composition/effect questions. Its
-25-file scope is narrower than a review of every upstream repository file; no
-candidate has been activated and the two retrieval losses remain open.
+The [first selected-source gap review](foundation-gap-review.md) distinguishes
+selection gaps from unresolved composition/effect questions. Its 25-file scope
+is narrower than a review of every upstream repository file. The subsequent
+[nine-entry expansion](foundation-expansion.md) passed **143 tests, zero skips**;
+the two retrieval losses remain open. Current counts are 159 entries and 567
+recipes, including 68 strict-core entries and 3 strict-core recipes.

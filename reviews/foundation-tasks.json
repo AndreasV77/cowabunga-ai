@@ -4,9 +4,9 @@
   "provenance": "New synthetic English briefs authored for Cowabunga AI. Research questions were suggested by a private working notebook; no private lyrics, historical prompts, third-party examples or listening reports are reproduced. These are audit tasks, not generation evidence.",
   "snapshots": {
     "musai": "musai@e34ad57e3450efccf792d1e4e1685ca089ce3c25",
-    "band-manager": "band-manager@73c52379833af51e9d3ce7731746d3bfff3f5266+66845f72bb79bd409106b6537c75ba3ac5e58cf176c6a39ac293976ad490345b",
-    "cookbook": "cookbook@c8e40ff0b10636a7719cbc88bc5f58443ad19907+27bf877b0a6c9cc46b59edd16c5b4fd82cba295b9a042d72cf843f39060cb5fe",
-    "lil-synn": "lil-synn@6b805bf77a350e7fba00bfd2451273327482827c+5f540a315d9636345ad85c89b279f79d49611011ab8c25293d91207ce2e4861c"
+    "band-manager": "band-manager@73c52379833af51e9d3ce7731746d3bfff3f5266+1bc9695422688940db418718b5feed271bab623b5e268621214d03af5e943768",
+    "cookbook": "cookbook@c8e40ff0b10636a7719cbc88bc5f58443ad19907+94c2f582ab7731a39419487ab8a877e968cacaf325ced81d43662a69e087be46",
+    "lil-synn": "lil-synn@6b805bf77a350e7fba00bfd2451273327482827c+a988382717642a720653a651326843e103e40199ba84ed902c71d0907bb3c845"
   },
   "tasks": [
     {
@@ -29,6 +29,10 @@
         {
           "record_id": "musai:479089a94dc33733f529caf667ceaa528261e9a3937b8407f3b3e964cbc8a5a0",
           "contribution": "Supplementary galloping vocabulary; model basis unspecified."
+        },
+        {
+          "record_id": "lil-synn:half-time",
+          "contribution": "V6-native rhythmic-feel vocabulary, not independent vocal/drum control."
         }
       ],
       "coverage": "partial",
@@ -91,12 +95,20 @@
         {
           "record_id": "lil-synn:expanded-chorus",
           "contribution": "An example of section-specific added density."
+        },
+        {
+          "record_id": "band-manager:choir",
+          "contribution": "Supplementary choir ensemble vocabulary; no automatic equivalence to shouted groups."
+        },
+        {
+          "record_id": "lil-synn:call-response",
+          "contribution": "V6-native answering vocabulary, untested effect."
         }
       ],
       "coverage": "partial",
       "missing": [
         "No independently tested distinction between layered and stacked.",
-        "No admitted curated choir-versus-gang-shout comparison."
+        "Choir vocabulary is now selected, but choir-versus-gang-shout and layered-versus-stacked effects remain untested."
       ],
       "evidence_boundary": "Ensemble type, density and answering arrangement are different dimensions; inherited cross-model claims are not V6 verification.",
       "future_assistant_check": "Do not silently substitute shouted group vocals for sung harmonies or apply chorus width to every section.",
@@ -217,6 +229,10 @@
         {
           "record_id": "lil-synn:centered-bass",
           "contribution": "Low-end spatial intention, not measured mix quality."
+        },
+        {
+          "record_id": "cookbook:exclude-field-guidance",
+          "contribution": "Separate-field workflow guidance, not suppression or equivalence evidence."
         }
       ],
       "coverage": "partial",
@@ -469,18 +485,20 @@
       "rationale": "Literal vocabulary retrieval; not a musical-effect assertion."
     },
     {
-      "id": "answers-outside-core",
+      "id": "answers-core-and-supplement-boundary",
       "task_id": "ensemble-and-section-scope",
       "query": "call and response",
       "scope": "v6_core",
-      "required_ids": [],
+      "required_ids": [
+        "lil-synn:call-response"
+      ],
       "forbidden_ids": [
         "band-manager:call-response"
       ],
       "desired_but_missing_ids": [],
-      "expect_empty": true,
+      "expect_empty": false,
       "disposition": "scope_boundary",
-      "rationale": "A mixed-source vocabulary item is not promoted into the V6-native core."
+      "rationale": "New V6-native vocabulary is searchable while the mixed-source record stays outside strict core; no historical evidence is promoted."
     },
     {
       "id": "continuing-kick",
@@ -606,9 +624,9 @@
       "desired_but_missing_ids": [
         "lil-synn:avoidance-experimental"
       ],
-      "expect_empty": true,
+      "expect_empty": false,
       "disposition": "retrieval_loss",
-      "rationale": "A plausible user query misses related avoidance guidance; semantic equivalence and any alias still need editorial review."
+      "rationale": "New field guidance is findable, but this query still misses the related selected avoidance entry. The original loss remains open."
     },
     {
       "id": "hierarchy-as-heuristic",
@@ -812,6 +830,49 @@
       "expect_empty": false,
       "disposition": "supported",
       "rationale": "Both forms retrieve this record because its text and explanation cover them; this is not evidence of a general synonym-expansion engine."
+    },
+    {
+      "id": "half-time-core",
+      "task_id": "pulse-and-subdivision",
+      "query": "half-time",
+      "scope": "v6_core",
+      "required_ids": [
+        "lil-synn:half-time"
+      ],
+      "forbidden_ids": [],
+      "desired_but_missing_ids": [],
+      "expect_empty": false,
+      "disposition": "supported",
+      "rationale": "Newly selected source vocabulary/guidance; no generation-effect claim."
+    },
+    {
+      "id": "choir-ensemble",
+      "task_id": "ensemble-and-section-scope",
+      "query": "choir",
+      "scope": "all",
+      "required_ids": [
+        "band-manager:choir",
+        "band-manager:gospel-choir"
+      ],
+      "forbidden_ids": [],
+      "desired_but_missing_ids": [],
+      "expect_empty": false,
+      "disposition": "supported",
+      "rationale": "Newly selected source vocabulary/guidance; no generation-effect claim."
+    },
+    {
+      "id": "exclude-field-core",
+      "task_id": "exclusions-and-positive-roles",
+      "query": "exclude",
+      "scope": "v6_core",
+      "required_ids": [
+        "cookbook:exclude-field-guidance"
+      ],
+      "forbidden_ids": [],
+      "desired_but_missing_ids": [],
+      "expect_empty": false,
+      "disposition": "supported",
+      "rationale": "Newly selected source vocabulary/guidance; no generation-effect claim."
     }
   ]
 }

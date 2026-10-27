@@ -154,7 +154,7 @@ def test_expanded_curation_retains_seed_ids_and_precise_musical_definitions():
             record["evidence"].pop("model_basis", None)
             assert record == original
         entries.extend(current["entries"])
-    assert len(entries) == 128
+    assert len(entries) == 135
     by_id = {entry["id"]: entry for entry in entries}
     assert "one syllable" in by_id["melisma"]["meaning"]
     assert by_id["falsetto"]["evidence"]["source_label"].startswith("LOW")
@@ -235,9 +235,9 @@ def test_curated_adapter_rejects_unreviewed_changes(tmp_path, case, message):
 
 
 @pytest.mark.parametrize("source_id,revision,entries,recipes", [
-    ("band-manager", "73c52379833af51e9d3ce7731746d3bfff3f5266", 83, 0),
-    ("cookbook", "c8e40ff0b10636a7719cbc88bc5f58443ad19907-v0.4", 45, 3),
-    ("lil-synn", "6b805bf77a350e7fba00bfd2451273327482827c", 22, 0),
+    ("band-manager", "73c52379833af51e9d3ce7731746d3bfff3f5266", 88, 0),
+    ("cookbook", "c8e40ff0b10636a7719cbc88bc5f58443ad19907-v0.4", 47, 3),
+    ("lil-synn", "6b805bf77a350e7fba00bfd2451273327482827c", 24, 0),
 ])
 def test_full_reviewed_source_if_available(tmp_path, source_id, revision, entries, recipes):
     directory = ROOT / "data" / "sources" / source_id / revision

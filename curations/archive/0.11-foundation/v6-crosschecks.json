@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "reviewed_on": "2026-10-26",
+  "snapshots": {
+    "band-manager": "band-manager@73c52379833af51e9d3ce7731746d3bfff3f5266+66845f72bb79bd409106b6537c75ba3ac5e58cf176c6a39ac293976ad490345b",
+    "cookbook": "cookbook@c8e40ff0b10636a7719cbc88bc5f58443ad19907+27bf877b0a6c9cc46b59edd16c5b4fd82cba295b9a042d72cf843f39060cb5fe",
+    "lil-synn": "lil-synn@6b805bf77a350e7fba00bfd2451273327482827c+5f540a315d9636345ad85c89b279f79d49611011ab8c25293d91207ce2e4861c"
+  },
+  "cases": [
+    {
+      "id": "model-routing",
+      "topic": "Exploration versus controlled refinement",
+      "record_ids": [
+        "lil-synn:wild-discovery",
+        "cookbook:cassette-highway"
+      ],
+      "assessment": "complementary",
+      "conclusion": "The guide's discovery loop and the cookbook's bridge exercise fit the official model-role distinction. This does not prove faithful reconstruction of a wild output in v6.",
+      "evidence_limit": "Both may draw on the same Suno model documentation; they are not two independent tests.",
+      "primary_links": [
+        "https://help.suno.com/en/articles/13924737"
+      ],
+      "independent_test_confirmation": false
+    },
+    {
+      "id": "exclusions",
+      "topic": "Negative wording and positive replacement",
+      "record_ids": [
+        "lil-synn:avoidance-experimental",
+        "lil-synn:positive-replacement",
+        "cookbook:break-the-silence"
+      ],
+      "assessment": "complementary",
+      "conclusion": "The cookbook keeps exclusions as a separate field; LIL SYNN treats avoidance as experimental and proposes positive replacements. Neither establishes a universal negation rule.",
+      "evidence_limit": "Prompt examples and editorial advice only. No controlled paired audio results were found for these records.",
+      "primary_links": [],
+      "independent_test_confirmation": false
+    },
+    {
+      "id": "live-drums",
+      "topic": "The word live versus intended acoustic drum character",
+      "record_ids": [
+        "cookbook:propulsive-drums",
+        "band-manager:room-sound"
+      ],
+      "assessment": "tension",
+      "conclusion": "The V6 cookbook intentionally requests live drums; Band Manager's room-sound advice reflects its concern about crowd associations. Preserve both as context-dependent alternatives, without automatically banning live.",
+      "evidence_limit": "The cookbook example is unverified; the selected Band Manager caveat lacks an isolated current-model test. This comparison does not establish which wording works better.",
+      "primary_links": [],
+      "independent_test_confirmation": false
+    },
+    {
+      "id": "vocal-facets",
+      "topic": "Vocal timing versus conversational character",
+      "record_ids": [
+        "lil-synn:behind-beat",
+        "cookbook:conversational-vocal"
+      ],
+      "assessment": "complementary",
+      "conclusion": "Behind-the-beat placement describes timing; conversational describes delivery character. They can be selected separately rather than treated as interchangeable voice labels.",
+      "evidence_limit": "A musical distinction useful for prompt composition; not a demonstrated improvement in Suno output.",
+      "primary_links": [],
+      "independent_test_confirmation": false
+    }
+  ]
+}

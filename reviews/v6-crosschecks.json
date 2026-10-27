@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0",
-  "reviewed_on": "2026-10-26",
+  "reviewed_on": "2026-10-27",
   "snapshots": {
-    "band-manager": "band-manager@73c52379833af51e9d3ce7731746d3bfff3f5266+66845f72bb79bd409106b6537c75ba3ac5e58cf176c6a39ac293976ad490345b",
-    "cookbook": "cookbook@c8e40ff0b10636a7719cbc88bc5f58443ad19907+27bf877b0a6c9cc46b59edd16c5b4fd82cba295b9a042d72cf843f39060cb5fe",
-    "lil-synn": "lil-synn@6b805bf77a350e7fba00bfd2451273327482827c+5f540a315d9636345ad85c89b279f79d49611011ab8c25293d91207ce2e4861c"
+    "band-manager": "band-manager@73c52379833af51e9d3ce7731746d3bfff3f5266+1bc9695422688940db418718b5feed271bab623b5e268621214d03af5e943768",
+    "cookbook": "cookbook@c8e40ff0b10636a7719cbc88bc5f58443ad19907+94c2f582ab7731a39419487ab8a877e968cacaf325ced81d43662a69e087be46",
+    "lil-synn": "lil-synn@6b805bf77a350e7fba00bfd2451273327482827c+a988382717642a720653a651326843e103e40199ba84ed902c71d0907bb3c845"
   },
   "cases": [
     {
@@ -59,6 +59,34 @@
       "assessment": "complementary",
       "conclusion": "Behind-the-beat placement describes timing; conversational describes delivery character. They can be selected separately rather than treated as interchangeable voice labels.",
       "evidence_limit": "A musical distinction useful for prompt composition; not a demonstrated improvement in Suno output.",
+      "primary_links": [],
+      "independent_test_confirmation": false
+    },
+    {
+      "id": "negation-context",
+      "topic": "Field and bracket context limit negative-wording claims",
+      "record_ids": [
+        "band-manager:negation-context-caveat",
+        "cookbook:exclude-field-guidance",
+        "lil-synn:avoidance-experimental"
+      ],
+      "assessment": "tension",
+      "conclusion": "Preserve the unresolved bracket-context exception, the cookbook field recommendation and experimental avoidance wording. These do not establish one deterministic negation rule for every field.",
+      "evidence_limit": "Publisher guidance and community reports differ in context; no independent paired generation test was performed.",
+      "primary_links": [],
+      "independent_test_confirmation": false
+    },
+    {
+      "id": "tempo-scope",
+      "topic": "Tempo/feel direction is not an impossibility law",
+      "record_ids": [
+        "band-manager:tempo-feel-limits",
+        "band-manager:heavy-backbeat",
+        "lil-synn:half-time"
+      ],
+      "assessment": "complementary",
+      "conclusion": "Separate a stated pulse, drum feel and arrangement density. Band Manager explicitly limits reliable feel switching; LIL SYNN supplies vocabulary, not a proof of actual tempo-change impossibility.",
+      "evidence_limit": "Mixed historical/community/local guidance and a vocabulary list. Internal absolute tempo wording is not adopted as a verified V6 law.",
       "primary_links": [],
       "independent_test_confirmation": false
     }

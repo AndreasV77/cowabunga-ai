@@ -39,6 +39,8 @@ def entry(source, revision, id, kind, path, fragment, text, meaning, category, e
 
 
 def main():
+    if (ROOT / "curations/archive/0.11-foundation").exists():
+        raise SystemExit("Historical builder: refusing to overwrite the reviewed foundation selection. Use current curations and export_glossary.py; reproduce old builders in a separate historical checkout.")
     band_entries = []
     legacy = evidence("unmarked legacy tag catalogue",
                       "Tag usage is attributed to the publisher. This table does not establish a current-model test or sample size.")

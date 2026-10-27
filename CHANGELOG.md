@@ -2,6 +2,8 @@
 
 ## Unreleased — public repository preparation
 
+- Added nine source-bound vocabulary/guidance entries (159 entries, 567 recipes; V6 core 68 entries and 3 recipes), two caveat crosschecks and 34 retrieval probes. Archived the exact previous selections/catalog/reviews, verified 143 tests without skips, and activated the reviewed local snapshots after a consistent backup with all user tables and eight historical snapshots preserved. Both known query losses and Gate 1 remain open.
+
 - Reviewed task gaps against all 25 admitted source files; documented concrete vocabulary/guidance selection candidates and internal scope tensions around tempo, negation and vocal registers. No curations, active snapshots or search behavior changed; foundation acceptance remains open.
 
 - Added eleven synthetic musical audit tasks, 31 pinned retrieval probes and explicit open coverage/search findings to strict foundation validation. Recorded an initial eight-entry semantic review without importing private notebook material or claiming assistant/generation tests; FND-01, FND-02 and FND-04 remain open.

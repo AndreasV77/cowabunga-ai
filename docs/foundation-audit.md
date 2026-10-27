@@ -4,6 +4,12 @@ Audit date: 2026-10-27. **Gate 1 is OPEN — foundation readiness has not been
 established.** Implemented storage/import features and passing tests are evidence,
 not a declaration that resource composition and useful coverage are complete.
 
+Latest update, 2026-10-27: the [reviewed nine-entry expansion](foundation-expansion.md)
+has **159 entries, 567 recipes, 12 concepts and 6 crosschecks**; strict V6 core has
+**68 entries and 3 recipes**. Strict validation passed **143 tests, zero skips**.
+The initial reconstruction counts and FND-03 closure run below are historical.
+FND-01, FND-02 and FND-04 remain open.
+
 ## Owner's priority and meaning of completion
 
 1. Resolve foundation questions and establish tested controls first, even when
@@ -110,7 +116,7 @@ adding more source records or more tests by itself is not closure.
 | FND-01 | What resource scope and musical coverage are sufficient for the first assistant workflow? | Reviewed matrix of roles, timbre/technique, rhythm, arrangement/transitions, structure, harmony and controls; map tasks to actual source records, distinguish selection gaps from upstream gaps, and record decisions on remaining source candidates. |
 | FND-02 | Which expected queries fail through wording, scope or indexing? | A maintained task-based retrieval set with expected records and negative cases, including `gallop/galloping`, spelling variants, strict-core versus supplements, wrong-tradition distractors and empty results; document/fix each loss without falsely merging traditions or evidence grades. |
 | FND-03 — CLOSED 2026-10-27 | Can a fresh checkout demonstrate all required real-source checks rather than silently skip them? | Implemented `python -m prompt_reference.foundation`; checked missing/tampered inputs, isolated full rebuild, complete exports and rejection of incomplete tests. Both existing checkout and clean source-copy runs passed 99 tests, zero skips. See evidence below and [reproduction instructions](foundation-validation.md). |
-| FND-04 | Are editorial meaning, applicable input field, model scope and conflicts sufficiently reviewed? | Item-level review of the admitted curated entries and representative recipe cases, findings register, corrections as new source/curation snapshots, and regression examples for discovered errors. Mechanical quote matching alone is insufficient. |
+| FND-04 | Are editorial meaning, applicable input field, model scope and conflicts sufficiently reviewed? | Item-level review of the admitted curated entries and representative recipe cases, findings register, corrections as new source/curation snapshots, and regression examples for discovered errors. Mechanical quote matching alone is insufficient. Explicit open contract issue: represent separate Exclude Styles guidance without mislabeling it as style-field text. |
 
 No numeric code-coverage percentage substitutes for these targets. For admitted
 sources, the gate target is all four complete imports/round trips and all required

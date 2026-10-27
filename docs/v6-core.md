@@ -2,16 +2,16 @@
 
 ## What the core means
 
-The core contains **64 entries and 3 recipes from two explicitly V6-oriented
-publishers**: 42 entries and 3 recipes from MJorgin's Cookbook; 22 entries from
+The core contains **68 entries and 3 recipes from two explicitly V6-oriented
+publishers**: 44 entries and 3 recipes from MJorgin's Cookbook; 24 entries from
 LIL SYNN. Each selected record has an explicit V6-family target. These are
-application candidates, not 67 verified effects.
+application candidates, not 71 verified effects.
 
 | Source | Reviewed orientation | Role |
 |---|---|---|
 | Suno v6 Cookbook | `v6_native` | Original V6 examples, model routing, genre descriptions and failure cases |
 | LIL SYNN V6 Guide | `v6_native` | Vocal dimensions, concrete phrasing, production descriptions and testing discipline |
-| Band Manager | `mixed` | Seven V6-targeted records plus version-unspecified vocabulary and one explicitly legacy finding |
+| Band Manager | `mixed` | V6-targeted guidance plus version-unspecified vocabulary and one explicitly legacy finding |
 | MUSAI | `unspecified` | Broad recipe vocabulary; model version remains unknown |
 
 `v6_native` records a reviewed declared purpose, anchored to a pinned source
@@ -43,7 +43,7 @@ matches within the groups. `--v6-core` limits results to the core. The hit's
 `v6_core` flag is a relevance flag, not a confidence label. History and explicit
 snapshot searches keep their earlier meanings.
 
-## Four concrete crosschecks
+## Six concrete crosschecks
 
 The machine-readable review set pins exact curation snapshot IDs and links to
 the selected records, so later imports cannot silently change the reviewed text.
@@ -54,6 +54,8 @@ the selected records, so later imports cannot silently change the reviewed text.
 | Exclusions | LIL SYNN's experimental avoidance and positive replacement versus Cookbook's explicit exclusion field | Useful alternatives; neither source proves a universal negation rule |
 | Live drums | Cookbook's requested live drums versus Band Manager room-sound advice | Tension retained; the word is not automatically banned |
 | Vocal facets | Behind-the-beat timing versus conversational delivery | Complementary musical dimensions rather than interchangeable labels |
+| Negation context | Band Manager bracket exception, Cookbook field guidance and LIL SYNN experimental wording | Tension retained; no deterministic rule across all input contexts |
+| Tempo scope | Band Manager's limited feel guidance and LIL SYNN half-time vocabulary | A pulse/feel distinction, not a verified impossibility law |
 
 Official primary baseline checked on 2026-10-26:
 [Current Models: v6](https://help.suno.com/en/articles/13924737).

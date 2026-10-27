@@ -1,0 +1,516 @@
+{
+  "source_id": "lil-synn",
+  "revision": "6b805bf77a350e7fba00bfd2451273327482827c",
+  "orientation": "v6_native",
+  "orientation_excerpt": "It is a **complete working reference for the current Suno V6 ecosystem**: what the tools are, where they live, what they are good for, how they interact, how to troubleshoot them, how to test them scientifically, and where the boundaries of the evidence are.",
+  "changes": "Selected V6-oriented wording and method notes; added English explanatory adaptations and evidence limits. Excluded the unsubstantiated Audio Quality Rescue recipe. No independent effect testing. Source orientation and record-level model basis reviewed for the 0.4 V6 core; targeting is not test evidence.",
+  "entries": [
+    {
+      "id": "sustained-phrases",
+      "kind": "phrase",
+      "path": "SUNO-V6-ULTIMATE-CONTROL-AND-PRODUCTION-ADDENDUM-2026.md",
+      "excerpt": "long sustained phrases",
+      "text": "long sustained phrases",
+      "meaning": "Extended sung phrases that maintain tone across a longer breath or melodic span.",
+      "category": "vocals",
+      "input_field": "style",
+      "evidence": {
+        "status": "working_hypothesis",
+        "source_label": "V6 guide vocabulary; untested wording",
+        "independently_verified": false,
+        "model_scope": [
+          "v6",
+          "v6-wild",
+          "v6-mini"
+        ],
+        "test_count": null,
+        "context": "Selected for a V6-family application. This establishes the target, not an observed effect; meaning is an editorial adaptation.",
+        "model_basis": "v6_targeted"
+      }
+    },
+    {
+      "id": "clipped-phrases",
+      "kind": "phrase",
+      "path": "SUNO-V6-ULTIMATE-CONTROL-AND-PRODUCTION-ADDENDUM-2026.md",
+      "excerpt": "short clipped phrases",
+      "text": "short clipped phrases",
+      "meaning": "Brief phrases with deliberately curtailed endings and audible gaps.",
+      "category": "vocals",
+      "input_field": "style",
+      "evidence": {
+        "status": "working_hypothesis",
+        "source_label": "V6 guide vocabulary; untested wording",
+        "independently_verified": false,
+        "model_scope": [
+          "v6",
+          "v6-wild",
+          "v6-mini"
+        ],
+        "test_count": null,
+        "context": "Selected for a V6-family application. This establishes the target, not an observed effect; meaning is an editorial adaptation.",
+        "model_basis": "v6_targeted"
+      }
+    },
+    {
+      "id": "behind-beat",
+      "kind": "phrase",
+      "path": "SUNO-V6-ULTIMATE-CONTROL-AND-PRODUCTION-ADDENDUM-2026.md",
+      "excerpt": "behind-the-beat delivery",
+      "text": "behind-the-beat delivery",
+      "meaning": "Place vocal attacks slightly after the reference pulse for a laid-back feel without necessarily changing tempo.",
+      "category": "vocals",
+      "input_field": "style",
+      "evidence": {
+        "status": "working_hypothesis",
+        "source_label": "V6 guide vocabulary; untested wording",
+        "independently_verified": false,
+        "model_scope": [
+          "v6",
+          "v6-wild",
+          "v6-mini"
+        ],
+        "test_count": null,
+        "context": "Selected for a V6-family application. This establishes the target, not an observed effect; meaning is an editorial adaptation.",
+        "model_basis": "v6_targeted"
+      }
+    },
+    {
+      "id": "forward-rhythm",
+      "kind": "phrase",
+      "path": "SUNO-V6-ULTIMATE-CONTROL-AND-PRODUCTION-ADDENDUM-2026.md",
+      "excerpt": "forward rhythmic delivery",
+      "text": "forward rhythmic delivery",
+      "meaning": "A vocal delivery intended to feel rhythmically pushing or urgent; exact timing remains unspecified.",
+      "category": "vocals",
+      "input_field": "style",
+      "evidence": {
+        "status": "working_hypothesis",
+        "source_label": "V6 guide vocabulary; untested wording",
+        "independently_verified": false,
+        "model_scope": [
+          "v6",
+          "v6-wild",
+          "v6-mini"
+        ],
+        "test_count": null,
+        "context": "Selected for a V6-family application. This establishes the target, not an observed effect; meaning is an editorial adaptation.",
+        "model_basis": "v6_targeted"
+      }
+    },
+    {
+      "id": "melismatic",
+      "kind": "phrase",
+      "path": "SUNO-V6-ULTIMATE-CONTROL-AND-PRODUCTION-ADDENDUM-2026.md",
+      "excerpt": "melismatic",
+      "text": "melismatic",
+      "meaning": "Singing multiple pitches on one syllable, rather than assigning a new syllable to each note.",
+      "category": "vocals",
+      "input_field": "style",
+      "evidence": {
+        "status": "working_hypothesis",
+        "source_label": "V6 guide vocabulary; untested wording",
+        "independently_verified": false,
+        "model_scope": [
+          "v6",
+          "v6-wild",
+          "v6-mini"
+        ],
+        "test_count": null,
+        "context": "Selected for a V6-family application. This establishes the target, not an observed effect; meaning is an editorial adaptation.",
+        "model_basis": "v6_targeted"
+      }
+    },
+    {
+      "id": "syllabic",
+      "kind": "phrase",
+      "path": "SUNO-V6-ULTIMATE-CONTROL-AND-PRODUCTION-ADDENDUM-2026.md",
+      "excerpt": "syllabic",
+      "text": "syllabic",
+      "meaning": "A primarily one-note-per-syllable relationship between text and melody.",
+      "category": "vocals",
+      "input_field": "style",
+      "evidence": {
+        "status": "working_hypothesis",
+        "source_label": "V6 guide vocabulary; untested wording",
+        "independently_verified": false,
+        "model_scope": [
+          "v6",
+          "v6-wild",
+          "v6-mini"
+        ],
+        "test_count": null,
+        "context": "Selected for a V6-family application. This establishes the target, not an observed effect; meaning is an editorial adaptation.",
+        "model_basis": "v6_targeted"
+      }
+    },
+    {
+      "id": "grainy",
+      "kind": "phrase",
+      "path": "SUNO-V6-ULTIMATE-CONTROL-AND-PRODUCTION-ADDENDUM-2026.md",
+      "excerpt": "clean / husky / breathy / raspy / grainy / warm / airy / dark / bright / intimate",
+      "text": "grainy",
+      "meaning": "A finely roughened or textured vocal timbre; not a specific loudness or register.",
+      "category": "vocals",
+      "input_field": "style",
+      "evidence": {
+        "status": "working_hypothesis",
+        "source_label": "V6 guide vocabulary; untested wording",
+        "independently_verified": false,
+        "model_scope": [
+          "v6",
+          "v6-wild",
+          "v6-mini"
+        ],
+        "test_count": null,
+        "context": "Selected for a V6-family application. This establishes the target, not an observed effect; meaning is an editorial adaptation.",
+        "model_basis": "v6_targeted"
+      }
+    },
+    {
+      "id": "husky",
+      "kind": "phrase",
+      "path": "SUNO-V6-ULTIMATE-CONTROL-AND-PRODUCTION-ADDENDUM-2026.md",
+      "excerpt": "clean / husky / breathy / raspy / grainy / warm / airy / dark / bright / intimate",
+      "text": "husky",
+      "meaning": "A darker or breath-rough vocal color, distinct from a pitch-register instruction.",
+      "category": "vocals",
+      "input_field": "style",
+      "evidence": {
+        "status": "working_hypothesis",
+        "source_label": "V6 guide vocabulary; untested wording",
+        "independently_verified": false,
+        "model_scope": [
+          "v6",
+          "v6-wild",
+          "v6-mini"
+        ],
+        "test_count": null,
+        "context": "Selected for a V6-family application. This establishes the target, not an observed effect; meaning is an editorial adaptation.",
+        "model_basis": "v6_targeted"
+      }
+    },
+    {
+      "id": "head-dominant",
+      "kind": "phrase",
+      "path": "SUNO-V6-ULTIMATE-CONTROL-AND-PRODUCTION-ADDENDUM-2026.md",
+      "excerpt": "low / baritone / tenor / alto / high / chest-dominant / head-dominant / falsetto",
+      "text": "head-dominant",
+      "meaning": "A head-dominant registration quality; not assumed identical to falsetto.",
+      "category": "vocals",
+      "input_field": "style",
+      "evidence": {
+        "status": "working_hypothesis",
+        "source_label": "V6 guide vocabulary; untested wording",
+        "independently_verified": false,
+        "model_scope": [
+          "v6",
+          "v6-wild",
+          "v6-mini"
+        ],
+        "test_count": null,
+        "context": "Selected for a V6-family application. This establishes the target, not an observed effect; meaning is an editorial adaptation.",
+        "model_basis": "v6_targeted"
+      }
+    },
+    {
+      "id": "chest-dominant",
+      "kind": "phrase",
+      "path": "SUNO-V6-ULTIMATE-CONTROL-AND-PRODUCTION-ADDENDUM-2026.md",
+      "excerpt": "low / baritone / tenor / alto / high / chest-dominant / head-dominant / falsetto",
+      "text": "chest-dominant",
+      "meaning": "A chest-dominant registration quality, separate from the lyric's emotional delivery.",
+      "category": "vocals",
+      "input_field": "style",
+      "evidence": {
+        "status": "working_hypothesis",
+        "source_label": "V6 guide vocabulary; untested wording",
+        "independently_verified": false,
+        "model_scope": [
+          "v6",
+          "v6-wild",
+          "v6-mini"
+        ],
+        "test_count": null,
+        "context": "Selected for a V6-family application. This establishes the target, not an observed effect; meaning is an editorial adaptation.",
+        "model_basis": "v6_targeted"
+      }
+    },
+    {
+      "id": "kick-ducking",
+      "kind": "phrase",
+      "path": "SUNO-V6-GAP-CLOSURE-ALL-REMAINING-CURRENT.md",
+      "excerpt": "| Sidechain | subtle kick-driven ducking |",
+      "text": "subtle kick-driven ducking",
+      "meaning": "A request for a restrained level dip triggered by the kick; no exact compression setting is implied.",
+      "category": "production",
+      "input_field": "style",
+      "evidence": {
+        "status": "working_hypothesis",
+        "source_label": "V6 guide vocabulary; untested wording",
+        "independently_verified": false,
+        "model_scope": [
+          "v6",
+          "v6-wild",
+          "v6-mini"
+        ],
+        "test_count": null,
+        "context": "Selected for a V6-family application. This establishes the target, not an observed effect; meaning is an editorial adaptation.",
+        "model_basis": "v6_targeted"
+      }
+    },
+    {
+      "id": "centered-bass",
+      "kind": "phrase",
+      "path": "SUNO-V6-GAP-CLOSURE-ALL-REMAINING-CURRENT.md",
+      "excerpt": "| Mono compatibility | centered low end, controlled stereo bass |",
+      "text": "centered low end, controlled stereo bass",
+      "meaning": "A low-frequency spatial intention; this wording alone does not establish measured mono compatibility.",
+      "category": "production",
+      "input_field": "style",
+      "evidence": {
+        "status": "working_hypothesis",
+        "source_label": "V6 guide vocabulary; untested wording",
+        "independently_verified": false,
+        "model_scope": [
+          "v6",
+          "v6-wild",
+          "v6-mini"
+        ],
+        "test_count": null,
+        "context": "Selected for a V6-family application. This establishes the target, not an observed effect; meaning is an editorial adaptation.",
+        "model_basis": "v6_targeted"
+      }
+    },
+    {
+      "id": "upper-mid-edge",
+      "kind": "phrase",
+      "path": "SUNO-V6-GAP-CLOSURE-ALL-REMAINING-CURRENT.md",
+      "excerpt": "| Harshness | softened upper-mid edge |",
+      "text": "softened upper-mid edge",
+      "meaning": "A request to reduce an abrasive upper-midrange impression without prescribing a numeric EQ operation.",
+      "category": "production",
+      "input_field": "style",
+      "evidence": {
+        "status": "working_hypothesis",
+        "source_label": "V6 guide vocabulary; untested wording",
+        "independently_verified": false,
+        "model_scope": [
+          "v6",
+          "v6-wild",
+          "v6-mini"
+        ],
+        "test_count": null,
+        "context": "Selected for a V6-family application. This establishes the target, not an observed effect; meaning is an editorial adaptation.",
+        "model_basis": "v6_targeted"
+      }
+    },
+    {
+      "id": "foreground-depth",
+      "kind": "phrase",
+      "path": "SUNO-V6-GAP-CLOSURE-ALL-REMAINING-CURRENT.md",
+      "excerpt": "| Depth | intimate foreground, distant ambience |",
+      "text": "intimate foreground, distant ambience",
+      "meaning": "Contrast a near main element with farther ambient space.",
+      "category": "production",
+      "input_field": "style",
+      "evidence": {
+        "status": "working_hypothesis",
+        "source_label": "V6 guide vocabulary; untested wording",
+        "independently_verified": false,
+        "model_scope": [
+          "v6",
+          "v6-wild",
+          "v6-mini"
+        ],
+        "test_count": null,
+        "context": "Selected for a V6-family application. This establishes the target, not an observed effect; meaning is an editorial adaptation.",
+        "model_basis": "v6_targeted"
+      }
+    },
+    {
+      "id": "working-hierarchy",
+      "kind": "guidance",
+      "path": "SUNO-V6-ULTIMATE-CONTROL-AND-PRODUCTION-ADDENDUM-2026.md",
+      "excerpt": "There is no official Suno document saying that prompts obey a rigid deterministic hierarchy. Treat the following as a **working production model**, not a hidden implementation detail.",
+      "text": "working production model",
+      "meaning": "The proposed instruction hierarchy is an author heuristic, not an official implementation specification.",
+      "category": "arrangement",
+      "input_field": null,
+      "evidence": {
+        "status": "working_hypothesis",
+        "source_label": "V6 workflow/testing guidance; not an empirical effect report",
+        "independently_verified": false,
+        "model_scope": [
+          "v6",
+          "v6-wild",
+          "v6-mini"
+        ],
+        "test_count": null,
+        "context": "Selected for a V6-family application. This establishes the target, not an observed effect; meaning is an editorial adaptation.",
+        "model_basis": "v6_targeted"
+      }
+    },
+    {
+      "id": "avoidance-experimental",
+      "kind": "guidance",
+      "path": "SUNO-V6-ULTIMATE-CONTROL-AND-PRODUCTION-ADDENDUM-2026.md",
+      "excerpt": "Negative prompting is **not documented as a deterministic exclusion language**. Treat exclusion wording as an experimental technique.",
+      "text": "experimental technique",
+      "meaning": "Negative wording is offered as a test candidate, not as a deterministic exclusion language.",
+      "category": "controls",
+      "input_field": "style",
+      "evidence": {
+        "status": "working_hypothesis",
+        "source_label": "V6 workflow/testing guidance; not an empirical effect report",
+        "independently_verified": false,
+        "model_scope": [
+          "v6",
+          "v6-wild",
+          "v6-mini"
+        ],
+        "test_count": null,
+        "context": "Selected for a V6-family application. This establishes the target, not an observed effect; meaning is an editorial adaptation.",
+        "model_basis": "v6_targeted"
+      }
+    },
+    {
+      "id": "positive-replacement",
+      "kind": "guidance",
+      "path": "SUNO-V6-ULTIMATE-CONTROL-AND-PRODUCTION-ADDENDUM-2026.md",
+      "excerpt": "A positive replacement is often more actionable than a bare prohibition:",
+      "text": "A positive replacement",
+      "meaning": "State what should fill the role instead of relying only on a prohibition.",
+      "category": "arrangement",
+      "input_field": "style",
+      "evidence": {
+        "status": "working_hypothesis",
+        "source_label": "V6 workflow/testing guidance; not an empirical effect report",
+        "independently_verified": false,
+        "model_scope": [
+          "v6",
+          "v6-wild",
+          "v6-mini"
+        ],
+        "test_count": null,
+        "context": "Selected for a V6-family application. This establishes the target, not an observed effect; meaning is an editorial adaptation.",
+        "model_basis": "v6_targeted"
+      }
+    },
+    {
+      "id": "single-success",
+      "kind": "guidance",
+      "path": "SUNO-V6-ULTIMATE-CONTROL-AND-PRODUCTION-ADDENDUM-2026.md",
+      "excerpt": "A technique is not “proven” because one generation worked.",
+      "text": "one generation worked",
+      "meaning": "A successful single output is insufficient to establish a prompt technique's repeatable effect.",
+      "category": "controls",
+      "input_field": null,
+      "evidence": {
+        "status": "working_hypothesis",
+        "source_label": "V6 workflow/testing guidance; not an empirical effect report",
+        "independently_verified": false,
+        "model_scope": [
+          "v6",
+          "v6-wild",
+          "v6-mini"
+        ],
+        "test_count": null,
+        "context": "Selected for a V6-family application. This establishes the target, not an observed effect; meaning is an editorial adaptation.",
+        "model_basis": "v6_targeted"
+      }
+    },
+    {
+      "id": "test-variable",
+      "kind": "guidance",
+      "path": "SUNO-V6-ULTIMATE-CONTROL-AND-PRODUCTION-ADDENDUM-2026.md",
+      "excerpt": "VARIABLE CHANGED:",
+      "text": "VARIABLE CHANGED:",
+      "meaning": "Record the changed variable alongside model, references, controls, failures and output IDs.",
+      "category": "controls",
+      "input_field": null,
+      "evidence": {
+        "status": "working_hypothesis",
+        "source_label": "V6 workflow/testing guidance; not an empirical effect report",
+        "independently_verified": false,
+        "model_scope": [
+          "v6",
+          "v6-wild",
+          "v6-mini"
+        ],
+        "test_count": null,
+        "context": "Selected for a V6-family application. This establishes the target, not an observed effect; meaning is an editorial adaptation.",
+        "model_basis": "v6_targeted"
+      }
+    },
+    {
+      "id": "sparse-verse",
+      "kind": "phrase",
+      "path": "SUNO-V6-ULTIMATE-CONTROL-AND-PRODUCTION-ADDENDUM-2026.md",
+      "excerpt": "Verse: intimate acoustic guitar, close vocal, sparse percussion.",
+      "text": "Verse: intimate acoustic guitar, close vocal, sparse percussion.",
+      "meaning": "Assign acoustic guitar, near vocal and sparse percussion specifically to the verse.",
+      "category": "arrangement",
+      "input_field": "style",
+      "evidence": {
+        "status": "working_hypothesis",
+        "source_label": "V6 guide vocabulary; untested wording",
+        "independently_verified": false,
+        "model_scope": [
+          "v6",
+          "v6-wild",
+          "v6-mini"
+        ],
+        "test_count": null,
+        "context": "Selected for a V6-family application. This establishes the target, not an observed effect; meaning is an editorial adaptation.",
+        "model_basis": "v6_targeted"
+      }
+    },
+    {
+      "id": "expanded-chorus",
+      "kind": "phrase",
+      "path": "SUNO-V6-ULTIMATE-CONTROL-AND-PRODUCTION-ADDENDUM-2026.md",
+      "excerpt": "Chorus: introduce huge drums, wide synths and stacked harmonies.",
+      "text": "Chorus: introduce huge drums, wide synths and stacked harmonies.",
+      "meaning": "Reserve the added drum, synth and vocal density for the chorus rather than imposing it on every section.",
+      "category": "arrangement",
+      "input_field": "style",
+      "evidence": {
+        "status": "working_hypothesis",
+        "source_label": "V6 guide vocabulary; untested wording",
+        "independently_verified": false,
+        "model_scope": [
+          "v6",
+          "v6-wild",
+          "v6-mini"
+        ],
+        "test_count": null,
+        "context": "Selected for a V6-family application. This establishes the target, not an observed effect; meaning is an editorial adaptation.",
+        "model_basis": "v6_targeted"
+      }
+    },
+    {
+      "id": "wild-discovery",
+      "kind": "guidance",
+      "path": "SUNO-V6-ULTIMATE-CONTROL-AND-PRODUCTION-ADDENDUM-2026.md",
+      "excerpt": "v6-wild → unusual discoveries",
+      "text": "v6-wild → unusual discoveries",
+      "meaning": "Use wild for exploratory candidates; a discovery does not imply identical reconstruction with another model.",
+      "category": "controls",
+      "input_field": "settings",
+      "evidence": {
+        "status": "working_hypothesis",
+        "source_label": "author workflow based on model roles; refinement recipe not tested",
+        "independently_verified": false,
+        "model_scope": [
+          "v6",
+          "v6-wild",
+          "v6-mini"
+        ],
+        "test_count": null,
+        "context": "Selected for a V6-family application. This establishes the target, not an observed effect; meaning is an editorial adaptation.",
+        "model_basis": "v6_targeted"
+      }
+    }
+  ],
+  "recipes": []
+}

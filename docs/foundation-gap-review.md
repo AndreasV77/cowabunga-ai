@@ -4,6 +4,10 @@
 selections from missing vocabulary, authored relationships and uncertain effects.
 It proposes selections; it does not change curations or activate a source snapshot.
 
+This is the pre-expansion review record. The later
+[nine-entry expansion](foundation-expansion.md) implements the selected candidates
+and documents validation and activation; the original findings below remain history.
+
 ## Scope and method
 
 Validated all four pinned inputs through the production adapters before reviewing

@@ -40,6 +40,8 @@ def add_entry(collection, source, revision, id, path, fragment, text, meaning, c
 
 
 def main():
+    if (ROOT / "curations/archive/0.11-foundation").exists():
+        raise SystemExit("Historical builder: refusing to overwrite the reviewed foundation selection. Use current curations and export_glossary.py; reproduce old builders in a separate historical checkout.")
     band = json.loads((ROOT / "curations/archive/0.3/band-manager.json").read_text(encoding="utf-8"))
     cook = json.loads((ROOT / "curations/archive/0.3/cookbook.json").read_text(encoding="utf-8"))
     band["orientation"] = "mixed"

@@ -15,6 +15,8 @@ def concept(id, label, aliases, description, rows, checks=()):
 
 
 def main():
+    if (ROOT / "curations/archive/0.11-foundation").exists():
+        raise SystemExit("Historical builder: refusing to overwrite the reviewed foundation selection. Use current curations; reproduce old builders in a separate historical checkout.")
     concepts = [
         concept("vocal-placement", "Vocal placement and intimacy", ["close singer", "foreground voice", "intimate vocal"],
             "Choose apparent distance and foreground/background balance independently of voice register or texture.", [

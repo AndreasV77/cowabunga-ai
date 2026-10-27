@@ -1,7 +1,7 @@
 {
   "source_id": "cookbook",
   "revision": "c8e40ff0b10636a7719cbc88bc5f58443ad19907",
-  "changes": "Selected source excerpts; added English explanatory adaptations, categories and explicit evidence limits; normalized recipe section order. No independent musical-effect verification. Source orientation and record-level model basis reviewed for the 0.4 V6 core; targeting is not test evidence.",
+  "changes": "Selected source excerpts; added English explanatory adaptations, categories and explicit evidence limits; normalized recipe section order. No independent musical-effect verification. Source orientation and record-level model basis reviewed for the 0.4 V6 core; targeting is not test evidence. Foundation expansion 2026-10-27: selected missing vocabulary and scoped guidance; retained uncertainty, field distinctions and negation/tempo limitations. Previous selection archived; no independent effects verified.",
   "entries": [
     {
       "id": "fingerpicked-guitar",
@@ -951,6 +951,48 @@
         ],
         "test_count": null,
         "context": "Selected for a V6-family application. This establishes the target, not an observed effect; meaning is an editorial adaptation.",
+        "model_basis": "v6_targeted"
+      }
+    },
+    {
+      "id": "exclude-field-guidance",
+      "kind": "guidance",
+      "path": "docs/prompt-anatomy.md",
+      "excerpt": "Keep exclusions specific and short. Use the Exclude Styles field when available\nrather than packing many \"no\" statements into the main style prompt.",
+      "text": "Exclude Styles",
+      "meaning": "Keep exclusions short and specific in the separate Exclude Styles field when available. This is workflow guidance, not proof of suppression or equivalence to inline negative wording.",
+      "category": "controls",
+      "input_field": null,
+      "evidence": {
+        "status": "working_hypothesis",
+        "source_label": "V6 cookbook editorial guidance; untested",
+        "independently_verified": false,
+        "model_scope": [
+          "v6"
+        ],
+        "test_count": null,
+        "context": "V6-native prompting guidance. The current reference contract has no exclude-field enum; this method has no direct input_field rather than being falsely labeled as style wording.",
+        "model_basis": "v6_targeted"
+      }
+    },
+    {
+      "id": "acoustic-section-entrances",
+      "kind": "phrase",
+      "path": "docs/prompt-anatomy.md",
+      "excerpt": "Mandopop ballad, 72 BPM, sparse piano intro, warm fingerpicked acoustic guitar\nin verse two, soft brushed drums entering before chorus, intimate close vocal,\ngentle string pad only under the final chorus.",
+      "text": "soft brushed drums entering before chorus",
+      "meaning": "An example of a section-bound instrument entrance; the same example reserves its string pad for the final chorus. No reliable timing or small-lift effect is established.",
+      "category": "arrangement",
+      "input_field": "style",
+      "evidence": {
+        "status": "working_hypothesis",
+        "source_label": "V6 cookbook example; no observed rendering evidence",
+        "independently_verified": false,
+        "model_scope": [
+          "v6"
+        ],
+        "test_count": null,
+        "context": "Definition is an editorial adaptation; source wording is not generation verification.",
         "model_basis": "v6_targeted"
       }
     }

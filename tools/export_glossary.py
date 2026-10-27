@@ -38,7 +38,7 @@ def main():
             lines.append(f"| {cell(entry.text)} | {entry.kind} / {entry.input_field or 'unspecified'} | {cell(entry.meaning)} | {cell(entry.evidence.source_label)} | {basis} | [{source.id}, L{citation.line_start}]({citation.url}) |")
         lines.append("")
     target = ROOT / "docs" / "vocabulary.md"
-    target.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    target.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
     print(f"Wrote {len(entries)} entries to {target}")
 
 

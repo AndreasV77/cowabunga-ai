@@ -137,7 +137,7 @@ Use `--history` to include older selections. Export refuses to overwrite a file.
 
 ## Band Manager and Cookbook seed imports
 
-Version 0.4 includes **150 selected entries and three Cookbook recipes**, not an
+The current selection includes **159 selected entries and three Cookbook recipes**, not an
 exhaustive import of either repository. The reviewed selections live in
 `curations/`; wording, definitions, categories and evidence scope can be reviewed
 there before importing. No upstream skill is installed or executed.
@@ -189,17 +189,16 @@ matches, then FTS ranks lexical relevance, not musical efficacy;
 scores from the two indexes do not establish a calibrated cross-type ranking.
 
 For human review, open [the English vocabulary](docs/vocabulary.md). It includes
-83 Band Manager entries, 45 Cookbook entries and 22 LIL SYNN entries with direct source citations.
-Reproduce it after fetching the pinned sources:
+88 Band Manager entries, 47 Cookbook entries and 24 LIL SYNN entries with direct source citations.
+Regenerate the readable view from current curations after fetching the pinned sources:
 
 ```powershell
-.\.venv\Scripts\python.exe tools/build_v6_core.py
 .\.venv\Scripts\python.exe tools/export_glossary.py
 ```
 
 ## Explicit V6 core
 
-The core contains **64 entries and three recipes from two V6-native sources**:
+The core contains **68 entries and three recipes from two V6-native sources**:
 Cookbook and LIL SYNN. Source orientation is anchored to an exact introduction;
 record-level `model_basis` distinguishes V6 targeting, legacy information and
 unspecified applicability. Targeting does not mean tested efficacy. Mixed-source
@@ -212,11 +211,12 @@ Band Manager V6 records remain separately searchable.
 .\.venv\Scripts\python.exe -m prompt_reference.cli crosschecks reviews/v6-crosschecks.json
 ```
 
-Four pinned editorial comparisons cover model routing, exclusions, live-drum
-wording and vocal dimensions. They do not turn agreement between publishers into
+Six pinned editorial comparisons cover model routing, exclusions, live-drum
+wording, vocal dimensions, negation context and tempo scope. They do not turn agreement between publishers into
 independent tests. See [V6 core policy and counterchecks](docs/v6-core.md).
-`tools/build_seed_curations.py` reproduces the historical 0.3 selection; use the
-V6 builder above for the current selection.
+The seed and V6 builders are historical generators and refuse to overwrite the
+current reviewed selection. Use a separate historical checkout to reproduce them.
+Current curations are the reviewed inputs; strict validation rebuilds their corpus.
 
 ## Modules and data flow
 

@@ -3,7 +3,7 @@
   "revision": "6b805bf77a350e7fba00bfd2451273327482827c",
   "orientation": "v6_native",
   "orientation_excerpt": "It is a **complete working reference for the current Suno V6 ecosystem**: what the tools are, where they live, what they are good for, how they interact, how to troubleshoot them, how to test them scientifically, and where the boundaries of the evidence are.",
-  "changes": "Selected V6-oriented wording and method notes; added English explanatory adaptations and evidence limits. Excluded the unsubstantiated Audio Quality Rescue recipe. No independent effect testing. Source orientation and record-level model basis reviewed for the 0.4 V6 core; targeting is not test evidence.",
+  "changes": "Selected V6-oriented wording and method notes; added English explanatory adaptations and evidence limits. Excluded the unsubstantiated Audio Quality Rescue recipe. No independent effect testing. Source orientation and record-level model basis reviewed for the 0.4 V6 core; targeting is not test evidence. Foundation expansion 2026-10-27: selected missing vocabulary and scoped guidance; retained uncertainty, field distinctions and negation/tempo limitations. Previous selection archived; no independent effects verified.",
   "entries": [
     {
       "id": "sustained-phrases",
@@ -508,6 +508,48 @@
         ],
         "test_count": null,
         "context": "Selected for a V6-family application. This establishes the target, not an observed effect; meaning is an editorial adaptation.",
+        "model_basis": "v6_targeted"
+      }
+    },
+    {
+      "id": "call-response",
+      "kind": "phrase",
+      "path": "README.md",
+      "excerpt": "stacked harmonies • double-tracked • call-and-response",
+      "text": "call-and-response",
+      "meaning": "An answering arrangement between phrases or performers; sung answers need not be gang shouts. Inclusion in a V6 vocabulary list is not a tested success rate.",
+      "category": "vocals",
+      "input_field": "style",
+      "evidence": {
+        "status": "working_hypothesis",
+        "source_label": "V6 guide vocabulary list; untested wording",
+        "independently_verified": false,
+        "model_scope": [
+          "v6"
+        ],
+        "test_count": null,
+        "context": "Definition is an editorial adaptation; source wording is not generation verification.",
+        "model_basis": "v6_targeted"
+      }
+    },
+    {
+      "id": "half-time",
+      "kind": "phrase",
+      "path": "README.md",
+      "excerpt": "four-on-the-floor • half-time • syncopated • swung • humanized • mechanical",
+      "text": "half-time",
+      "meaning": "A half-time rhythmic feel, distinct from an instruction to halve the actual tempo or every simultaneous layer. The source lists the term without an isolated execution test.",
+      "category": "rhythm",
+      "input_field": "style",
+      "evidence": {
+        "status": "working_hypothesis",
+        "source_label": "V6 guide vocabulary list; untested wording",
+        "independently_verified": false,
+        "model_scope": [
+          "v6"
+        ],
+        "test_count": null,
+        "context": "Definition is an editorial adaptation; source wording is not generation verification.",
         "model_basis": "v6_targeted"
       }
     }

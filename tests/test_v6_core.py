@@ -92,7 +92,7 @@ def test_real_v6_core_with_two_distinct_publishers_if_available(tmp_path):
     with Store(tmp_path / "v6.sqlite3") as store:
         for bundle in bundles:
             store.import_bundle(bundle)
-        assert store.stats(v6_core=True)["entries"] == 64
+        assert store.stats(v6_core=True)["entries"] == 68
         assert store.stats(v6_core=True)["recipes"] == 3
         results = store.search("vocal", v6_core=True, limit=100)
         assert {hit["source"]["id"] for hit in results} == {"cookbook", "lil-synn"}
@@ -155,7 +155,7 @@ def test_real_crosschecks_resolve_without_upgrading_evidence_if_available(tmp_pa
                 pytest.skip("Optional source snapshot not fetched")
             store.import_bundle(load_curated_source(directory, ROOT / "curations" / f"{source}.json"))
         result = resolve_reviews(store, ROOT / "reviews/v6-crosschecks.json")
-        assert len(result["cases"]) == 4
+        assert len(result["cases"]) == 6
         assert any(case["assessment"] == "tension" for case in result["cases"])
         assert all(case["independent_test_confirmation"] is False for case in result["cases"])
         assert {record["record"]["id"].split(":")[0] for case in result["cases"] for record in case["records"]} == {"cookbook", "lil-synn", "band-manager"}

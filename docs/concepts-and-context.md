@@ -78,12 +78,15 @@ the CLI and can be reused by a web UI or provider adapter. `render_context()`
 produces the human-readable view. The module performs no network or AI calls.
 
 ```powershell
-.\.venv\Scripts\python.exe tools/build_concepts.py
 .\.venv\Scripts\python.exe -m prompt_reference.cli schema schemas/concepts.schema.json --contract concepts
 .\.venv\Scripts\python.exe -m prompt_reference.cli schema schemas/context.schema.json --contract context
 ```
 
-The source Bundle remains contract 1.2 and SQLite remains schema 3. ConceptCatalog
+`tools/build_concepts.py` is a historical 0.5 generator and refuses to overwrite
+the newer reviewed catalog. Use current curated JSON and strict foundation
+validation; reproduce the historical generator in a separate historical checkout.
+
+The source Bundle remains contract 1.2; current SQLite migrations reach schema 5. ConceptCatalog
 and ContextPacket are separate version-1.0 contracts. Catalog links stay in
 reviewable JSON at this scale; relational concept storage can be introduced
 behind this interface if larger relationships or editing workflows require it.
