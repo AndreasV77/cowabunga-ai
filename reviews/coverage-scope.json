@@ -531,6 +531,32 @@
       "disposition": "effect_question",
       "next_action": "Retain as optional separate listening questions; no paid generations required for this audit.",
       "evidence_limit": "Vocabulary coverage cannot demonstrate musical execution."
+    },
+    {
+      "id": "genre-lineage",
+      "dimension": "genre",
+      "need": "Explain roots, stylistic influences, subgenres and fusion relationships without forcing one parent tree.",
+      "task_ids": [
+        "cross-genre-drive",
+        "overtone-tradition"
+      ],
+      "references": [],
+      "disposition": "historical_gap",
+      "next_action": "Select one or two deep genre-history sources; retain relation type, evidence and source revision per assertion. Explore Musicmap as a reading aid and English Wikipedia/Wikidata as a reusable source family.",
+      "evidence_limit": "Existing style recipes do not establish historical relationships. Ancestry does not imply that every inherited musical trait belongs in a prompt."
+    },
+    {
+      "id": "regional-evolution",
+      "dimension": "genre",
+      "need": "Explain regional scenes, time periods and branching interpretations with uncertainty and multiple influences.",
+      "task_ids": [
+        "cross-genre-drive",
+        "priority-and-conflicts"
+      ],
+      "references": [],
+      "disposition": "historical_gap",
+      "next_action": "Retain approximate dates, place/context, references and disagreement; do not flatten scene, influence and subgenre into one relation.",
+      "evidence_limit": "Public graph edges may lack references. Two Wikimedia pages can repeat one underlying claim and are not automatically independent confirmation."
     }
   ],
   "source_decisions": [
@@ -686,6 +712,44 @@
       ],
       "license_observation": "Article copyright section states Creative Commons Attribution with author/source credit; no text, figures or audio imported.",
       "reason": "Primary acoustic/MRI study of Tuvan singing can inform the distinction between drone and focused overtones. Not a Mongolian tradition reference, not a Suno test; no cultural equivalence or V6 effect inferred. Age is acceptable for a bounded general mechanism, not model-current prompting evidence."
+    },
+    {
+      "id": "musicmap",
+      "url": "https://musicmap.info/",
+      "revision": null,
+      "checked_on": "2026-10-27",
+      "decision": "research_only",
+      "evidence_urls": [
+        "https://musicmap.info/"
+      ],
+      "license_observation": "Site disclaimer states all rights reserved and reproduction/reuse requires written creator consent. No dataset, graph, descriptions or layout imported.",
+      "reason": "Deep popular-genre genealogy candidate: site distinguishes parent, secondary influence and backlash relations with contextual history. Useful reading/comparison aid; no reuse permission established. Not a universal authority or an exhaustive global tradition map."
+    },
+    {
+      "id": "english-wikipedia-genres",
+      "url": "https://en.wikipedia.org/wiki/Music_genre",
+      "revision": null,
+      "checked_on": "2026-10-27",
+      "decision": "shortlist",
+      "evidence_urls": [
+        "https://en.wikipedia.org/w/index.php?title=Progressive_metal&oldid=1380211228",
+        "https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use"
+      ],
+      "license_observation": "Wikimedia terms specify CC BY-SA 4.0 text reuse requirements, subject to project/content exceptions and attribution. Selected revisions and adaptation notices needed before import; media licensing is separate.",
+      "reason": "English genre articles offer historical prose, origins, subgenre/fusion context and bibliography. Follow citations claim by claim; not every article or infobox relation is equally well sourced."
+    },
+    {
+      "id": "wikidata-genres",
+      "url": "https://www.wikidata.org/",
+      "revision": null,
+      "checked_on": "2026-10-27",
+      "decision": "shortlist",
+      "evidence_urls": [
+        "https://www.wikidata.org/wiki/Wikidata:Licensing",
+        "https://www.wikidata.org/w/index.php?title=Q33160145&oldid=2014406729"
+      ],
+      "license_observation": "Structured main/Property/Lexeme/EntitySchema data is CC0 per official licensing policy; other page text is not automatically CC0.",
+      "reason": "Potential structured companion for genre IDs, subclass and influence relations. Example item separates pop subclass from ambient influence, but its influence statement has zero references. Preserve each edge reference/rank/qualifier and Wikimedia dependence; not an independent corroborating source by default."
     }
   ],
   "holdouts": [
@@ -719,6 +783,16 @@
         "production-dimensions"
       ],
       "finding": "Useful instrument/countermelody definitions exist; foreground role exchange is an authored relationship, not necessarily a missing recipe."
+    },
+    {
+      "id": "genre-family-and-influence",
+      "brief": "Explain the roots of progressive metal, the role of progressive rock, and where djent fits; distinguish ancestry, stylistic influence and disputed classification.",
+      "requirement_ids": [
+        "genre-lineage",
+        "regional-evolution",
+        "genre-examples"
+      ],
+      "finding": "A style recipe and a flat genre list cannot answer the historical question. Relationships need their own evidence and must not automatically become prompt synonyms or inherited defaults."
     }
   ]
 }

@@ -24,7 +24,7 @@ class CoverageRequirement(Model):
     task_ids: list[str] = Field(min_length=1)
     references: list[CoverageLink]
     disposition: Literal["references_available", "selection_gap", "definition_gap",
-                         "authored_relation", "effect_question"]
+                         "historical_gap", "authored_relation", "effect_question"]
     next_action: str = Field(min_length=1)
     evidence_limit: str = Field(min_length=1)
 
@@ -101,6 +101,7 @@ def evaluate_coverage(store: Store, path: Path, tasks_path: Path) -> dict:
             "vocabulary_gaps": [row.id for row in review.requirements
                                 if row.disposition in ("definition_gap", "selection_gap")],
             "authored_relationships": [row.id for row in review.requirements if row.disposition == "authored_relation"],
+            "historical_gaps": [row.id for row in review.requirements if row.disposition == "historical_gap"],
             "effect_questions": [row.id for row in review.requirements if row.disposition == "effect_question"],
             "source_decisions": {row.id: row.decision for row in review.source_decisions},
             "holdouts": [row.model_dump() for row in review.holdouts],

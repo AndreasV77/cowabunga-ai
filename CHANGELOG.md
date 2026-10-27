@@ -2,6 +2,8 @@
 
 ## Unreleased — public repository preparation
 
+- Extended reusable music-reference scope to genre roots, influences, regional development and branches: two explicit historical-information gaps, a fourth holdout and three source decisions. Shortlisted Wikipedia/Wikidata as complementary material and kept Musicmap research-only under its stated reuse conditions; no genre data or graph feature imported.
+
 - Added a source-bound coverage review with 22 information needs, twelve source decisions and three original holdout briefs; identified six definition gaps and distinguished authored relationships from generation-effect questions. Recorded the owner's reusable music-theory direction and shortlisted general/specialist sources without importing them. Integrated link/provenance checks into strict validation; 160 tests passed without skips, while coverage and editorial acceptance remain open.
 
 - Closed the two known retrieval losses with explicit, directional query expansions, inspectable API/CLI search plans and literal comparison controls; closed FND-02 for the current 36-probe scope after 153 tests without skips and a successful frontend build. Added backward-readable Bundle 1.3 exclusion-field metadata, archived the prior Cookbook selection and preserved all local user data/historical snapshots during backed-up activation. Coverage and full editorial review remain open.

@@ -19,11 +19,17 @@ Do not begin Gate 2 until the blocking work has documented closure. UI polish,
 branding, app packaging and other visible enhancements wait; diagnostic changes
 needed to resolve foundation defects are permitted.
 
-The [resource coverage review](coverage-scope.md) defines 22 information needs,
-six definition gaps and a reusable general-music theory reference area. The owner
+The [resource coverage review](coverage-scope.md) defines 24 information needs,
+including six definition gaps and two historical relationship gaps. It also defines
+a reusable general-music theory reference area. The owner
 wants that area useful beyond Suno prompting, with provider-independent interfaces.
 Keep general meaning, platform application evidence and authored relationships
 separate. No candidate source is admitted merely by being shortlisted.
+
+Include [genre history and branching](genre-history-sources.md): roots, influences,
+subgenres, fusions, regional scenes and approximate eras, with claim-level evidence.
+Aim for one or two deep source families; preserve contested and multiple-parent
+relationships instead of imposing a universal tree or inheriting prompt defaults.
 
 ### Gate 2 — complete AI-assisted work, not just connectivity
 

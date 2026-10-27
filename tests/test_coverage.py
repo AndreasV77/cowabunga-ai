@@ -21,10 +21,12 @@ def test_coverage_keeps_missing_definitions_and_authored_relations_distinct(corp
     assert set(report["authored_relationships"]) == {
         "instrument-dependencies", "change-and-invariants", "small-contrast",
     }
+    assert set(report["historical_gaps"]) == {"genre-lineage", "regional-evolution"}
+    assert report["source_decisions"]["musicmap"] == "research_only"
     assert report["source_decisions"]["tonal"] == "shortlist"
     assert report["source_decisions"]["open-music-theory"] == "shortlist"
     assert corpus.active_snapshots() == before
-    assert len(report["holdouts"]) == 3
+    assert len(report["holdouts"]) == 4
 
 
 @pytest.mark.parametrize("case,expected", [

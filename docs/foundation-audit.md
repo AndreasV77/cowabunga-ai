@@ -12,8 +12,8 @@ FND-01 and FND-04 remain open.
 
 ## Owner's priority and meaning of completion
 
-The [coverage-scope review](coverage-scope.md) now records 22 requirements, twelve
-source decisions and three holdout briefs. Six general/specialist definition gaps
+The [coverage-scope review](coverage-scope.md) now records 24 requirements, fifteen
+source decisions and four holdout briefs, including genre roots and regional branching. Six general/specialist definition gaps
 remain; three relationships belong to explicit composition reasoning. Strict
 validation passed 160 tests without skips, with coverage explicitly reported open.
 The owner wants a reusable general-music theory area beyond the first Suno task.

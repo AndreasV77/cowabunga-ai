@@ -25,13 +25,14 @@ knowledge for lacking a V6 label or turn it into V6 execution evidence.
 
 ## Coverage matrix
 
-`reviews/coverage-scope.json` links **22 information requirements** to real source
-records and the eleven task briefs. It records 12 source decisions and three
+`reviews/coverage-scope.json` links **24 information requirements** to real source
+records and the eleven task briefs. It records 15 source decisions and four
 additional synthetic holdout briefs. Current dispositions are:
 
 | Disposition | Count | Meaning |
 |---|---:|---|
 | References available | 12 | Linked material contributes the specified information; full editorial review remains pending |
+| Historical relationship gap | 2 | Genre lineage and regional evolution need sourced relationships, not more flat labels |
 | Definition gap | 6 | A coherent reference definition is still missing from the admitted selection |
 | Authored relationship | 3 | Vocabulary exists in part; the arrangement relationship must be composed explicitly |
 | Effect question | 1 | Listening/generation question, not a missing word to solve by importing more tags |
@@ -56,9 +57,9 @@ stored phrases is not automatically a reason to buy or import another database.
 
 ## Holdouts and lexical observations
 
-Three new original English briefs test whether the matrix merely fits the
+The original three English briefs test whether the matrix merely fits the
 existing task set: suspended harmony over a tonic pedal, compound-meter acoustic
-lilt, and cello/lead counterline role exchange. They are coverage probes, not
+lilt, and cello/lead counterline role exchange. A fourth now probes genre ancestry, influence and classification. They are coverage probes, not
 new assistant or audio tests.
 
 On the pinned corpus, literal searches returned no entry definitions for major,
@@ -130,3 +131,17 @@ also evaluated against the isolated pinned corpus after the final specialist
 candidate was added. Reports remain ignored under `data/audits/`. The existing
 Starlette/httpx deprecation warning remains. No source activation, working-data
 change, new runtime dependency, UI work or generation experiment occurred.
+
+## Genre-history extension
+
+The owner additionally requires one or two sources with genre roots and later branches.
+[The genre-history review](genre-history-sources.md) records two historical-information
+gaps, a fourth holdout and candidate decisions. Musicmap is research-only; English
+Wikipedia/Wikidata is a shortlisted, related source family. They are not admitted
+data and do not remove the six definition gaps above. The earlier twelve-source
+validation description records the first pass before this extension.
+
+The extended fifteen-source decision registry and four holdouts passed the strict
+validation run with **160 tests, zero skips**; local report:
+`data/audits/genre-coverage-20261027.json`. The source corpus and working database
+remain unchanged.
