@@ -2,6 +2,8 @@
 
 ## Unreleased — public repository preparation
 
+- Locked the owner-approved rotated turquoise shaka identity; preserved the source PNG and added a simplified SVG shared by the favicon, workbench header and README, with visual guidance in docs/branding.md.
+
 - Added shared AGENTS.md onboarding and a CLAUDE.md import, covering architecture, evidence, license boundaries, local-data protection and validation; corrected the roadmap's outdated open-licensing status.
 
 - Named the public project Cowabunga AI, updated branding and permission links to AndreasV77/cowabunga-ai, and retained existing package/application identifiers for compatibility.

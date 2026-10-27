@@ -26,7 +26,7 @@ export default function App() {
 
   return <div className="app">
     <header className="topbar">
-      <a className="brand" href="/" aria-label="Cowabunga AI home"><span className="brand-mark" aria-hidden="true"><i/><i/><i/><i/></span>Cowabunga AI</a>
+      <a className="brand" href="/" aria-label="Cowabunga AI home"><img className="brand-mark" src="/brand/shaka-icon.svg" width="36" height="36" alt=""/>Cowabunga AI</a>
       <span className="workspace-label">Music workbench</span>
       <span className="local-status"><span aria-hidden="true"/>Local workspace</span>
     </header>

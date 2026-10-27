@@ -82,26 +82,11 @@ h4{
   color:var(--ink)
 }
 .brand-mark{
-  display:flex;
-  align-items:center;
-  gap:3px;
-  height:29px;
-  width:27px
-}
-.brand-mark i{
-  width:4px;
-  background:var(--accent);
-  height:18px;
-  border-radius:1px
-}
-.brand-mark i:nth-child(2){
-  height:29px
-}
-.brand-mark i:nth-child(3){
-  height:11px
-}
-.brand-mark i:nth-child(4){
-  height:23px
+  display:block;
+  flex-shrink:0;
+  height:36px;
+  width:36px;
+  object-fit:contain
 }
 .workspace-label{
   font-size:14px;

@@ -1,5 +1,7 @@
 # Cowabunga AI
 
+<img src="web/public/brand/shaka-icon.svg" alt="Cowabunga AI turquoise shaka" width="144" height="144"/>
+
 **Your AI music buddy — ready to be your new best friend.**
 
 An English-first, provider-independent music creation workbench built around
@@ -297,6 +299,8 @@ Technical references: [Pydantic models](https://docs.pydantic.dev/latest/concept
 Shared project instructions are in [AGENTS.md](AGENTS.md). [CLAUDE.md](CLAUDE.md)
 imports that same file for Claude Code, keeping architecture, evidence boundaries
 and working conventions in one place. Start assistants in the repository root.
+The approved logo, favicon and visual constraints are documented in
+[brand guidance](docs/branding.md).
 
 ## Code license
 
