@@ -107,3 +107,8 @@ review candidate-source decisions, resolve the two retrieval losses with negativ
 controls, and continue item-level semantic review. Retain generation questions
 separately; running this software audit does not authorize or require paid Suno
 experiments, an AI adapter or UI work.
+
+The [first selected-source gap review](foundation-gap-review.md) now distinguishes
+concrete selection candidates from unresolved composition/effect questions. Its
+25-file scope is narrower than a review of every upstream repository file; no
+candidate has been activated and the two retrieval losses remain open.
