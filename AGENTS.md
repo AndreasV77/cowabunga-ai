@@ -20,6 +20,14 @@ shared across coding assistants; put detailed design and history in `docs/`.
 
 ## Product decisions
 
+- Mandatory delivery order: **foundation acceptance → complete AI-assisted workflow
+  → user experience**. Gate 1 is currently open; `docs/foundation-audit.md` owns
+  findings and exit evidence. Do not replace unresolved basics with UI polish,
+  branding, packaging or attractive features, or begin Gate 2 before Gate 1 closes.
+- Passing the current suite is not proof of complete data/resource coverage.
+  Keep README and progress reports explicit about manual work without an AI
+  assistant. A musical brief should ultimately yield a directionally appropriate
+  prompt; no ideal/optimal tag combination or guaranteed Suno result is promised.
 - English is the default for reference vocabulary, prompts, lyrics metadata,
   contracts and product UI. Preserve upstream originals without translating them
   in place. Match the owner's language in conversation.
@@ -32,8 +40,9 @@ shared across coding assistants; put detailed design and history in `docs/`.
   data. Provider-specific hidden memory must not become their source of truth.
 - Video, LRC, alignment and audio analysis stay separate reusable modules with
   explicit interfaces. Do not grow this workbench into an unrelated tool suite.
-- The repository's 0.11 foundation is implemented; its MCP adapter and skill/plugin
-  packages are planned, not implemented. Check `docs/roadmap.md` before extending it.
+- The repository has implemented 0.11 foundation components; their readiness gate
+  is not closed. Its MCP adapter and skill/plugin packages are not implemented.
+  Check `docs/roadmap.md` before extending it.
 
 ## Architecture and module map
 

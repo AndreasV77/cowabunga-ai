@@ -2,6 +2,48 @@
 
 Decision updated 2026-10-27. This is the authoritative integration priority.
 
+## Mandatory delivery gates
+
+The owner's order is **basics first, complete assistant integration second,
+user experience third**. Visual progress is not a reason to bypass open questions.
+
+### Gate 1 — data, resource composition and controls (CURRENT: OPEN)
+
+Audit the admitted sources, editorial quality, musical coverage, evidence grades,
+reuse terms, retrieval behavior, source-change handling and reproducible real-source
+tests. Keep actual evidence separate from assumed completeness. The current
+[foundation audit](foundation-audit.md) records checks and blocking work FND-01–04.
+Do not begin Gate 2 until the blocking work has documented closure. UI polish,
+branding, app packaging and other visible enhancements wait; diagnostic changes
+needed to resolve foundation defects are permitted.
+
+### Gate 2 — complete AI-assisted work, not just connectivity
+
+After Gate 1, implement MCP/skills/host packaging as the preferred integration.
+An assistant must interpret a musical brief, retrieve relevant vocabulary, assess
+fit/conflicts, distinguish sourced material from creative proposals, and produce
+a coherent prompt that clearly expresses the user's intended direction. Preserve
+deliberate writes, exact text versions, provenance and uncertainty throughout.
+
+Acceptance requires a real assistant-driven workflow, including Tiny Bell and a
+contrasting musical brief, missing/ambiguous/contradictory reference cases, and
+save/reopen/export of the result without manual authoring outside the workflow.
+Do not hard-code the historic Tiny Bell prompt or require new paid Suno generations
+merely to demonstrate software integration. Listening outcomes and software tests
+are different evidence. An ideal tag mixture or guaranteed musical result is not
+the acceptance criterion.
+
+README and user-facing documentation must explicitly describe what users must do
+manually without an AI assistant, and which connected workflows actually exist.
+A connected endpoint alone does not satisfy this gate. The UI may remain rough.
+
+### Gate 3 — accessible, forgiving user experience
+
+After Gate 2 demonstrates the promised assistance, iterate with owner feedback
+towards a workflow usable without knowing prompting terminology. Improve defaults,
+clarification, discoverability, recovery and explanations against real tasks.
+Do not demand that novices manually reconstruct the assistant's composition logic.
+
 ## Integration decision
 
 The primary AI integration path is **MCP, skills and host-specific plugins**.
@@ -24,18 +66,18 @@ The existing FastAPI REST adapter connects our own UI and core. It is not a mode
 provider API dependency. Implementing ordinary application endpoints does not
 change the integration priority above.
 
-## Delivery order
+## Implemented components versus acceptance
 
-1. Completed foundation: provenance-preserving reference import/search, reviewed
-   context, saved drafts, listening assessments and durable free reference choices.
-2. Completed in 0.11: exact style/lyrics text, immutable versions and hashes linked
-   to saved draft/source context. This gives assistants a stable editing target.
-3. Next: first MCP adapter over the existing core, with explicit read/write boundaries
-   and tests for provenance and deliberate mutation. No provider SDK prerequisite.
-4. Initial skill workflows and host/plugin packaging; validate real assistant use.
-5. Expand exact generation-run linkage and user/project/artist context resolution,
-   based on those workflows and user reports.
-6. Optional direct model-provider adapters after the assistant integration path.
+Reference import/search, source-bound context, saved drafts, listening assessments,
+durable reference choices and immutable exact style/lyrics versions are implemented.
+That is not a closed foundation gate or an implemented prompt-composition assistant.
+The immediate work is FND-01–04, not another user-visible feature or MCP transport.
+
+After Gate 1, deliver the MCP adapter and tested skill/plugin workflows together
+as the Gate 2 user capability. Add generation-run linkage and explicit user/project/
+artist context resolution as required by that workflow, without hiding missing
+decisions in a provider's memory. Direct model-provider APIs remain optional later
+work and must not become a prerequisite for the primary integration path.
 
 No MCP server, skill package or host plugin is implemented yet. Their concrete
 protocol/host requirements will be checked against current official documentation

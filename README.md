@@ -4,6 +4,25 @@
 
 **Your AI music buddy — ready to be your new best friend.**
 
+## Current status — foundation under review
+
+Cowabunga AI currently provides a reference and authoring workbench, **not an
+automatic prompt-writing assistant**. Without a connected, capable AI assistant,
+you must interpret your musical idea, choose and combine references, and write
+the final style prompt/lyrics yourself. The current version does not implement
+that connected assistant workflow yet.
+
+The musical-direction field is saved with context; it does not currently perform
+semantic interpretation or contextual ranking. The style/lyrics editor stores
+your authored text and versions; it does not generate that text. Tiny Bell, Big
+Thunder combined reference tools with an assistant's external creative work;
+it was not generated end to end by the product.
+
+Development order is **foundation acceptance → complete assistant integration →
+user experience**. Gate 1 is still open; passing existing tests is not a claim of
+complete resource coverage. See [the foundation audit](docs/foundation-audit.md)
+and [roadmap](docs/roadmap.md) for evidence, gaps and acceptance criteria.
+
 An English-first, provider-independent music creation workbench built around
 source-backed vocabulary, deliberate prompt design and documented experience.
 Previously developed under the working name PromptReference; implementation

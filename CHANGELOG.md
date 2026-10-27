@@ -2,6 +2,9 @@
 
 ## Unreleased — public repository preparation
 
+- Made delivery gates explicit: foundation acceptance before complete AI-assisted prompting, then user experience; corrected README/AGENTS status and documented the external creative work in the Tiny Bell example.
+- Audited the four pinned collections in an isolated store (150 entries, 567 recipes), reran all 90 tests without skips, checked upstream changes and registered four foundation acceptance tasks in docs/foundation-audit.md.
+
 - Recorded the canonical sRGB brand color, Cowabunga Turquoise (#23C7C3 / RGB 35, 199, 195), and a recommended shared CSS token in docs/branding.md.
 
 - Locked the owner-approved rotated turquoise shaka identity; preserved the source PNG and added a simplified SVG shared by the favicon, workbench header and README, with visual guidance in docs/branding.md.
