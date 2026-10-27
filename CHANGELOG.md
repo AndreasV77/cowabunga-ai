@@ -2,6 +2,8 @@
 
 ## Unreleased — public repository preparation
 
+- Added strict foundation validation against tracked source hashes, isolated corpus reconstruction, full round trips and the complete suite; missing inputs, skips, deselections and xfails cannot pass. Closed FND-03 after two 99-test runs, including a clean source copy with fresh pinned downloads; coverage, retrieval and editorial gates remain open.
+
 - Made delivery gates explicit: foundation acceptance before complete AI-assisted prompting, then user experience; corrected README/AGENTS status and documented the external creative work in the Tiny Bell example.
 - Audited the four pinned collections in an isolated store (150 entries, 567 recipes), reran all 90 tests without skips, checked upstream changes and registered four foundation acceptance tasks in docs/foundation-audit.md.
 

@@ -23,6 +23,10 @@ user experience**. Gate 1 is still open; passing existing tests is not a claim o
 complete resource coverage. See [the foundation audit](docs/foundation-audit.md)
 and [roadmap](docs/roadmap.md) for evidence, gaps and acceptance criteria.
 
+For a reproducible check of every required pinned collection and the full Python
+suite without silent skips, use [strict foundation validation](docs/foundation-validation.md).
+This mechanical check does not replace the open coverage and editorial reviews.
+
 An English-first, provider-independent music creation workbench built around
 source-backed vocabulary, deliberate prompt design and documented experience.
 Previously developed under the working name PromptReference; implementation

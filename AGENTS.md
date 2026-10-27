@@ -124,6 +124,10 @@ Pop-Location
   and give pytest a fresh `--basetemp=data/test-runs/<unique-run>` path.
 - Real-source integration checks may skip without pinned downloaded snapshots;
   do not report skipped checks as passed or fetch a new revision to hide a failure.
+- For foundation acceptance, use `python -m prompt_reference.foundation --report
+  data/audits/<new-run>.json` after the pinned downloads described in
+  `docs/foundation-validation.md`. It rebuilds an isolated store and rejects
+  skipped/deselected/xfail checks; ordinary optional pytest runs are insufficient.
 - Import the pinned sources using the README before launching a fresh workbench.
   `Start-Workbench.ps1` starts/reuses the local server; `-NoBrowser` suppresses
   browser launch. A CLI alternative is `uv run --extra web prompt-ref serve`.

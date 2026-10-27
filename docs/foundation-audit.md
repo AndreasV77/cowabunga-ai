@@ -100,7 +100,8 @@ feature, not a failed claim that the present selector performs semantic matching
 
 ## Blocking work register
 
-These are concrete acceptance tasks. Do not start Gate 2 or substitute UI work
+These are concrete acceptance tasks. FND-03 is closed for the current pins;
+FND-01, FND-02 and FND-04 remain open. Do not start Gate 2 or substitute UI work
 for them. Close a row with evidence and an explicit treatment of limitations;
 adding more source records or more tests by itself is not closure.
 
@@ -108,13 +109,38 @@ adding more source records or more tests by itself is not closure.
 |---|---|---|
 | FND-01 | What resource scope and musical coverage are sufficient for the first assistant workflow? | Reviewed matrix of roles, timbre/technique, rhythm, arrangement/transitions, structure, harmony and controls; map tasks to actual source records, distinguish selection gaps from upstream gaps, and record decisions on remaining source candidates. |
 | FND-02 | Which expected queries fail through wording, scope or indexing? | A maintained task-based retrieval set with expected records and negative cases, including `gallop/galloping`, spelling variants, strict-core versus supplements, wrong-tradition distractors and empty results; document/fix each loss without falsely merging traditions or evidence grades. |
-| FND-03 | Can a fresh checkout demonstrate all required real-source checks rather than silently skip them? | Reproducible strict validation entry point or job: check required pinned inputs, rebuild the corpus, run real-source tests and fail clearly on missing inputs; retain normal optional developer tests as distinct from gate acceptance. |
+| FND-03 — CLOSED 2026-10-27 | Can a fresh checkout demonstrate all required real-source checks rather than silently skip them? | Implemented `python -m prompt_reference.foundation`; checked missing/tampered inputs, isolated full rebuild, complete exports and rejection of incomplete tests. Both existing checkout and clean source-copy runs passed 99 tests, zero skips. See evidence below and [reproduction instructions](foundation-validation.md). |
 | FND-04 | Are editorial meaning, applicable input field, model scope and conflicts sufficiently reviewed? | Item-level review of the admitted curated entries and representative recipe cases, findings register, corrections as new source/curation snapshots, and regression examples for discovered errors. Mechanical quote matching alone is insufficient. |
 
 No numeric code-coverage percentage substitutes for these targets. For admitted
 sources, the gate target is all four complete imports/round trips and all required
 real-source checks running. For the retrieval task set, every expected result or
 documented limitation needs an explicit disposition, including negative cases.
+
+### FND-03 closure evidence — 2026-10-27
+
+The strict command checks local manifests against tracked revision/license/file
+hash pins before using production importers. It reconstructs all four sources
+(150 entries, 567 recipes), verifies full source/record round trips, idempotency,
+SQLite integrity/foreign keys, 12 concepts and 4 crosschecks, then runs all tests.
+Missing inputs, skips (including module collection), deselections and xfails
+cannot produce a successful strict result. Nine new validator regression cases
+cover successful/failed/incomplete runs and protection of existing files.
+
+Both runs passed **99 tests, zero skips**:
+
+- Existing checkout: `data/audits/foundation-strict-20261027-a.json`.
+- Clean source copy without local reference data: downloaded all four exact
+  upstream revisions again, checked them against the tracked file hashes and ran
+  the same strict command: `data/audits/foundation-clean-20261027-a.json`.
+
+The second run used the existing locked Python environment with the clean copy's
+`src/` on its import path; it did not claim a fresh dependency installation or a
+second operating-system test. The existing Starlette/httpx deprecation warning
+remains. Neither run opened the owner's working database. Reports stay local and
+ignored; the implementation, negative tests and reproduction commands are tracked.
+Source changes require rerunning this check. Coverage, retrieval and semantic
+editorial acceptance remain separate open work; Gate 1 stays OPEN.
 
 ## Source-change control
 
