@@ -1,0 +1,91 @@
+{
+  "$defs": {
+    "PromptVersionSummary": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "version": {
+          "title": "Version",
+          "type": "integer"
+        },
+        "created_at": {
+          "title": "Created At",
+          "type": "string"
+        },
+        "note": {
+          "title": "Note",
+          "type": "string"
+        },
+        "style_sha256": {
+          "title": "Style Sha256",
+          "type": "string"
+        },
+        "lyrics_sha256": {
+          "title": "Lyrics Sha256",
+          "type": "string"
+        },
+        "draft_revision": {
+          "title": "Draft Revision",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "id",
+        "version",
+        "created_at",
+        "note",
+        "style_sha256",
+        "lyrics_sha256",
+        "draft_revision"
+      ],
+      "title": "PromptVersionSummary",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0",
+      "default": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "draft_id": {
+      "title": "Draft Id",
+      "type": "string"
+    },
+    "head_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Head Id"
+    },
+    "items": {
+      "items": {
+        "$ref": "#/$defs/PromptVersionSummary"
+      },
+      "title": "Items",
+      "type": "array"
+    },
+    "has_more": {
+      "title": "Has More",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "draft_id",
+    "head_id",
+    "items",
+    "has_more"
+  ],
+  "title": "PromptVersionPage",
+  "type": "object"
+}

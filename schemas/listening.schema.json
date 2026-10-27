@@ -1,0 +1,264 @@
+{
+  "$defs": {
+    "GenerationContext": {
+      "additionalProperties": false,
+      "properties": {
+        "provider": {
+          "default": "",
+          "maxLength": 100,
+          "title": "Provider",
+          "type": "string"
+        },
+        "model": {
+          "default": "",
+          "maxLength": 100,
+          "title": "Model",
+          "type": "string"
+        },
+        "settings": {
+          "additionalProperties": {
+            "$ref": "#/$defs/JsonValue"
+          },
+          "title": "Settings",
+          "type": "object"
+        },
+        "song_reference": {
+          "default": "",
+          "maxLength": 2000,
+          "title": "Song Reference",
+          "type": "string"
+        },
+        "input_note": {
+          "default": "",
+          "maxLength": 4000,
+          "title": "Input Note",
+          "type": "string"
+        },
+        "style_sha256": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Style Sha256"
+        },
+        "lyrics_sha256": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Lyrics Sha256"
+        }
+      },
+      "title": "GenerationContext",
+      "type": "object"
+    },
+    "JsonValue": {},
+    "ListeningValue": {
+      "additionalProperties": false,
+      "properties": {
+        "immediate_replay": {
+          "anyOf": [
+            {
+              "maximum": 2,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Immediate Replay"
+        },
+        "later_replay": {
+          "anyOf": [
+            {
+              "maximum": 2,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Later Replay"
+        },
+        "later_listening_context": {
+          "default": "",
+          "maxLength": 2000,
+          "title": "Later Listening Context",
+          "type": "string"
+        }
+      },
+      "title": "ListeningValue",
+      "type": "object"
+    },
+    "RatedObservation": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+          "title": "Id",
+          "type": "string"
+        },
+        "label": {
+          "maxLength": 200,
+          "minLength": 1,
+          "title": "Label",
+          "type": "string"
+        },
+        "score": {
+          "anyOf": [
+            {
+              "maximum": 2,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Score"
+        },
+        "note": {
+          "default": "",
+          "maxLength": 4000,
+          "title": "Note",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "label"
+      ],
+      "title": "RatedObservation",
+      "type": "object"
+    },
+    "ReportedProblems": {
+      "additionalProperties": false,
+      "properties": {
+        "sung_instructions": {
+          "default": "unknown",
+          "enum": [
+            "unknown",
+            "none",
+            "present"
+          ],
+          "title": "Sung Instructions",
+          "type": "string"
+        },
+        "omitted_lyrics": {
+          "default": "unknown",
+          "enum": [
+            "unknown",
+            "none",
+            "present"
+          ],
+          "title": "Omitted Lyrics",
+          "type": "string"
+        },
+        "merged_voices": {
+          "default": "unknown",
+          "enum": [
+            "unknown",
+            "none",
+            "present"
+          ],
+          "title": "Merged Voices",
+          "type": "string"
+        },
+        "note": {
+          "default": "",
+          "maxLength": 4000,
+          "title": "Note",
+          "type": "string"
+        }
+      },
+      "title": "ReportedProblems",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0",
+      "default": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "evidence_source": {
+      "const": "user_report",
+      "default": "user_report",
+      "title": "Evidence Source",
+      "type": "string"
+    },
+    "independently_verified": {
+      "const": false,
+      "default": false,
+      "title": "Independently Verified",
+      "type": "boolean"
+    },
+    "generation": {
+      "$ref": "#/$defs/GenerationContext"
+    },
+    "musical_execution": {
+      "items": {
+        "$ref": "#/$defs/RatedObservation"
+      },
+      "maxItems": 30,
+      "title": "Musical Execution",
+      "type": "array"
+    },
+    "sound_quality": {
+      "items": {
+        "$ref": "#/$defs/RatedObservation"
+      },
+      "maxItems": 30,
+      "title": "Sound Quality",
+      "type": "array"
+    },
+    "listening_value": {
+      "$ref": "#/$defs/ListeningValue"
+    },
+    "problems": {
+      "$ref": "#/$defs/ReportedProblems"
+    },
+    "interpretation": {
+      "default": "",
+      "maxLength": 8000,
+      "title": "Interpretation",
+      "type": "string"
+    },
+    "raw_report": {
+      "anyOf": [
+        {
+          "additionalProperties": {
+            "$ref": "#/$defs/JsonValue"
+          },
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Raw Report"
+    }
+  },
+  "title": "ListeningAssessment",
+  "type": "object"
+}

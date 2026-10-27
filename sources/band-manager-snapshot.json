@@ -1,0 +1,20 @@
+{
+  "id": "band-manager",
+  "repository": "https://github.com/zarlor/suno-band-manager",
+  "revision": "73c52379833af51e9d3ce7731746d3bfff3f5266",
+  "license": "MIT",
+  "retrieved_at": "2026-10-26T06:01:03.041554+00:00",
+  "files": {
+    "LICENSE": "1126322e2cc8d165adc4c792eeb195717de2bcc7b39be1ce77959d78e87ef685",
+    "README.md": "0400a40f5d32d8b92e3e577156141b069912a9e4b339a33c9fa3a724cc9a8027",
+    "src/skills/suno-lyric-transformer/references/metatag-reference.md": "95458c87932c93cb5f948d658245beac5b501f8f1074980921cb30977f441a40",
+    "src/skills/suno-style-prompt-builder/references/v6-build-core.md": "9d10e23cdb64cbddda72ee2c21354f0afe6b0891ddd3b4cf35bad2d20234b0db",
+    "src/skills/suno-style-prompt-builder/references/safety-tables.md": "786e6804dbd9f94e3c8540070a3de2f3c231939b087e6c2a70ef2885b24c324d",
+    "src/skills/suno-style-prompt-builder/references/research-sources.md": "54405afbbf0fb5bb99624bd1adeccb84d3a1ddf3da44500f25f697c27a840662"
+  },
+  "attribution": null,
+  "license_url": null,
+  "license_text": null,
+  "changes": null,
+  "curation_sha256": null
+}

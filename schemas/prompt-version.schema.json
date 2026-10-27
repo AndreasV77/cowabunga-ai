@@ -1,0 +1,191 @@
+{
+  "$defs": {
+    "Draft": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "namespace": {
+          "maxLength": 80,
+          "minLength": 1,
+          "title": "Namespace",
+          "type": "string"
+        },
+        "title": {
+          "maxLength": 120,
+          "minLength": 1,
+          "title": "Title",
+          "type": "string"
+        },
+        "revision": {
+          "minimum": 1,
+          "title": "Revision",
+          "type": "integer"
+        },
+        "created_at": {
+          "title": "Created At",
+          "type": "string"
+        },
+        "updated_at": {
+          "title": "Updated At",
+          "type": "string"
+        },
+        "form": {
+          "additionalProperties": {
+            "$ref": "#/$defs/JsonValue"
+          },
+          "title": "Form",
+          "type": "object"
+        },
+        "selection": {
+          "anyOf": [
+            {
+              "additionalProperties": {
+                "$ref": "#/$defs/JsonValue"
+              },
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Selection"
+        }
+      },
+      "required": [
+        "id",
+        "namespace",
+        "title",
+        "revision",
+        "created_at",
+        "updated_at",
+        "form"
+      ],
+      "title": "Draft",
+      "type": "object"
+    },
+    "JsonValue": {},
+    "PromptText": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "language": {
+          "const": "en",
+          "default": "en",
+          "title": "Language",
+          "type": "string"
+        },
+        "style_prompt": {
+          "default": "",
+          "maxLength": 20000,
+          "title": "Style Prompt",
+          "type": "string"
+        },
+        "lyrics": {
+          "default": "",
+          "maxLength": 100000,
+          "title": "Lyrics",
+          "type": "string"
+        }
+      },
+      "title": "PromptText",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0",
+      "default": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "draft_id": {
+      "title": "Draft Id",
+      "type": "string"
+    },
+    "version": {
+      "minimum": 1,
+      "title": "Version",
+      "type": "integer"
+    },
+    "previous_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Previous Id"
+    },
+    "based_on_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Based On Id"
+    },
+    "created_at": {
+      "title": "Created At",
+      "type": "string"
+    },
+    "note": {
+      "default": "",
+      "maxLength": 2000,
+      "title": "Note",
+      "type": "string"
+    },
+    "content": {
+      "$ref": "#/$defs/PromptText"
+    },
+    "style_sha256": {
+      "title": "Style Sha256",
+      "type": "string"
+    },
+    "lyrics_sha256": {
+      "title": "Lyrics Sha256",
+      "type": "string"
+    },
+    "draft_snapshot": {
+      "$ref": "#/$defs/Draft"
+    }
+  },
+  "required": [
+    "id",
+    "draft_id",
+    "version",
+    "previous_id",
+    "based_on_id",
+    "created_at",
+    "content",
+    "style_sha256",
+    "lyrics_sha256",
+    "draft_snapshot"
+  ],
+  "title": "PromptVersion",
+  "type": "object"
+}

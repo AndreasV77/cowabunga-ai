@@ -1,0 +1,20 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.egg-info/
+data/
+dist/
+node_modules/
+
+
+# Local authoring, listening evidence and machine-specific validation
+/challenges/
+/VALIDATION.md
+
+# Local configuration, credentials and runtime outputs
+.env
+.env.*
+!.env.example
+*.sqlite3
+*.sqlite3-*
+*.log

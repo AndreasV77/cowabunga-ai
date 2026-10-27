@@ -1,0 +1,128 @@
+{
+  "$defs": {
+    "Concept": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+          "title": "Id",
+          "type": "string"
+        },
+        "label": {
+          "title": "Label",
+          "type": "string"
+        },
+        "aliases": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Aliases",
+          "type": "array"
+        },
+        "description": {
+          "title": "Description",
+          "type": "string"
+        },
+        "links": {
+          "items": {
+            "$ref": "#/$defs/ConceptLink"
+          },
+          "minItems": 1,
+          "title": "Links",
+          "type": "array"
+        },
+        "crosscheck_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Crosscheck Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "label",
+        "description",
+        "links"
+      ],
+      "title": "Concept",
+      "type": "object"
+    },
+    "ConceptLink": {
+      "additionalProperties": false,
+      "properties": {
+        "record_id": {
+          "title": "Record Id",
+          "type": "string"
+        },
+        "relation": {
+          "enum": [
+            "wording",
+            "dimension",
+            "example",
+            "alternative"
+          ],
+          "title": "Relation",
+          "type": "string"
+        },
+        "note": {
+          "minLength": 1,
+          "title": "Note",
+          "type": "string"
+        }
+      },
+      "required": [
+        "record_id",
+        "relation",
+        "note"
+      ],
+      "title": "ConceptLink",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0",
+      "default": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "version": {
+      "title": "Version",
+      "type": "string"
+    },
+    "reviewed_on": {
+      "title": "Reviewed On",
+      "type": "string"
+    },
+    "snapshots": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "title": "Snapshots",
+      "type": "object"
+    },
+    "reviews_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Reviews Sha256",
+      "type": "string"
+    },
+    "concepts": {
+      "items": {
+        "$ref": "#/$defs/Concept"
+      },
+      "title": "Concepts",
+      "type": "array"
+    }
+  },
+  "required": [
+    "version",
+    "reviewed_on",
+    "snapshots",
+    "reviews_sha256",
+    "concepts"
+  ],
+  "title": "ConceptCatalog",
+  "type": "object"
+}

@@ -1,0 +1,1530 @@
+{
+  "source_id": "band-manager",
+  "revision": "73c52379833af51e9d3ce7731746d3bfff3f5266",
+  "changes": "Selected source excerpts; added English explanatory adaptations, categories and explicit evidence limits; normalized recipe section order. No independent musical-effect verification.",
+  "entries": [
+    {
+      "id": "pre-chorus",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "| `[Pre-Chorus]` | Transitional build before chorus | Short — 2-4 lines, creates tension/lift toward chorus |",
+      "text": "[Pre-Chorus]",
+      "meaning": "A short transition that builds tension or lift before the chorus.",
+      "category": "structure",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "unmarked legacy tag catalogue",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "Tag usage is attributed to the publisher. This table does not establish a current-model test or sample size."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "post-chorus",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "| `[Post-Chorus]` | Section immediately after chorus | Extends chorus energy or provides cooldown. Genre-dependent: very effective in pop/EDM, may blend with chorus in rock/metal |",
+      "text": "[Post-Chorus]",
+      "meaning": "A section following the chorus that extends or relaxes its energy.",
+      "category": "structure",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "unmarked legacy tag catalogue",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "Tag usage is attributed to the publisher. This table does not establish a current-model test or sample size."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "bridge",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "| `[Bridge]` | Contrasting section — new harmonic content | Introduces NEW chords, melody, perspective. A bridge gives you something the song hasn't heard yet. Usually appears once |",
+      "text": "[Bridge]",
+      "meaning": "A contrasting section offering new harmonic or melodic material.",
+      "category": "structure",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "unmarked legacy tag catalogue",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "Tag usage is attributed to the publisher. This table does not establish a current-model test or sample size."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "instrumental-break",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "| `[Instrumental Break]` | Explicit instrumental mid-song break | Clearer intent than `[Break]` alone (HIGH) |",
+      "text": "[Instrumental Break]",
+      "meaning": "A mid-song passage intended to foreground instruments rather than sung lyrics.",
+      "category": "structure",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "HIGH (publisher grading)",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "Publisher grades agreement between sources as HIGH; model/version and test count remain unspecified."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "drum-break",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "| `[Drum Break]` | Percussion-only break section | Strips everything except drums (HIGH) |",
+      "text": "[Drum Break]",
+      "meaning": "A passage focused on drums, described here as a percussion-only break.",
+      "category": "structure",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "HIGH (publisher grading)",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "Publisher grades agreement between sources as HIGH; model/version and test count remain unspecified."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "interlude",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "| `[Interlude]` | Musical bridge between sections | 8-20 sec |",
+      "text": "[Interlude]",
+      "meaning": "A transitional instrumental passage between larger sections.",
+      "category": "structure",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "unmarked legacy tag catalogue",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "Tag usage is attributed to the publisher. This table does not establish a current-model test or sample size."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "riff-under-verse",
+      "kind": "phrase",
+      "path": "src/skills/suno-style-prompt-builder/references/v6-build-core.md",
+      "excerpt": "2. **Each instrument gets a job per section, in verbs:** \"the intro riff continues under the verse vocal, palm-muted and lower\", not \"big riffs\". A section the prompt skips is one where the instrument drops out (COMMUNITY + VENDOR).",
+      "text": "the intro riff continues under the verse vocal, palm-muted and lower",
+      "meaning": "Keep the opening guitar motif present underneath the verse singer, with muted articulation and reduced level.",
+      "category": "arrangement",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "COMMUNITY + VENDOR",
+        "independently_verified": false,
+        "model_scope": [
+          "v6",
+          "v6-wild",
+          "v6-mini"
+        ],
+        "test_count": null,
+        "context": "Wording and claimed effect belong to the source; no independent listening verification was performed."
+      },
+      "input_field": "style"
+    },
+    {
+      "id": "vocal-placement",
+      "kind": "phrase",
+      "path": "src/skills/suno-style-prompt-builder/references/v6-build-core.md",
+      "excerpt": "3. **Place the vocal instead of praising it:** \"vocal in front of the band, close-mic'd and dry, the loudest element; instruments sit behind and below the voice\"; thinning the arrangement under the verse is the most-reported fix for a buried vocal (VENDOR + COMMUNITY).",
+      "text": "vocal in front of the band, close-mic'd and dry, the loudest element; instruments sit behind and below the voice",
+      "meaning": "Specify foreground vocal placement and a supporting instrumental balance.",
+      "category": "production",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "VENDOR + COMMUNITY",
+        "independently_verified": false,
+        "model_scope": [
+          "v6",
+          "v6-wild",
+          "v6-mini"
+        ],
+        "test_count": null,
+        "context": "Wording and claimed effect belong to the source; no independent listening verification was performed."
+      },
+      "input_field": "style"
+    },
+    {
+      "id": "intro-length",
+      "kind": "phrase",
+      "path": "src/skills/suno-style-prompt-builder/references/v6-build-core.md",
+      "excerpt": "4. **State both edges, with lengths:** \"4-bar guitar intro, instrumental only\"; \"ends on a hard stop after the final chorus\". Unstated, the intro comes back as humming and the ending vamps or cuts off mid-lyric (VENDOR + COMMUNITY).",
+      "text": "4-bar guitar intro, instrumental only",
+      "meaning": "Request an opening guitar passage of four bars without a sung part; execution is not guaranteed.",
+      "category": "structure",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "VENDOR + COMMUNITY",
+        "independently_verified": false,
+        "model_scope": [
+          "v6",
+          "v6-wild",
+          "v6-mini"
+        ],
+        "test_count": null,
+        "context": "Wording and claimed effect belong to the source; no independent listening verification was performed."
+      },
+      "input_field": "style"
+    },
+    {
+      "id": "heavy-backbeat",
+      "kind": "phrase",
+      "path": "src/skills/suno-style-prompt-builder/references/v6-build-core.md",
+      "excerpt": "**Tempo as feel.** State one BPM for the whole song and pair every number with feel words (\"72 BPM feel with a slow heavy backbeat\"), since a bare number is often ignored (COMMUNITY). Carry section contrast as half-time or double-time drum feel and sparse or dense arrangement over that pulse, in the same scene-naming phrases in the style prompt and the lyric section cues (VENDOR + COMMUNITY; LOCAL: heard as \"a LOT better\"). A feel switch lands sometimes, not reliably.",
+      "text": "72 BPM feel with a slow heavy backbeat",
+      "meaning": "Pair a tempo target with the felt placement and weight of the drum accents.",
+      "category": "rhythm",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "COMMUNITY",
+        "independently_verified": false,
+        "model_scope": [
+          "v6",
+          "v6-wild",
+          "v6-mini"
+        ],
+        "test_count": null,
+        "context": "Wording and claimed effect belong to the source; no independent listening verification was performed."
+      },
+      "input_field": "style"
+    },
+    {
+      "id": "guitar-vocal-space",
+      "kind": "phrase",
+      "path": "src/skills/suno-style-prompt-builder/references/v6-build-core.md",
+      "excerpt": "3. **A band-side vocal-space clause** when the vocal must get in front: \"rhythm guitars leave midrange space for the lead vocal\" (LOCAL: no phrase alone has lifted a vocal; the arrangement decides).",
+      "text": "rhythm guitars leave midrange space for the lead vocal",
+      "meaning": "Ask the rhythm-guitar arrangement to leave room for the voice in the midrange.",
+      "category": "arrangement",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "LOCAL; no phrase alone lifted a vocal",
+        "independently_verified": false,
+        "model_scope": [
+          "v6",
+          "v6-wild",
+          "v6-mini"
+        ],
+        "test_count": null,
+        "context": "Wording and claimed effect belong to the source; no independent listening verification was performed."
+      },
+      "input_field": "style"
+    },
+    {
+      "id": "off-home-chord",
+      "kind": "phrase",
+      "path": "src/skills/suno-style-prompt-builder/references/v6-build-core.md",
+      "excerpt": "9. **Carry \"unresolved\" as harmony** (\"ends off the home chord\"), not as a mood word: a mood tag on a bare verse made it the loudest section (LOCAL, n=1).",
+      "text": "ends off the home chord",
+      "meaning": "Request a harmonically unresolved ending rather than an emotional adjective.",
+      "category": "harmony",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "LOCAL, n=1",
+        "independently_verified": false,
+        "model_scope": [
+          "v6",
+          "v6-wild",
+          "v6-mini"
+        ],
+        "test_count": 1,
+        "context": "Wording and claimed effect belong to the source; no independent listening verification was performed."
+      },
+      "input_field": "style"
+    },
+    {
+      "id": "refrain-legacy-limit",
+      "kind": "guidance",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "**Reserve `[Chorus]` for sections that are allowed to peak.** In a heavy-lane song where the loud material is in the verses, tagging any section `[Chorus]` reintroduces the problem you just solved. (Not yet re-tested on v6.)",
+      "text": "Not yet re-tested on v6.",
+      "meaning": "The publisher's quiet-refrain workaround for heavy genres predates v6 and is explicitly not re-tested on v6.",
+      "category": "structure",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "LOCAL-CONFIRMED, 2026-07; not re-tested on v6",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "Applies to the complete refrain/role/exclude workaround, not to every use of Refrain."
+      },
+      "input_field": null
+    },
+    {
+      "id": "line-end-comma-counterevidence",
+      "kind": "guidance",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "- **Mid-line commas make the singer stop** (ANECDOTAL-controlled). A reported stutter from end-of-line commas never showed up in production testing (2026-09-15, many v6 takes with line-ending commas), so leave the writer's line-end commas alone.",
+      "text": "leave the writer's line-end commas alone",
+      "meaning": "The publisher reports that line-end comma stuttering did not reproduce in its own v6 takes; preserve the distinction from mid-line commas.",
+      "category": "vocals",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "ANECDOTAL-controlled + production counter-evidence",
+        "independently_verified": false,
+        "model_scope": [
+          "v6",
+          "v6-wild",
+          "v6-mini"
+        ],
+        "test_count": null,
+        "context": "No exact production test count is supplied in this passage."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "room-sound",
+      "kind": "phrase",
+      "path": "src/skills/suno-style-prompt-builder/references/safety-tables.md",
+      "excerpt": "**Say the quality, not the venue.** `unpolished room sound`, `natural room ambience`, `single-take band performance`, `minimal overdubs`, `dry close-mic drums with room bleed` all get the intended texture without the word.",
+      "text": "natural room ambience",
+      "meaning": "Describe the acoustic impression of a room without necessarily requesting an audience recording.",
+      "category": "production",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "LOCAL-CONFIRMED (section heading); model unspecified",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "The surrounding claim that every live-word form causes crowds is a publisher heuristic, not a general exclusion rule."
+      },
+      "input_field": "style"
+    },
+    {
+      "id": "rhodes",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "`[Piano]`, `[Electric Piano]`, `[Rhodes]`, `[Wurlitzer]`, `[Organ]`, `[Hammond Organ]`, `[Harpsichord]`, `[Clavinet]`, `[Mellotron]`",
+      "text": "[Rhodes]",
+      "meaning": "A tine-based electric-piano timbre, from mellow rounded notes to a bell-like attack.",
+      "category": "instrumentation",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "legacy catalogue; publisher HIGH instrument-tag grading",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "Musical explanation is an editorial adaptation. Listing a token does not establish reliable current-model instrument control; no model version or test count is inferred."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "hammond",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "`[Piano]`, `[Electric Piano]`, `[Rhodes]`, `[Wurlitzer]`, `[Organ]`, `[Hammond Organ]`, `[Harpsichord]`, `[Clavinet]`, `[Mellotron]`",
+      "text": "[Hammond Organ]",
+      "meaning": "A tonewheel-organ sound associated with drawbar registration and sustained tones.",
+      "category": "instrumentation",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "legacy catalogue; publisher HIGH instrument-tag grading",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "Musical explanation is an editorial adaptation. Listing a token does not establish reliable current-model instrument control; no model version or test count is inferred."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "clavinet",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "`[Piano]`, `[Electric Piano]`, `[Rhodes]`, `[Wurlitzer]`, `[Organ]`, `[Hammond Organ]`, `[Harpsichord]`, `[Clavinet]`, `[Mellotron]`",
+      "text": "[Clavinet]",
+      "meaning": "A plucked-string electric-keyboard timbre with a sharp, percussive attack.",
+      "category": "instrumentation",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "legacy catalogue; publisher HIGH instrument-tag grading",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "Musical explanation is an editorial adaptation. Listing a token does not establish reliable current-model instrument control; no model version or test count is inferred."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "synth-pad",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "`[Synth]`, `[Analog Synth]`, `[Moog Synth]`, `[Synth Pad]`, `[Lead Synth]`, `[Synth Stabs]`, `[Pad]`, `[Pluck Synth]`, `[Arpeggiated Synth]`, `[Synth Bass]`, `[Acid Bass]`, `[Supersaw]`, `[Wobbly Bass]`",
+      "text": "[Synth Pad]",
+      "meaning": "A sustained synthesizer layer supporting harmony or atmosphere.",
+      "category": "instrumentation",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "legacy catalogue; publisher HIGH instrument-tag grading",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "Musical explanation is an editorial adaptation. Listing a token does not establish reliable current-model instrument control; no model version or test count is inferred."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "lead-synth",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "`[Synth]`, `[Analog Synth]`, `[Moog Synth]`, `[Synth Pad]`, `[Lead Synth]`, `[Synth Stabs]`, `[Pad]`, `[Pluck Synth]`, `[Arpeggiated Synth]`, `[Synth Bass]`, `[Acid Bass]`, `[Supersaw]`, `[Wobbly Bass]`",
+      "text": "[Lead Synth]",
+      "meaning": "A synthesizer voice carrying a foreground melody or hook.",
+      "category": "instrumentation",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "legacy catalogue; publisher HIGH instrument-tag grading",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "Musical explanation is an editorial adaptation. Listing a token does not establish reliable current-model instrument control; no model version or test count is inferred."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "synth-stabs",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "`[Synth]`, `[Analog Synth]`, `[Moog Synth]`, `[Synth Pad]`, `[Lead Synth]`, `[Synth Stabs]`, `[Pad]`, `[Pluck Synth]`, `[Arpeggiated Synth]`, `[Synth Bass]`, `[Acid Bass]`, `[Supersaw]`, `[Wobbly Bass]`",
+      "text": "[Synth Stabs]",
+      "meaning": "Short accented synth notes or chords used as rhythmic punctuation.",
+      "category": "instrumentation",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "legacy catalogue; publisher HIGH instrument-tag grading",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "Musical explanation is an editorial adaptation. Listing a token does not establish reliable current-model instrument control; no model version or test count is inferred."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "arpeggiated-synth",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "`[Synth]`, `[Analog Synth]`, `[Moog Synth]`, `[Synth Pad]`, `[Lead Synth]`, `[Synth Stabs]`, `[Pad]`, `[Pluck Synth]`, `[Arpeggiated Synth]`, `[Synth Bass]`, `[Acid Bass]`, `[Supersaw]`, `[Wobbly Bass]`",
+      "text": "[Arpeggiated Synth]",
+      "meaning": "A synth pattern that presents chord tones successively rather than simultaneously.",
+      "category": "instrumentation",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "legacy catalogue; publisher HIGH instrument-tag grading",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "Musical explanation is an editorial adaptation. Listing a token does not establish reliable current-model instrument control; no model version or test count is inferred."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "acid-bass",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "`[Synth]`, `[Analog Synth]`, `[Moog Synth]`, `[Synth Pad]`, `[Lead Synth]`, `[Synth Stabs]`, `[Pad]`, `[Pluck Synth]`, `[Arpeggiated Synth]`, `[Synth Bass]`, `[Acid Bass]`, `[Supersaw]`, `[Wobbly Bass]`",
+      "text": "[Acid Bass]",
+      "meaning": "A resonant, squelching synth-bass character commonly associated with acid dance styles.",
+      "category": "instrumentation",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "legacy catalogue; publisher HIGH instrument-tag grading",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "Musical explanation is an editorial adaptation. Listing a token does not establish reliable current-model instrument control; no model version or test count is inferred."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "supersaw",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "`[Synth]`, `[Analog Synth]`, `[Moog Synth]`, `[Synth Pad]`, `[Lead Synth]`, `[Synth Stabs]`, `[Pad]`, `[Pluck Synth]`, `[Arpeggiated Synth]`, `[Synth Bass]`, `[Acid Bass]`, `[Supersaw]`, `[Wobbly Bass]`",
+      "text": "[Supersaw]",
+      "meaning": "A thick synthesizer texture built from multiple detuned sawtooth voices.",
+      "category": "instrumentation",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "legacy catalogue; publisher HIGH instrument-tag grading",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "Musical explanation is an editorial adaptation. Listing a token does not establish reliable current-model instrument control; no model version or test count is inferred."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "slide-guitar",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "`[Acoustic Guitar]`, `[Electric Guitar]`, `[Distorted Guitar]`, `[Clean Guitar]`, `[Jangly Guitar]`, `[Fingerpicked Guitar]`, `[Slide Guitar]`, `[12-String Guitar]`, `[Classical Guitar]`, `[Bass Guitar]`, `[Slap Bass]`, `[Upright Bass]`, `[Fretless Bass]`, `[Violin]`, `[Viola]`, `[Strings]`, `[String Quartet]`, `[String Section]`, `[Cello]`, `[Double Bass]`, `[Pizzicato]`, `[Harp]`, `[Ukulele]`, `[Banjo]`, `[Mandolin]`, `[Sitar]`",
+      "text": "[Slide Guitar]",
+      "meaning": "Guitar played with a slide, allowing continuous pitch glides between notes.",
+      "category": "instrumentation",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "legacy catalogue; publisher HIGH instrument-tag grading",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "Musical explanation is an editorial adaptation. Listing a token does not establish reliable current-model instrument control; no model version or test count is inferred."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "twelve-string",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "`[Acoustic Guitar]`, `[Electric Guitar]`, `[Distorted Guitar]`, `[Clean Guitar]`, `[Jangly Guitar]`, `[Fingerpicked Guitar]`, `[Slide Guitar]`, `[12-String Guitar]`, `[Classical Guitar]`, `[Bass Guitar]`, `[Slap Bass]`, `[Upright Bass]`, `[Fretless Bass]`, `[Violin]`, `[Viola]`, `[Strings]`, `[String Quartet]`, `[String Section]`, `[Cello]`, `[Double Bass]`, `[Pizzicato]`, `[Harp]`, `[Ukulele]`, `[Banjo]`, `[Mandolin]`, `[Sitar]`",
+      "text": "[12-String Guitar]",
+      "meaning": "A guitar with paired string courses producing a bright, doubled shimmer.",
+      "category": "instrumentation",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "legacy catalogue; publisher HIGH instrument-tag grading",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "Musical explanation is an editorial adaptation. Listing a token does not establish reliable current-model instrument control; no model version or test count is inferred."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "slap-bass",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "`[Acoustic Guitar]`, `[Electric Guitar]`, `[Distorted Guitar]`, `[Clean Guitar]`, `[Jangly Guitar]`, `[Fingerpicked Guitar]`, `[Slide Guitar]`, `[12-String Guitar]`, `[Classical Guitar]`, `[Bass Guitar]`, `[Slap Bass]`, `[Upright Bass]`, `[Fretless Bass]`, `[Violin]`, `[Viola]`, `[Strings]`, `[String Quartet]`, `[String Section]`, `[Cello]`, `[Double Bass]`, `[Pizzicato]`, `[Harp]`, `[Ukulele]`, `[Banjo]`, `[Mandolin]`, `[Sitar]`",
+      "text": "[Slap Bass]",
+      "meaning": "A percussive bass technique using thumb strikes and often plucked or popped strings.",
+      "category": "instrumentation",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "legacy catalogue; publisher HIGH instrument-tag grading",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "Musical explanation is an editorial adaptation. Listing a token does not establish reliable current-model instrument control; no model version or test count is inferred."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "fretless-bass",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "`[Acoustic Guitar]`, `[Electric Guitar]`, `[Distorted Guitar]`, `[Clean Guitar]`, `[Jangly Guitar]`, `[Fingerpicked Guitar]`, `[Slide Guitar]`, `[12-String Guitar]`, `[Classical Guitar]`, `[Bass Guitar]`, `[Slap Bass]`, `[Upright Bass]`, `[Fretless Bass]`, `[Violin]`, `[Viola]`, `[Strings]`, `[String Quartet]`, `[String Section]`, `[Cello]`, `[Double Bass]`, `[Pizzicato]`, `[Harp]`, `[Ukulele]`, `[Banjo]`, `[Mandolin]`, `[Sitar]`",
+      "text": "[Fretless Bass]",
+      "meaning": "Bass played without frets, allowing continuous slides and flexible intonation.",
+      "category": "instrumentation",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "legacy catalogue; publisher HIGH instrument-tag grading",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "Musical explanation is an editorial adaptation. Listing a token does not establish reliable current-model instrument control; no model version or test count is inferred."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "string-quartet",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "`[Acoustic Guitar]`, `[Electric Guitar]`, `[Distorted Guitar]`, `[Clean Guitar]`, `[Jangly Guitar]`, `[Fingerpicked Guitar]`, `[Slide Guitar]`, `[12-String Guitar]`, `[Classical Guitar]`, `[Bass Guitar]`, `[Slap Bass]`, `[Upright Bass]`, `[Fretless Bass]`, `[Violin]`, `[Viola]`, `[Strings]`, `[String Quartet]`, `[String Section]`, `[Cello]`, `[Double Bass]`, `[Pizzicato]`, `[Harp]`, `[Ukulele]`, `[Banjo]`, `[Mandolin]`, `[Sitar]`",
+      "text": "[String Quartet]",
+      "meaning": "A four-part bowed-string ensemble, conventionally two violins, viola and cello.",
+      "category": "instrumentation",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "legacy catalogue; publisher HIGH instrument-tag grading",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "Musical explanation is an editorial adaptation. Listing a token does not establish reliable current-model instrument control; no model version or test count is inferred."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "pizzicato",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "`[Acoustic Guitar]`, `[Electric Guitar]`, `[Distorted Guitar]`, `[Clean Guitar]`, `[Jangly Guitar]`, `[Fingerpicked Guitar]`, `[Slide Guitar]`, `[12-String Guitar]`, `[Classical Guitar]`, `[Bass Guitar]`, `[Slap Bass]`, `[Upright Bass]`, `[Fretless Bass]`, `[Violin]`, `[Viola]`, `[Strings]`, `[String Quartet]`, `[String Section]`, `[Cello]`, `[Double Bass]`, `[Pizzicato]`, `[Harp]`, `[Ukulele]`, `[Banjo]`, `[Mandolin]`, `[Sitar]`",
+      "text": "[Pizzicato]",
+      "meaning": "Plucked articulation on a string instrument, especially in contrast to bowed playing.",
+      "category": "instrumentation",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "legacy catalogue; publisher HIGH instrument-tag grading",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "Musical explanation is an editorial adaptation. Listing a token does not establish reliable current-model instrument control; no model version or test count is inferred."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "cello",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "`[Acoustic Guitar]`, `[Electric Guitar]`, `[Distorted Guitar]`, `[Clean Guitar]`, `[Jangly Guitar]`, `[Fingerpicked Guitar]`, `[Slide Guitar]`, `[12-String Guitar]`, `[Classical Guitar]`, `[Bass Guitar]`, `[Slap Bass]`, `[Upright Bass]`, `[Fretless Bass]`, `[Violin]`, `[Viola]`, `[Strings]`, `[String Quartet]`, `[String Section]`, `[Cello]`, `[Double Bass]`, `[Pizzicato]`, `[Harp]`, `[Ukulele]`, `[Banjo]`, `[Mandolin]`, `[Sitar]`",
+      "text": "[Cello]",
+      "meaning": "A bowed low-to-middle-register string instrument that can support bass, harmony or a melody.",
+      "category": "instrumentation",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "legacy catalogue; publisher HIGH instrument-tag grading",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "Musical explanation is an editorial adaptation. Listing a token does not establish reliable current-model instrument control; no model version or test count is inferred."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "mandolin",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "`[Acoustic Guitar]`, `[Electric Guitar]`, `[Distorted Guitar]`, `[Clean Guitar]`, `[Jangly Guitar]`, `[Fingerpicked Guitar]`, `[Slide Guitar]`, `[12-String Guitar]`, `[Classical Guitar]`, `[Bass Guitar]`, `[Slap Bass]`, `[Upright Bass]`, `[Fretless Bass]`, `[Violin]`, `[Viola]`, `[Strings]`, `[String Quartet]`, `[String Section]`, `[Cello]`, `[Double Bass]`, `[Pizzicato]`, `[Harp]`, `[Ukulele]`, `[Banjo]`, `[Mandolin]`, `[Sitar]`",
+      "text": "[Mandolin]",
+      "meaning": "A small plucked-string instrument with a bright attack and short sustain.",
+      "category": "instrumentation",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "legacy catalogue; publisher HIGH instrument-tag grading",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "Musical explanation is an editorial adaptation. Listing a token does not establish reliable current-model instrument control; no model version or test count is inferred."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "tenor-sax",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "`[Saxophone]`, `[Tenor Sax]`, `[Alto Sax]`, `[Trumpet]`, `[Trombone]`, `[French Horn]`, `[Tuba]`, `[Brass Section]`, `[Flute]`, `[Clarinet]`, `[Oboe]`, `[Harmonica]`, `[Accordion]`, `[Bagpipes]`, `[Didgeridoo]`",
+      "text": "[Tenor Sax]",
+      "meaning": "A saxophone voice with a lower range than alto sax, usable for melody or ensemble parts.",
+      "category": "instrumentation",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "legacy catalogue; publisher HIGH instrument-tag grading",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "Musical explanation is an editorial adaptation. Listing a token does not establish reliable current-model instrument control; no model version or test count is inferred."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "brass-section",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "`[Saxophone]`, `[Tenor Sax]`, `[Alto Sax]`, `[Trumpet]`, `[Trombone]`, `[French Horn]`, `[Tuba]`, `[Brass Section]`, `[Flute]`, `[Clarinet]`, `[Oboe]`, `[Harmonica]`, `[Accordion]`, `[Bagpipes]`, `[Didgeridoo]`",
+      "text": "[Brass Section]",
+      "meaning": "A group of brass instruments used for ensemble lines, sustained chords or rhythmic accents.",
+      "category": "instrumentation",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "legacy catalogue; publisher HIGH instrument-tag grading",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "Musical explanation is an editorial adaptation. Listing a token does not establish reliable current-model instrument control; no model version or test count is inferred."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "harmonica",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "`[Saxophone]`, `[Tenor Sax]`, `[Alto Sax]`, `[Trumpet]`, `[Trombone]`, `[French Horn]`, `[Tuba]`, `[Brass Section]`, `[Flute]`, `[Clarinet]`, `[Oboe]`, `[Harmonica]`, `[Accordion]`, `[Bagpipes]`, `[Didgeridoo]`",
+      "text": "[Harmonica]",
+      "meaning": "A breath-driven free-reed instrument often used for compact melodic phrases and bends.",
+      "category": "instrumentation",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "legacy catalogue; publisher HIGH instrument-tag grading",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "Musical explanation is an editorial adaptation. Listing a token does not establish reliable current-model instrument control; no model version or test count is inferred."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "brushed-drums",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "`[Drums]`, `[Acoustic Drums]`, `[Electronic Drums]`, `[Brushed Drums]`, `[Live Drums]` (see caveat below), `[808s]`, `[808 Bass]`, `[808 Drums]`, `[Drum Machine]`, `[TR-909]`, `[Trap Hi-Hats]`, `[Taiko Drums]`, `[Congas]`, `[Bongos]`, `[Tambourine]`, `[Shaker]`, `[Handclaps]`, `[Claps]`, `[Gong]`, `[Timpani]`, `[Cinematic Percussion]`",
+      "text": "[Brushed Drums]",
+      "meaning": "Drum-kit articulation using brushes for swishes and softer attacks.",
+      "category": "instrumentation",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "legacy catalogue; publisher HIGH instrument-tag grading",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "Musical explanation is an editorial adaptation. Listing a token does not establish reliable current-model instrument control; no model version or test count is inferred."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "drum-machine",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "`[Drums]`, `[Acoustic Drums]`, `[Electronic Drums]`, `[Brushed Drums]`, `[Live Drums]` (see caveat below), `[808s]`, `[808 Bass]`, `[808 Drums]`, `[Drum Machine]`, `[TR-909]`, `[Trap Hi-Hats]`, `[Taiko Drums]`, `[Congas]`, `[Bongos]`, `[Tambourine]`, `[Shaker]`, `[Handclaps]`, `[Claps]`, `[Gong]`, `[Timpani]`, `[Cinematic Percussion]`",
+      "text": "[Drum Machine]",
+      "meaning": "Programmed percussion produced by a dedicated machine or its sampled or synthesized sound.",
+      "category": "instrumentation",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "legacy catalogue; publisher HIGH instrument-tag grading",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "Musical explanation is an editorial adaptation. Listing a token does not establish reliable current-model instrument control; no model version or test count is inferred."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "tr909",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "`[Drums]`, `[Acoustic Drums]`, `[Electronic Drums]`, `[Brushed Drums]`, `[Live Drums]` (see caveat below), `[808s]`, `[808 Bass]`, `[808 Drums]`, `[Drum Machine]`, `[TR-909]`, `[Trap Hi-Hats]`, `[Taiko Drums]`, `[Congas]`, `[Bongos]`, `[Tambourine]`, `[Shaker]`, `[Handclaps]`, `[Claps]`, `[Gong]`, `[Timpani]`, `[Cinematic Percussion]`",
+      "text": "[TR-909]",
+      "meaning": "A Roland drum-machine sound palette associated with punchy electronic dance rhythms.",
+      "category": "instrumentation",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "legacy catalogue; publisher HIGH instrument-tag grading",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "Musical explanation is an editorial adaptation. Listing a token does not establish reliable current-model instrument control; no model version or test count is inferred."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "trap-hihats",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "`[Drums]`, `[Acoustic Drums]`, `[Electronic Drums]`, `[Brushed Drums]`, `[Live Drums]` (see caveat below), `[808s]`, `[808 Bass]`, `[808 Drums]`, `[Drum Machine]`, `[TR-909]`, `[Trap Hi-Hats]`, `[Taiko Drums]`, `[Congas]`, `[Bongos]`, `[Tambourine]`, `[Shaker]`, `[Handclaps]`, `[Claps]`, `[Gong]`, `[Timpani]`, `[Cinematic Percussion]`",
+      "text": "[Trap Hi-Hats]",
+      "meaning": "Rapid hi-hat subdivisions, rolls and rhythmic variation associated with trap production.",
+      "category": "instrumentation",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "legacy catalogue; publisher HIGH instrument-tag grading",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "Musical explanation is an editorial adaptation. Listing a token does not establish reliable current-model instrument control; no model version or test count is inferred."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "congas",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "`[Drums]`, `[Acoustic Drums]`, `[Electronic Drums]`, `[Brushed Drums]`, `[Live Drums]` (see caveat below), `[808s]`, `[808 Bass]`, `[808 Drums]`, `[Drum Machine]`, `[TR-909]`, `[Trap Hi-Hats]`, `[Taiko Drums]`, `[Congas]`, `[Bongos]`, `[Tambourine]`, `[Shaker]`, `[Handclaps]`, `[Claps]`, `[Gong]`, `[Timpani]`, `[Cinematic Percussion]`",
+      "text": "[Congas]",
+      "meaning": "Tall hand drums used for pitched accents and interlocking percussion patterns.",
+      "category": "instrumentation",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "legacy catalogue; publisher HIGH instrument-tag grading",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "Musical explanation is an editorial adaptation. Listing a token does not establish reliable current-model instrument control; no model version or test count is inferred."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "shaker",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "`[Drums]`, `[Acoustic Drums]`, `[Electronic Drums]`, `[Brushed Drums]`, `[Live Drums]` (see caveat below), `[808s]`, `[808 Bass]`, `[808 Drums]`, `[Drum Machine]`, `[TR-909]`, `[Trap Hi-Hats]`, `[Taiko Drums]`, `[Congas]`, `[Bongos]`, `[Tambourine]`, `[Shaker]`, `[Handclaps]`, `[Claps]`, `[Gong]`, `[Timpani]`, `[Cinematic Percussion]`",
+      "text": "[Shaker]",
+      "meaning": "A shaken percussion instrument providing a continuous or accented subdivision texture.",
+      "category": "instrumentation",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "legacy catalogue; publisher HIGH instrument-tag grading",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "Musical explanation is an editorial adaptation. Listing a token does not establish reliable current-model instrument control; no model version or test count is inferred."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "whispered",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "| `[Whispered]` / `[Whisper]` | Soft, breathy, intimate delivery |",
+      "text": "[Whispered]",
+      "meaning": "Breath-dominant whispered delivery rather than a fully voiced sung tone.",
+      "category": "vocals",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "legacy vocal catalogue; row not independently verified",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "The musical term is useful independently of the bracket syntax. Source includes mixed reliability grades; no current-model reliability is inferred."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "spoken-word",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "| `[Spoken]` / `[Spoken Word]` | Spoken rather than sung |",
+      "text": "[Spoken Word]",
+      "meaning": "Words delivered as speech rather than a pitched sung melody.",
+      "category": "vocals",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "legacy vocal catalogue; row not independently verified",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "The musical term is useful independently of the bracket syntax. Source includes mixed reliability grades; no current-model reliability is inferred."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "belting",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "| `[Belted]` / `[Belting]` | Powerful, full-voice, high-energy singing |",
+      "text": "[Belting]",
+      "meaning": "A forceful, projecting singing approach often used for a strong upper-range phrase.",
+      "category": "vocals",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "legacy vocal catalogue; row not independently verified",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "The musical term is useful independently of the bracket syntax. Source includes mixed reliability grades; no current-model reliability is inferred."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "falsetto",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "| `[Falsetto]` / `[Head Voice]` | High, airy vocal register — **LOW reliability** (HookGenius testing: 'sometimes Suno delivers it, sometimes ignores it entirely'). Try 'natural falsetto, airy high register, effortless' in the style prompt instead for more consistent results. |",
+      "text": "[Falsetto]",
+      "meaning": "A vocal register often heard as lighter or airier; not simply a synonym for every high note or for head voice.",
+      "category": "vocals",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "LOW reliability (publisher, citing HookGenius)",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "The musical term is useful independently of the bracket syntax. Source includes mixed reliability grades; no current-model reliability is inferred. Source explicitly reports inconsistent falsetto tag results; head voice and falsetto are not normalized as equivalent concepts."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "chest-voice",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "| `[Chest Voice]` | Full, resonant lower register |",
+      "text": "[Chest Voice]",
+      "meaning": "A chest-dominant vocal registration or tonal quality, rather than a fixed note range.",
+      "category": "vocals",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "legacy vocal catalogue; row not independently verified",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "The musical term is useful independently of the bracket syntax. Source includes mixed reliability grades; no current-model reliability is inferred."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "breathy",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "| `[Breathy]` | Airy, breath-heavy vocal |",
+      "text": "[Breathy]",
+      "meaning": "An audible airflow component mixed into the sung tone.",
+      "category": "vocals",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "legacy vocal catalogue; row not independently verified",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "The musical term is useful independently of the bracket syntax. Source includes mixed reliability grades; no current-model reliability is inferred."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "raspy",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "| `[Raspy]` | Rough, textured vocal |",
+      "text": "[Raspy]",
+      "meaning": "A rough or grainy vocal texture; this alone does not specify loudness or pitch register.",
+      "category": "vocals",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "legacy vocal catalogue; row not independently verified",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "The musical term is useful independently of the bracket syntax. Source includes mixed reliability grades; no current-model reliability is inferred."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "crooning",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "| `[Crooning]` | Soft, intimate jazz-style singing |",
+      "text": "[Crooning]",
+      "meaning": "A soft, intimate microphone-oriented singing style.",
+      "category": "vocals",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "legacy vocal catalogue; row not independently verified",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "The musical term is useful independently of the bracket syntax. Source includes mixed reliability grades; no current-model reliability is inferred."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "adlibs",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "| `[Ad-libs]` / `[Ad-lib]` | Improvised vocal fills and runs |",
+      "text": "[Ad-libs]",
+      "meaning": "Additional short vocal phrases or ornaments around a main melody or lyric.",
+      "category": "vocals",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "legacy vocal catalogue; row not independently verified",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "The musical term is useful independently of the bracket syntax. Source includes mixed reliability grades; no current-model reliability is inferred."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "melisma",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "| `[Vocal Run]` / `[Melisma]` | Extended note runs across syllables |",
+      "text": "[Melisma]",
+      "meaning": "Several successive pitches sung on one syllable; not a requirement for multiple syllables.",
+      "category": "vocals",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "legacy vocal catalogue; row not independently verified",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "The musical term is useful independently of the bracket syntax. Source includes mixed reliability grades; no current-model reliability is inferred."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "vibrato",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "| `[Vibrato]` | Oscillating pitch on sustained notes |",
+      "text": "[Vibrato]",
+      "meaning": "A repeated small pitch variation around a sustained sung note.",
+      "category": "vocals",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "legacy vocal catalogue; row not independently verified",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "The musical term is useful independently of the bracket syntax. Source includes mixed reliability grades; no current-model reliability is inferred."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "staccato",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "| `[Staccato]` | Short, detached vocal phrasing |",
+      "text": "[Staccato]",
+      "meaning": "Short, detached articulation with audible separation between notes.",
+      "category": "vocals",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "legacy vocal catalogue; row not independently verified",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "The musical term is useful independently of the bracket syntax. Source includes mixed reliability grades; no current-model reliability is inferred."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "legato",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "| `[Legato]` | Smooth, connected vocal phrasing |",
+      "text": "[Legato]",
+      "meaning": "Connected articulation that joins successive sung notes smoothly.",
+      "category": "vocals",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "legacy vocal catalogue; row not independently verified",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "The musical term is useful independently of the bracket syntax. Source includes mixed reliability grades; no current-model reliability is inferred."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "call-response",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "| `[Call and Response]` | Back-and-forth vocal pattern |",
+      "text": "[Call and Response]",
+      "meaning": "An answering pattern between alternating voices or between a voice and an instrument.",
+      "category": "vocals",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "legacy vocal catalogue; row not independently verified",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "The musical term is useful independently of the bracket syntax. Source includes mixed reliability grades; no current-model reliability is inferred."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "scat",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "| `[Scat]` | Improvised nonsense syllables (jazz) |",
+      "text": "[Scat]",
+      "meaning": "Vocal improvisation using nonlexical syllables, often in jazz.",
+      "category": "vocals",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "legacy vocal catalogue; row not independently verified",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "The musical term is useful independently of the bracket syntax. Source includes mixed reliability grades; no current-model reliability is inferred."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "humming",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "| `[Hummed]` / `[Humming]` | Hummed melody, no words |",
+      "text": "[Humming]",
+      "meaning": "A closed-mouth or mostly closed-mouth melodic vocal sound without articulated words.",
+      "category": "vocals",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "legacy vocal catalogue; row not independently verified",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "The musical term is useful independently of the bracket syntax. Source includes mixed reliability grades; no current-model reliability is inferred."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "backing-vocals",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "| `[Backing Vocals]` | Explicit backing vocal layer (distinct from parentheses technique) (HIGH) |",
+      "text": "[Backing Vocals]",
+      "meaning": "Supporting vocal parts behind or around the main singer.",
+      "category": "vocals",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "legacy vocal catalogue; row not independently verified",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "The musical term is useful independently of the bracket syntax. Source includes mixed reliability grades; no current-model reliability is inferred."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "stacked-harmonies",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "| `[Stacked Harmonies]` | Dense layered harmonies (HIGH) |",
+      "text": "[Stacked Harmonies]",
+      "meaning": "Multiple layered vocal parts creating a dense harmonic texture.",
+      "category": "vocals",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "legacy vocal catalogue; row not independently verified",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "The musical term is useful independently of the bracket syntax. Source includes mixed reliability grades; no current-model reliability is inferred."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "slow-flow",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "| `[Slow Flow]` | Deliberate, spaced-out rap |",
+      "text": "[Slow Flow]",
+      "meaning": "A rap delivery leaving generous space between phrases or syllabic groups.",
+      "category": "vocals",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "legacy vocal catalogue; row not independently verified",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "The musical term is useful independently of the bracket syntax. Source includes mixed reliability grades; no current-model reliability is inferred."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "melodic-rap",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "| `[Melodic Rap]` | Singing-rapping hybrid |",
+      "text": "[Melodic Rap]",
+      "meaning": "Delivery combining rap-like rhythmic placement with a noticeable sung pitch contour.",
+      "category": "vocals",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "legacy vocal catalogue; row not independently verified",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "The musical term is useful independently of the bracket syntax. Source includes mixed reliability grades; no current-model reliability is inferred."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "vocoder",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "| `[Vocoder]` | Robotic/synthesized vocal effect |",
+      "text": "[Vocoder]",
+      "meaning": "A processed vocal effect that transfers speech-like articulation to a carrier sound, commonly a synthesizer.",
+      "category": "vocals",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "legacy vocal catalogue; row not independently verified",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "The musical term is useful independently of the bracket syntax. Source includes mixed reliability grades; no current-model reliability is inferred."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "telephone-vocal",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "| `[Telephone Effect]` | Lo-fi phone-quality vocal |",
+      "text": "[Telephone Effect]",
+      "meaning": "A deliberately bandwidth-limited vocal color suggesting telephone transmission.",
+      "category": "vocals",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "legacy vocal catalogue; row not independently verified",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "The musical term is useful independently of the bracket syntax. Source includes mixed reliability grades; no current-model reliability is inferred."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "half-time",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "| `[Half-Time]` | Half-time feel — slower, heavier beat |",
+      "text": "[Half-Time]",
+      "meaning": "A drum feel perceived at half the prevailing pulse, often by spacing backbeat accents farther apart without changing the underlying tempo.",
+      "category": "rhythm",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "legacy rhythm catalogue; publisher grading",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "Definition describes musical feel, not a guaranteed tempo transformation. Model version and reliability are not established by this table."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "swung",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "| `[Swung Feel]` / `[Shuffle]` | Swing/shuffle rhythm |",
+      "text": "[Swung Feel]",
+      "meaning": "Unequal timing of paired subdivisions instead of evenly spaced straight notes; the amount of swing can vary.",
+      "category": "rhythm",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "legacy rhythm catalogue; publisher grading",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "Definition describes musical feel, not a guaranteed tempo transformation. Model version and reliability are not established by this table."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "triplet",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "| `[Triplet Feel]` | Triplet-based rhythmic feel |",
+      "text": "[Triplet Feel]",
+      "meaning": "A feel organized around three subdivisions of a beat rather than two or four equal subdivisions.",
+      "category": "rhythm",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "legacy rhythm catalogue; publisher grading",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "Definition describes musical feel, not a guaranteed tempo transformation. Model version and reliability are not established by this table."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "syncopated",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "| `[Syncopated]` | Syncopated rhythm |",
+      "text": "[Syncopated]",
+      "meaning": "Accents or attacks placed away from expected strong beats, often emphasizing offbeats.",
+      "category": "rhythm",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "legacy rhythm catalogue; publisher grading",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "Definition describes musical feel, not a guaranteed tempo transformation. Model version and reliability are not established by this table."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "straight",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "| `[Straight]` | Straight (non-swung) rhythm |",
+      "text": "[Straight]",
+      "meaning": "Even subdivision timing rather than swung subdivision pairs.",
+      "category": "rhythm",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "legacy rhythm catalogue; publisher grading",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "Definition describes musical feel, not a guaranteed tempo transformation. Model version and reliability are not established by this table."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "four-floor",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "| `[Four on the Floor]` | Steady kick on every beat |",
+      "text": "[Four on the Floor]",
+      "meaning": "A kick-drum hit on each quarter-note beat of a four-beat bar.",
+      "category": "rhythm",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "legacy rhythm catalogue; publisher grading",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "Definition describes musical feel, not a guaranteed tempo transformation. Model version and reliability are not established by this table."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "polyrhythmic",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "| `[Polyrhythmic]` | Multiple simultaneous rhythms |",
+      "text": "[Polyrhythmic]",
+      "meaning": "Simultaneous rhythmic layers using contrasting subdivisions or groupings, such as three against two.",
+      "category": "rhythm",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "legacy rhythm catalogue; publisher grading",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "Definition describes musical feel, not a guaranteed tempo transformation. Model version and reliability are not established by this table."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "breakbeat",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "| `[Breakbeat]` | Breakbeat rhythm pattern |",
+      "text": "[Breakbeat]",
+      "meaning": "A groove based on a broken or syncopated drum-break pattern rather than only an unbroken four-on-the-floor kick.",
+      "category": "rhythm",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "legacy rhythm catalogue; publisher grading",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "Definition describes musical feel, not a guaranteed tempo transformation. Model version and reliability are not established by this table."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "double-time",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "| `[Double Time]` | Double-time drum feel — snare on every beat | Creates perception of doubled tempo. Good for energy surges. |",
+      "text": "[Double Time]",
+      "meaning": "A drum feel with increased accent or subdivision density suggesting twice the pace; it need not change the underlying tempo.",
+      "category": "rhythm",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "legacy rhythm catalogue; publisher grading",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "Definition describes musical feel, not a guaranteed tempo transformation. Model version and reliability are not established by this table."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "swell",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "| `[Swell]` | Gradual intensity increase |",
+      "text": "[Swell]",
+      "meaning": "A gradual rise in intensity or level, often within a sustained sound or short passage.",
+      "category": "arrangement",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "legacy transition catalogue; mixed publisher grades",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "Intended musical meaning retained even where the source's ending or tempo guidance questions actual tag behavior. Not a verified control."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "crescendo",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "| `[Crescendo]` | Building volume/intensity |",
+      "text": "[Crescendo]",
+      "meaning": "An increase in loudness across a passage; it does not inherently require adding instruments.",
+      "category": "arrangement",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "legacy transition catalogue; mixed publisher grades",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "Intended musical meaning retained even where the source's ending or tempo guidance questions actual tag behavior. Not a verified control."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "decrescendo",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "| `[Decrescendo]` | Decreasing volume/intensity |",
+      "text": "[Decrescendo]",
+      "meaning": "A decrease in loudness across a passage.",
+      "category": "arrangement",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "legacy transition catalogue; mixed publisher grades",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "Intended musical meaning retained even where the source's ending or tempo guidance questions actual tag behavior. Not a verified control."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "fade-in",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "| `[Fade In]` | Gradual volume increase at start |",
+      "text": "[Fade In]",
+      "meaning": "An opening level increase from silence or a low starting level.",
+      "category": "production",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "legacy transition catalogue; mixed publisher grades",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "Intended musical meaning retained even where the source's ending or tempo guidance questions actual tag behavior. Not a verified control."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "fade-out",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "| `[Fade Out]` / `[Fade]` | Gradual volume decrease |",
+      "text": "[Fade Out]",
+      "meaning": "A closing level reduction toward silence; source elsewhere reports unreliable rendering, so this is intended behavior rather than a promise.",
+      "category": "production",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "legacy transition catalogue; mixed publisher grades",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "Intended musical meaning retained even where the source's ending or tempo guidance questions actual tag behavior. Not a verified control."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "instrumental-fade",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "| `[Instrumental Fade Out]` | Vocals end, instruments continue briefly then fade (HIGH) |",
+      "text": "[Instrumental Fade Out]",
+      "meaning": "An ending in which vocals finish before the instrumental bed fades.",
+      "category": "structure",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "legacy transition catalogue; mixed publisher grades",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "Intended musical meaning retained even where the source's ending or tempo guidance questions actual tag behavior. Not a verified control."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "key-change",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "| `[Key Change]` / `[Key Modulation]` | Signal a key change, usually upward for a lift (HIGH) |",
+      "text": "[Key Change]",
+      "meaning": "A move to a new tonal center; the destination and interval require additional musical direction.",
+      "category": "harmony",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "legacy transition catalogue; mixed publisher grades",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "Intended musical meaning retained even where the source's ending or tempo guidance questions actual tag behavior. Not a verified control."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "ritardando",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "| `[Ritardando]` | Gradually slow down tempo (HIGH) |",
+      "text": "[Ritardando]",
+      "meaning": "A gradual slowing of performed tempo. Its musical meaning does not establish that a Suno tag realizes it.",
+      "category": "rhythm",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "legacy transition catalogue; mixed publisher grades",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "Intended musical meaning retained even where the source's ending or tempo guidance questions actual tag behavior. Not a verified control."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "palm-muted",
+      "kind": "term",
+      "path": "src/skills/suno-style-prompt-builder/references/v6-build-core.md",
+      "excerpt": "2. **Each instrument gets a job per section, in verbs:** \"the intro riff continues under the verse vocal, palm-muted and lower\", not \"big riffs\". A section the prompt skips is one where the instrument drops out (COMMUNITY + VENDOR).",
+      "text": "palm-muted",
+      "meaning": "Guitar articulation damped with the picking-hand palm near the bridge for a shorter, more percussive sound.",
+      "category": "instrumentation",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "musical vocabulary selected from v6 production-direction examples",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "The definition is editorial; no isolated causal effect is claimed for the individual term."
+      },
+      "input_field": "style"
+    },
+    {
+      "id": "backbeat",
+      "kind": "term",
+      "path": "src/skills/suno-style-prompt-builder/references/v6-build-core.md",
+      "excerpt": "**Tempo as feel.** State one BPM for the whole song and pair every number with feel words (\"72 BPM feel with a slow heavy backbeat\"), since a bare number is often ignored (COMMUNITY). Carry section contrast as half-time or double-time drum feel and sparse or dense arrangement over that pulse, in the same scene-naming phrases in the style prompt and the lyric section cues (VENDOR + COMMUNITY; LOCAL: heard as \"a LOT better\"). A feel switch lands sometimes, not reliably.",
+      "text": "backbeat",
+      "meaning": "Prominent drum accents conventionally on beats two and four in a four-beat groove.",
+      "category": "rhythm",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "musical vocabulary selected from v6 production-direction examples",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "The definition is editorial; no isolated causal effect is claimed for the individual term."
+      },
+      "input_field": "style"
+    },
+    {
+      "id": "hard-stop",
+      "kind": "term",
+      "path": "src/skills/suno-style-prompt-builder/references/v6-build-core.md",
+      "excerpt": "4. **State both edges, with lengths:** \"4-bar guitar intro, instrumental only\"; \"ends on a hard stop after the final chorus\". Unstated, the intro comes back as humming and the ending vamps or cuts off mid-lyric (VENDOR + COMMUNITY).",
+      "text": "hard stop",
+      "meaning": "A coordinated abrupt end rather than a fade or sustained play-out.",
+      "category": "structure",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "musical vocabulary selected from v6 production-direction examples",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "The definition is editorial; no isolated causal effect is claimed for the individual term."
+      },
+      "input_field": "style"
+    }
+  ],
+  "recipes": []
+}

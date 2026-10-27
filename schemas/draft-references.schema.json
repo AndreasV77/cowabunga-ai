@@ -1,0 +1,970 @@
+{
+  "$defs": {
+    "Citation": {
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "title": "Path",
+          "type": "string"
+        },
+        "line_start": {
+          "minimum": 1,
+          "title": "Line Start",
+          "type": "integer"
+        },
+        "line_end": {
+          "minimum": 1,
+          "title": "Line End",
+          "type": "integer"
+        },
+        "url": {
+          "title": "Url",
+          "type": "string"
+        },
+        "excerpt": {
+          "minLength": 1,
+          "title": "Excerpt",
+          "type": "string"
+        }
+      },
+      "required": [
+        "path",
+        "line_start",
+        "line_end",
+        "url",
+        "excerpt"
+      ],
+      "title": "Citation",
+      "type": "object"
+    },
+    "Concept": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+          "title": "Id",
+          "type": "string"
+        },
+        "label": {
+          "title": "Label",
+          "type": "string"
+        },
+        "aliases": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Aliases",
+          "type": "array"
+        },
+        "description": {
+          "title": "Description",
+          "type": "string"
+        },
+        "links": {
+          "items": {
+            "$ref": "#/$defs/ConceptLink"
+          },
+          "minItems": 1,
+          "title": "Links",
+          "type": "array"
+        },
+        "crosscheck_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Crosscheck Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "label",
+        "description",
+        "links"
+      ],
+      "title": "Concept",
+      "type": "object"
+    },
+    "ConceptLink": {
+      "additionalProperties": false,
+      "properties": {
+        "record_id": {
+          "title": "Record Id",
+          "type": "string"
+        },
+        "relation": {
+          "enum": [
+            "wording",
+            "dimension",
+            "example",
+            "alternative"
+          ],
+          "title": "Relation",
+          "type": "string"
+        },
+        "note": {
+          "minLength": 1,
+          "title": "Note",
+          "type": "string"
+        }
+      },
+      "required": [
+        "record_id",
+        "relation",
+        "note"
+      ],
+      "title": "ConceptLink",
+      "type": "object"
+    },
+    "ConceptUse": {
+      "additionalProperties": false,
+      "properties": {
+        "concept_id": {
+          "title": "Concept Id",
+          "type": "string"
+        },
+        "relation": {
+          "enum": [
+            "wording",
+            "dimension",
+            "example",
+            "alternative"
+          ],
+          "title": "Relation",
+          "type": "string"
+        },
+        "note": {
+          "title": "Note",
+          "type": "string"
+        }
+      },
+      "required": [
+        "concept_id",
+        "relation",
+        "note"
+      ],
+      "title": "ConceptUse",
+      "type": "object"
+    },
+    "ContextItem": {
+      "additionalProperties": false,
+      "properties": {
+        "snapshot_id": {
+          "title": "Snapshot Id",
+          "type": "string"
+        },
+        "v6_core": {
+          "title": "V6 Core",
+          "type": "boolean"
+        },
+        "uses": {
+          "items": {
+            "$ref": "#/$defs/ConceptUse"
+          },
+          "title": "Uses",
+          "type": "array"
+        },
+        "record": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ReferenceEntry"
+            },
+            {
+              "$ref": "#/$defs/Recipe"
+            }
+          ],
+          "title": "Record"
+        }
+      },
+      "required": [
+        "snapshot_id",
+        "v6_core",
+        "uses",
+        "record"
+      ],
+      "title": "ContextItem",
+      "type": "object"
+    },
+    "ContextOmission": {
+      "additionalProperties": false,
+      "properties": {
+        "record_id": {
+          "title": "Record Id",
+          "type": "string"
+        },
+        "reason": {
+          "enum": [
+            "outside_v6_core",
+            "model_scope_mismatch",
+            "limit",
+            "user_deselected"
+          ],
+          "title": "Reason",
+          "type": "string"
+        }
+      },
+      "required": [
+        "record_id",
+        "reason"
+      ],
+      "title": "ContextOmission",
+      "type": "object"
+    },
+    "ContextPacket": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "intent": {
+          "title": "Intent",
+          "type": "string"
+        },
+        "target_model": {
+          "enum": [
+            "v6",
+            "v6-wild",
+            "v6-mini"
+          ],
+          "title": "Target Model",
+          "type": "string"
+        },
+        "catalog_sha256": {
+          "title": "Catalog Sha256",
+          "type": "string"
+        },
+        "catalog_version": {
+          "title": "Catalog Version",
+          "type": "string"
+        },
+        "concepts": {
+          "items": {
+            "$ref": "#/$defs/Concept"
+          },
+          "title": "Concepts",
+          "type": "array"
+        },
+        "items": {
+          "items": {
+            "$ref": "#/$defs/ContextItem"
+          },
+          "title": "Items",
+          "type": "array"
+        },
+        "sources": {
+          "additionalProperties": {
+            "$ref": "#/$defs/Source"
+          },
+          "title": "Sources",
+          "type": "object"
+        },
+        "crosschecks": {
+          "items": {
+            "$ref": "#/$defs/Crosscheck"
+          },
+          "title": "Crosschecks",
+          "type": "array"
+        },
+        "omitted": {
+          "items": {
+            "$ref": "#/$defs/ContextOmission"
+          },
+          "title": "Omitted",
+          "type": "array"
+        },
+        "independently_verified": {
+          "const": false,
+          "default": false,
+          "title": "Independently Verified",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "intent",
+        "target_model",
+        "catalog_sha256",
+        "catalog_version",
+        "concepts",
+        "items",
+        "sources",
+        "crosschecks",
+        "omitted"
+      ],
+      "title": "ContextPacket",
+      "type": "object"
+    },
+    "Crosscheck": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "topic": {
+          "title": "Topic",
+          "type": "string"
+        },
+        "record_ids": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 2,
+          "title": "Record Ids",
+          "type": "array"
+        },
+        "assessment": {
+          "enum": [
+            "complementary",
+            "tension",
+            "agreement"
+          ],
+          "title": "Assessment",
+          "type": "string"
+        },
+        "conclusion": {
+          "title": "Conclusion",
+          "type": "string"
+        },
+        "evidence_limit": {
+          "title": "Evidence Limit",
+          "type": "string"
+        },
+        "primary_links": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Primary Links",
+          "type": "array"
+        },
+        "independent_test_confirmation": {
+          "const": false,
+          "default": false,
+          "title": "Independent Test Confirmation",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "id",
+        "topic",
+        "record_ids",
+        "assessment",
+        "conclusion",
+        "evidence_limit"
+      ],
+      "title": "Crosscheck",
+      "type": "object"
+    },
+    "Evidence": {
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "enum": [
+            "source_claim",
+            "working_hypothesis",
+            "unverified_example"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "source_label": {
+          "title": "Source Label",
+          "type": "string"
+        },
+        "independently_verified": {
+          "const": false,
+          "default": false,
+          "title": "Independently Verified",
+          "type": "boolean"
+        },
+        "model_scope": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Model Scope",
+          "type": "array"
+        },
+        "test_count": {
+          "anyOf": [
+            {
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Test Count"
+        },
+        "context": {
+          "title": "Context",
+          "type": "string"
+        },
+        "model_basis": {
+          "default": "unspecified",
+          "enum": [
+            "unspecified",
+            "v6_targeted",
+            "pre_v6"
+          ],
+          "title": "Model Basis",
+          "type": "string"
+        }
+      },
+      "required": [
+        "status",
+        "source_label",
+        "context"
+      ],
+      "title": "Evidence",
+      "type": "object"
+    },
+    "JsonValue": {},
+    "LibraryHit": {
+      "additionalProperties": false,
+      "properties": {
+        "snapshot_id": {
+          "title": "Snapshot Id",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "recipe",
+            "term",
+            "phrase",
+            "guidance"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "v6_core": {
+          "title": "V6 Core",
+          "type": "boolean"
+        },
+        "source": {
+          "$ref": "#/$defs/Source"
+        },
+        "record": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Recipe"
+            },
+            {
+              "$ref": "#/$defs/ReferenceEntry"
+            }
+          ],
+          "title": "Record"
+        }
+      },
+      "required": [
+        "snapshot_id",
+        "kind",
+        "v6_core",
+        "source",
+        "record"
+      ],
+      "title": "LibraryHit",
+      "type": "object"
+    },
+    "LibrarySelection": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "items": {
+          "items": {
+            "$ref": "#/$defs/LibraryHit"
+          },
+          "maxItems": 50,
+          "title": "Items",
+          "type": "array"
+        }
+      },
+      "title": "LibrarySelection",
+      "type": "object"
+    },
+    "Recipe": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "title": {
+          "minLength": 1,
+          "title": "Title",
+          "type": "string"
+        },
+        "prompt_language": {
+          "const": "en",
+          "default": "en",
+          "title": "Prompt Language",
+          "type": "string"
+        },
+        "family": {
+          "title": "Family",
+          "type": "string"
+        },
+        "style_prompt": {
+          "minLength": 1,
+          "title": "Style Prompt",
+          "type": "string"
+        },
+        "structure": {
+          "title": "Structure",
+          "type": "string"
+        },
+        "settings": {
+          "$ref": "#/$defs/SettingsRecommendation"
+        },
+        "source_record_url": {
+          "title": "Source Record Url",
+          "type": "string"
+        },
+        "raw_record": {
+          "additionalProperties": true,
+          "title": "Raw Record",
+          "type": "object"
+        },
+        "exclude_styles": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Exclude Styles"
+        },
+        "evidence": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Evidence"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "citations": {
+          "items": {
+            "$ref": "#/$defs/Citation"
+          },
+          "title": "Citations",
+          "type": "array"
+        },
+        "workflow": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Workflow"
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "family",
+        "style_prompt",
+        "structure",
+        "settings",
+        "source_record_url",
+        "raw_record"
+      ],
+      "title": "Recipe",
+      "type": "object"
+    },
+    "RecordRequest": {
+      "additionalProperties": false,
+      "properties": {
+        "snapshot_id": {
+          "maxLength": 300,
+          "minLength": 1,
+          "title": "Snapshot Id",
+          "type": "string"
+        },
+        "record_id": {
+          "maxLength": 200,
+          "minLength": 1,
+          "title": "Record Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "snapshot_id",
+        "record_id"
+      ],
+      "title": "RecordRequest",
+      "type": "object"
+    },
+    "ReferenceEntry": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "term",
+            "phrase",
+            "guidance"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "text": {
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        },
+        "meaning": {
+          "minLength": 1,
+          "title": "Meaning",
+          "type": "string"
+        },
+        "category": {
+          "enum": [
+            "instrumentation",
+            "rhythm",
+            "vocals",
+            "structure",
+            "production",
+            "arrangement",
+            "controls",
+            "harmony",
+            "genre"
+          ],
+          "title": "Category",
+          "type": "string"
+        },
+        "language": {
+          "const": "en",
+          "default": "en",
+          "title": "Language",
+          "type": "string"
+        },
+        "input_field": {
+          "anyOf": [
+            {
+              "enum": [
+                "style",
+                "lyrics",
+                "settings"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Input Field"
+        },
+        "evidence": {
+          "$ref": "#/$defs/Evidence"
+        },
+        "citations": {
+          "items": {
+            "$ref": "#/$defs/Citation"
+          },
+          "minItems": 1,
+          "title": "Citations",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "text",
+        "meaning",
+        "category",
+        "evidence",
+        "citations"
+      ],
+      "title": "ReferenceEntry",
+      "type": "object"
+    },
+    "SettingsRecommendation": {
+      "additionalProperties": false,
+      "properties": {
+        "bpm": {
+          "anyOf": [
+            {
+              "exclusiveMinimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Bpm"
+        },
+        "weirdness": {
+          "anyOf": [
+            {
+              "maximum": 100,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Weirdness"
+        },
+        "style_influence": {
+          "anyOf": [
+            {
+              "maximum": 100,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Style Influence"
+        },
+        "evidence": {
+          "const": "publisher_recommendation",
+          "default": "publisher_recommendation",
+          "title": "Evidence",
+          "type": "string"
+        },
+        "model_version": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Model Version"
+        }
+      },
+      "title": "SettingsRecommendation",
+      "type": "object"
+    },
+    "Source": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "minLength": 1,
+          "title": "Id",
+          "type": "string"
+        },
+        "repository": {
+          "title": "Repository",
+          "type": "string"
+        },
+        "revision": {
+          "pattern": "^[0-9a-f]{40}$",
+          "title": "Revision",
+          "type": "string"
+        },
+        "license": {
+          "title": "License",
+          "type": "string"
+        },
+        "retrieved_at": {
+          "title": "Retrieved At",
+          "type": "string"
+        },
+        "files": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "title": "Files",
+          "type": "object"
+        },
+        "attribution": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Attribution"
+        },
+        "license_url": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "License Url"
+        },
+        "license_text": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "License Text"
+        },
+        "changes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Changes"
+        },
+        "curation_sha256": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Curation Sha256"
+        },
+        "orientation": {
+          "default": "unspecified",
+          "enum": [
+            "unspecified",
+            "mixed",
+            "v6_native"
+          ],
+          "title": "Orientation",
+          "type": "string"
+        },
+        "orientation_basis": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Orientation Basis"
+        }
+      },
+      "required": [
+        "id",
+        "repository",
+        "revision",
+        "license",
+        "retrieved_at",
+        "files"
+      ],
+      "title": "Source",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0",
+      "default": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "draft_id": {
+      "title": "Draft Id",
+      "type": "string"
+    },
+    "title": {
+      "title": "Title",
+      "type": "string"
+    },
+    "revision": {
+      "title": "Revision",
+      "type": "integer"
+    },
+    "form": {
+      "additionalProperties": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Form",
+      "type": "object"
+    },
+    "context": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/ContextPacket"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "library": {
+      "$ref": "#/$defs/LibrarySelection"
+    },
+    "inactive_library_records": {
+      "items": {
+        "$ref": "#/$defs/RecordRequest"
+      },
+      "title": "Inactive Library Records",
+      "type": "array"
+    },
+    "inactive_context_snapshots": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Inactive Context Snapshots",
+      "type": "array"
+    },
+    "independently_verified": {
+      "const": false,
+      "default": false,
+      "title": "Independently Verified",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "draft_id",
+    "title",
+    "revision",
+    "form",
+    "context",
+    "library",
+    "inactive_library_records",
+    "inactive_context_snapshots"
+  ],
+  "title": "DraftReferencePack",
+  "type": "object"
+}

@@ -1,0 +1,521 @@
+{
+  "$defs": {
+    "Citation": {
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "title": "Path",
+          "type": "string"
+        },
+        "line_start": {
+          "minimum": 1,
+          "title": "Line Start",
+          "type": "integer"
+        },
+        "line_end": {
+          "minimum": 1,
+          "title": "Line End",
+          "type": "integer"
+        },
+        "url": {
+          "title": "Url",
+          "type": "string"
+        },
+        "excerpt": {
+          "minLength": 1,
+          "title": "Excerpt",
+          "type": "string"
+        }
+      },
+      "required": [
+        "path",
+        "line_start",
+        "line_end",
+        "url",
+        "excerpt"
+      ],
+      "title": "Citation",
+      "type": "object"
+    },
+    "Evidence": {
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "enum": [
+            "source_claim",
+            "working_hypothesis",
+            "unverified_example"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "source_label": {
+          "title": "Source Label",
+          "type": "string"
+        },
+        "independently_verified": {
+          "const": false,
+          "default": false,
+          "title": "Independently Verified",
+          "type": "boolean"
+        },
+        "model_scope": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Model Scope",
+          "type": "array"
+        },
+        "test_count": {
+          "anyOf": [
+            {
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Test Count"
+        },
+        "context": {
+          "title": "Context",
+          "type": "string"
+        },
+        "model_basis": {
+          "default": "unspecified",
+          "enum": [
+            "unspecified",
+            "v6_targeted",
+            "pre_v6"
+          ],
+          "title": "Model Basis",
+          "type": "string"
+        }
+      },
+      "required": [
+        "status",
+        "source_label",
+        "context"
+      ],
+      "title": "Evidence",
+      "type": "object"
+    },
+    "Recipe": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "title": {
+          "minLength": 1,
+          "title": "Title",
+          "type": "string"
+        },
+        "prompt_language": {
+          "const": "en",
+          "default": "en",
+          "title": "Prompt Language",
+          "type": "string"
+        },
+        "family": {
+          "title": "Family",
+          "type": "string"
+        },
+        "style_prompt": {
+          "minLength": 1,
+          "title": "Style Prompt",
+          "type": "string"
+        },
+        "structure": {
+          "title": "Structure",
+          "type": "string"
+        },
+        "settings": {
+          "$ref": "#/$defs/SettingsRecommendation"
+        },
+        "source_record_url": {
+          "title": "Source Record Url",
+          "type": "string"
+        },
+        "raw_record": {
+          "additionalProperties": true,
+          "title": "Raw Record",
+          "type": "object"
+        },
+        "exclude_styles": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Exclude Styles"
+        },
+        "evidence": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Evidence"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "citations": {
+          "items": {
+            "$ref": "#/$defs/Citation"
+          },
+          "title": "Citations",
+          "type": "array"
+        },
+        "workflow": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Workflow"
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "family",
+        "style_prompt",
+        "structure",
+        "settings",
+        "source_record_url",
+        "raw_record"
+      ],
+      "title": "Recipe",
+      "type": "object"
+    },
+    "ReferenceEntry": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "term",
+            "phrase",
+            "guidance"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "text": {
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        },
+        "meaning": {
+          "minLength": 1,
+          "title": "Meaning",
+          "type": "string"
+        },
+        "category": {
+          "enum": [
+            "instrumentation",
+            "rhythm",
+            "vocals",
+            "structure",
+            "production",
+            "arrangement",
+            "controls",
+            "harmony",
+            "genre"
+          ],
+          "title": "Category",
+          "type": "string"
+        },
+        "language": {
+          "const": "en",
+          "default": "en",
+          "title": "Language",
+          "type": "string"
+        },
+        "input_field": {
+          "anyOf": [
+            {
+              "enum": [
+                "style",
+                "lyrics",
+                "settings"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Input Field"
+        },
+        "evidence": {
+          "$ref": "#/$defs/Evidence"
+        },
+        "citations": {
+          "items": {
+            "$ref": "#/$defs/Citation"
+          },
+          "minItems": 1,
+          "title": "Citations",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "text",
+        "meaning",
+        "category",
+        "evidence",
+        "citations"
+      ],
+      "title": "ReferenceEntry",
+      "type": "object"
+    },
+    "SettingsRecommendation": {
+      "additionalProperties": false,
+      "properties": {
+        "bpm": {
+          "anyOf": [
+            {
+              "exclusiveMinimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Bpm"
+        },
+        "weirdness": {
+          "anyOf": [
+            {
+              "maximum": 100,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Weirdness"
+        },
+        "style_influence": {
+          "anyOf": [
+            {
+              "maximum": 100,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Style Influence"
+        },
+        "evidence": {
+          "const": "publisher_recommendation",
+          "default": "publisher_recommendation",
+          "title": "Evidence",
+          "type": "string"
+        },
+        "model_version": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Model Version"
+        }
+      },
+      "title": "SettingsRecommendation",
+      "type": "object"
+    },
+    "Source": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "minLength": 1,
+          "title": "Id",
+          "type": "string"
+        },
+        "repository": {
+          "title": "Repository",
+          "type": "string"
+        },
+        "revision": {
+          "pattern": "^[0-9a-f]{40}$",
+          "title": "Revision",
+          "type": "string"
+        },
+        "license": {
+          "title": "License",
+          "type": "string"
+        },
+        "retrieved_at": {
+          "title": "Retrieved At",
+          "type": "string"
+        },
+        "files": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "title": "Files",
+          "type": "object"
+        },
+        "attribution": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Attribution"
+        },
+        "license_url": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "License Url"
+        },
+        "license_text": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "License Text"
+        },
+        "changes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Changes"
+        },
+        "curation_sha256": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Curation Sha256"
+        },
+        "orientation": {
+          "default": "unspecified",
+          "enum": [
+            "unspecified",
+            "mixed",
+            "v6_native"
+          ],
+          "title": "Orientation",
+          "type": "string"
+        },
+        "orientation_basis": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Orientation Basis"
+        }
+      },
+      "required": [
+        "id",
+        "repository",
+        "revision",
+        "license",
+        "retrieved_at",
+        "files"
+      ],
+      "title": "Source",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "default": "1.2",
+      "enum": [
+        "1.0",
+        "1.1",
+        "1.2"
+      ],
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "source": {
+      "$ref": "#/$defs/Source"
+    },
+    "recipes": {
+      "items": {
+        "$ref": "#/$defs/Recipe"
+      },
+      "title": "Recipes",
+      "type": "array"
+    },
+    "entries": {
+      "items": {
+        "$ref": "#/$defs/ReferenceEntry"
+      },
+      "title": "Entries",
+      "type": "array"
+    }
+  },
+  "required": [
+    "source"
+  ],
+  "title": "Bundle",
+  "type": "object"
+}

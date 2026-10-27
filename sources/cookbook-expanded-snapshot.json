@@ -1,0 +1,27 @@
+{
+  "id": "cookbook",
+  "repository": "https://github.com/MJorgin/suno-v6-cookbook",
+  "revision": "c8e40ff0b10636a7719cbc88bc5f58443ad19907",
+  "license": "CC-BY-4.0",
+  "retrieved_at": "2026-10-26T15:38:46.656479+00:00",
+  "files": {
+    "LICENSE": "c22b6ea7b1b3ddc975d6a3803e937ac1c1affdc90df173720b54a1cad347adee",
+    "README.md": "3560bc2536e290d39ad19d46515be8a2d400e2d86532f149f5e351281d9b79ba",
+    "docs/case-schema.md": "7844e9cec3b6e59721d63f4d1e13302dda4d79aaa641efa282c519687468b821",
+    "docs/lyric-and-section-tags.md": "3ac0473d7851bcccc9b4322e8f5fc87af5deca1790c75062a843c0d81dcbbe28",
+    "docs/prompt-anatomy.md": "185d51b1b273284cb3189268822fe0f386d0324f76e86ed67b6082ed0b75ddff",
+    "library/genres/acoustic-folk.md": "22b052e7eb3ef837aec6652978446cef11aa02a1bd2d321576c09153c73d97e0",
+    "library/genres/english-indie-pop.md": "dec325975c00938f6b78813e62dfa62be17caf595df5c02dafd020c5b5a9a2d6",
+    "library/genres/electronic-dance.md": "b8c31a14bf9a0d0cd2453268f02be3c71ca0d7a1ef0d091f415e64b0c812f2c6",
+    "library/examples/03-parking-lot-bloom.md": "8bc3aa267a2ab5ac0d71cc8aeb70215904fbed65b9d6d60a2eb85d17e0175047",
+    "library/examples/05-cassette-highway.md": "b659618dbdcee230fea3807e701be44b8156be3dc76ddd308cc1aa9f095c6835",
+    "library/examples/07-break-the-silence.md": "909de237b2096e13befb1789e2e5389fb38561df869f80bd95aa83695ce3d482"
+  },
+  "attribution": null,
+  "license_url": null,
+  "license_text": null,
+  "changes": null,
+  "curation_sha256": null,
+  "orientation": "unspecified",
+  "orientation_basis": null
+}

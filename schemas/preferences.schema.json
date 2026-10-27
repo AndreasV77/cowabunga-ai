@@ -1,0 +1,61 @@
+{
+  "$defs": {
+    "JsonValue": {}
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0",
+      "default": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "namespace": {
+      "maxLength": 80,
+      "minLength": 1,
+      "title": "Namespace",
+      "type": "string"
+    },
+    "scope": {
+      "enum": [
+        "user",
+        "project",
+        "artist"
+      ],
+      "title": "Scope",
+      "type": "string"
+    },
+    "subject_id": {
+      "maxLength": 128,
+      "minLength": 1,
+      "title": "Subject Id",
+      "type": "string"
+    },
+    "revision": {
+      "minimum": 1,
+      "title": "Revision",
+      "type": "integer"
+    },
+    "updated_at": {
+      "title": "Updated At",
+      "type": "string"
+    },
+    "values": {
+      "additionalProperties": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Values",
+      "type": "object"
+    }
+  },
+  "required": [
+    "namespace",
+    "scope",
+    "subject_id",
+    "revision",
+    "updated_at",
+    "values"
+  ],
+  "title": "Preferences",
+  "type": "object"
+}

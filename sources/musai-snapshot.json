@@ -1,0 +1,13 @@
+{
+  "id": "musai",
+  "repository": "https://github.com/samuelgrupolimex-prog/suno-style-recipes",
+  "revision": "e34ad57e3450efccf792d1e4e1685ca089ce3c25",
+  "license": "CC0-1.0",
+  "retrieved_at": "2026-10-26T05:52:39.074240+00:00",
+  "files": {
+    "styles.json": "27b5bb0485f36d8c3681a24a9bad45cd774e02ac023c42eb842512b3a10be3d1",
+    "LICENSE": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499",
+    "README.md": "041633eaadf29408f25fdf588ee0afb05d87645d2ed1acefc46cdeb29bdd4a92",
+    "datapackage.json": "0aff358036c9e55526f89021eabc734abd04739df27b9d34688f70ced8e0ca59"
+  }
+}

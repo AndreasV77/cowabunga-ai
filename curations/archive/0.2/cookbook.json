@@ -1,0 +1,323 @@
+{
+  "source_id": "cookbook",
+  "revision": "c8e40ff0b10636a7719cbc88bc5f58443ad19907",
+  "changes": "Selected source excerpts; added English explanatory adaptations, categories and explicit evidence limits; normalized recipe section order. No independent musical-effect verification.",
+  "entries": [
+    {
+      "id": "fingerpicked-guitar",
+      "kind": "phrase",
+      "path": "library/genres/acoustic-folk.md",
+      "excerpt": "Fingerpicked guitar, wooden room, warm harmonies, storytelling, gentle mandolin, soft upright bass, campfire intimacy, earthy percussion.",
+      "text": "Fingerpicked guitar",
+      "meaning": "Guitar played with individual finger-plucked notes rather than only strummed chords.",
+      "category": "instrumentation",
+      "evidence": {
+        "status": "working_hypothesis",
+        "source_label": "working-hypothesis",
+        "independently_verified": false,
+        "model_scope": [
+          "v6"
+        ],
+        "test_count": null,
+        "context": "Descriptor selected from this genre page. Explanation is an editorial adaptation; the page's evidence label is not independent verification."
+      },
+      "input_field": "style"
+    },
+    {
+      "id": "warm-harmonies",
+      "kind": "phrase",
+      "path": "library/genres/acoustic-folk.md",
+      "excerpt": "Fingerpicked guitar, wooden room, warm harmonies, storytelling, gentle mandolin, soft upright bass, campfire intimacy, earthy percussion.",
+      "text": "warm harmonies",
+      "meaning": "A soft or full-sounding harmonic blend; the source leaves the exact voicing unspecified.",
+      "category": "vocals",
+      "evidence": {
+        "status": "working_hypothesis",
+        "source_label": "working-hypothesis",
+        "independently_verified": false,
+        "model_scope": [
+          "v6"
+        ],
+        "test_count": null,
+        "context": "Descriptor selected from this genre page. Explanation is an editorial adaptation; the page's evidence label is not independent verification."
+      },
+      "input_field": "style"
+    },
+    {
+      "id": "gentle-mandolin",
+      "kind": "phrase",
+      "path": "library/genres/acoustic-folk.md",
+      "excerpt": "Fingerpicked guitar, wooden room, warm harmonies, storytelling, gentle mandolin, soft upright bass, campfire intimacy, earthy percussion.",
+      "text": "gentle mandolin",
+      "meaning": "A lightly delivered mandolin part supporting the arrangement.",
+      "category": "instrumentation",
+      "evidence": {
+        "status": "working_hypothesis",
+        "source_label": "working-hypothesis",
+        "independently_verified": false,
+        "model_scope": [
+          "v6"
+        ],
+        "test_count": null,
+        "context": "Descriptor selected from this genre page. Explanation is an editorial adaptation; the page's evidence label is not independent verification."
+      },
+      "input_field": "style"
+    },
+    {
+      "id": "upright-bass",
+      "kind": "phrase",
+      "path": "library/genres/acoustic-folk.md",
+      "excerpt": "Fingerpicked guitar, wooden room, warm harmonies, storytelling, gentle mandolin, soft upright bass, campfire intimacy, earthy percussion.",
+      "text": "soft upright bass",
+      "meaning": "An acoustic upright-bass role with restrained attack or level.",
+      "category": "instrumentation",
+      "evidence": {
+        "status": "working_hypothesis",
+        "source_label": "working-hypothesis",
+        "independently_verified": false,
+        "model_scope": [
+          "v6"
+        ],
+        "test_count": null,
+        "context": "Descriptor selected from this genre page. Explanation is an editorial adaptation; the page's evidence label is not independent verification."
+      },
+      "input_field": "style"
+    },
+    {
+      "id": "jangly-guitar",
+      "kind": "phrase",
+      "path": "library/genres/english-indie-pop.md",
+      "excerpt": "Jangly electric guitar, handclaps, wistful optimism, airy synth, melodic bass, bedroom intimacy, sing-along chorus, dry close vocal.",
+      "text": "Jangly electric guitar",
+      "meaning": "Bright, ringing electric-guitar texture with overlapping resonances.",
+      "category": "instrumentation",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "official-informed",
+        "independently_verified": false,
+        "model_scope": [
+          "v6"
+        ],
+        "test_count": null,
+        "context": "Descriptor selected from this genre page. Explanation is an editorial adaptation; the page's evidence label is not independent verification."
+      },
+      "input_field": "style"
+    },
+    {
+      "id": "melodic-bass",
+      "kind": "phrase",
+      "path": "library/genres/english-indie-pop.md",
+      "excerpt": "Jangly electric guitar, handclaps, wistful optimism, airy synth, melodic bass, bedroom intimacy, sing-along chorus, dry close vocal.",
+      "text": "melodic bass",
+      "meaning": "A bass part with a noticeable melodic contour rather than only repeated roots.",
+      "category": "instrumentation",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "official-informed",
+        "independently_verified": false,
+        "model_scope": [
+          "v6"
+        ],
+        "test_count": null,
+        "context": "Descriptor selected from this genre page. Explanation is an editorial adaptation; the page's evidence label is not independent verification."
+      },
+      "input_field": "style"
+    },
+    {
+      "id": "sing-along-chorus",
+      "kind": "phrase",
+      "path": "library/genres/english-indie-pop.md",
+      "excerpt": "Jangly electric guitar, handclaps, wistful optimism, airy synth, melodic bass, bedroom intimacy, sing-along chorus, dry close vocal.",
+      "text": "sing-along chorus",
+      "meaning": "A chorus designed around an easily repeated vocal hook.",
+      "category": "structure",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "official-informed",
+        "independently_verified": false,
+        "model_scope": [
+          "v6"
+        ],
+        "test_count": null,
+        "context": "Descriptor selected from this genre page. Explanation is an editorial adaptation; the page's evidence label is not independent verification."
+      },
+      "input_field": "style"
+    },
+    {
+      "id": "dry-close-vocal",
+      "kind": "phrase",
+      "path": "library/genres/english-indie-pop.md",
+      "excerpt": "Jangly electric guitar, handclaps, wistful optimism, airy synth, melodic bass, bedroom intimacy, sing-along chorus, dry close vocal.",
+      "text": "dry close vocal",
+      "meaning": "An intimate foreground vocal with little apparent room or reverb.",
+      "category": "production",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "official-informed",
+        "independently_verified": false,
+        "model_scope": [
+          "v6"
+        ],
+        "test_count": null,
+        "context": "Descriptor selected from this genre page. Explanation is an editorial adaptation; the page's evidence label is not independent verification."
+      },
+      "input_field": "style"
+    },
+    {
+      "id": "four-on-floor",
+      "kind": "phrase",
+      "path": "library/genres/electronic-dance.md",
+      "excerpt": "Punchy four-on-the-floor, sidechain pad, bright lead, clean build, euphoric hook, club mix, wide stereo sweep, concise vocal sample-like phrase.",
+      "text": "Punchy four-on-the-floor",
+      "meaning": "A forceful kick pulse on each quarter-note beat in a four-beat dance groove.",
+      "category": "rhythm",
+      "evidence": {
+        "status": "working_hypothesis",
+        "source_label": "working-hypothesis",
+        "independently_verified": false,
+        "model_scope": [
+          "v6"
+        ],
+        "test_count": null,
+        "context": "Descriptor selected from this genre page. Explanation is an editorial adaptation; the page's evidence label is not independent verification."
+      },
+      "input_field": "style"
+    },
+    {
+      "id": "sidechain-pad",
+      "kind": "phrase",
+      "path": "library/genres/electronic-dance.md",
+      "excerpt": "Punchy four-on-the-floor, sidechain pad, bright lead, clean build, euphoric hook, club mix, wide stereo sweep, concise vocal sample-like phrase.",
+      "text": "sidechain pad",
+      "meaning": "A sustained synth layer shaped by level reduction triggered from another signal, commonly the kick.",
+      "category": "production",
+      "evidence": {
+        "status": "working_hypothesis",
+        "source_label": "working-hypothesis",
+        "independently_verified": false,
+        "model_scope": [
+          "v6"
+        ],
+        "test_count": null,
+        "context": "Descriptor selected from this genre page. Explanation is an editorial adaptation; the page's evidence label is not independent verification."
+      },
+      "input_field": "style"
+    },
+    {
+      "id": "wide-sweep",
+      "kind": "phrase",
+      "path": "library/genres/electronic-dance.md",
+      "excerpt": "Punchy four-on-the-floor, sidechain pad, bright lead, clean build, euphoric hook, club mix, wide stereo sweep, concise vocal sample-like phrase.",
+      "text": "wide stereo sweep",
+      "meaning": "A broad motion or sweep across the stereo image.",
+      "category": "production",
+      "evidence": {
+        "status": "working_hypothesis",
+        "source_label": "working-hypothesis",
+        "independently_verified": false,
+        "model_scope": [
+          "v6"
+        ],
+        "test_count": null,
+        "context": "Descriptor selected from this genre page. Explanation is an editorial adaptation; the page's evidence label is not independent verification."
+      },
+      "input_field": "style"
+    },
+    {
+      "id": "short-vocal-phrase",
+      "kind": "phrase",
+      "path": "library/genres/electronic-dance.md",
+      "excerpt": "Punchy four-on-the-floor, sidechain pad, bright lead, clean build, euphoric hook, club mix, wide stereo sweep, concise vocal sample-like phrase.",
+      "text": "concise vocal sample-like phrase",
+      "meaning": "A brief rhythmic vocal motif used like a sample; this does not imply using third-party recordings.",
+      "category": "vocals",
+      "evidence": {
+        "status": "working_hypothesis",
+        "source_label": "working-hypothesis",
+        "independently_verified": false,
+        "model_scope": [
+          "v6"
+        ],
+        "test_count": null,
+        "context": "Descriptor selected from this genre page. Explanation is an editorial adaptation; the page's evidence label is not independent verification."
+      },
+      "input_field": "style"
+    },
+    {
+      "id": "breakdown",
+      "kind": "term",
+      "path": "docs/lyric-and-section-tags.md",
+      "excerpt": "| `[Breakdown]` | Sparser arrangement |",
+      "text": "[Breakdown]",
+      "meaning": "A section with a sparser arrangement in the cookbook's terminology.",
+      "category": "structure",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "ungraded conventional tags",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "The source presents conventional labels, not a dedicated Suno UI control or a verified syntax specification."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "drop",
+      "kind": "term",
+      "path": "docs/lyric-and-section-tags.md",
+      "excerpt": "| `[Drop]` | Electronic payoff, only when genre-appropriate |",
+      "text": "[Drop]",
+      "meaning": "An electronic-music payoff after a build, where appropriate to the genre.",
+      "category": "structure",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "ungraded conventional tags",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "The source presents conventional labels, not a dedicated Suno UI control or a verified syntax specification."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "main-theme-example",
+      "kind": "phrase",
+      "path": "docs/lyric-and-section-tags.md",
+      "excerpt": "[Main Theme - warm cello enters]",
+      "text": "[Main Theme - warm cello enters]",
+      "meaning": "The cookbook's instrumental example requests a cello entrance at the main theme. Retained as an unverified example, despite Band Manager's preference for recognized section labels.",
+      "category": "structure",
+      "evidence": {
+        "status": "unverified_example",
+        "source_label": "unverified instrumental example",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "This is a source example, not a confirmed recognized tag."
+      },
+      "input_field": "lyrics"
+    }
+  ],
+  "recipes": [
+    {
+      "id": "parking-lot-bloom",
+      "path": "library/examples/03-parking-lot-bloom.md",
+      "title": "Parking Lot Bloom",
+      "family": "english-indie-pop",
+      "style_prompt": "Original English indie pop, jangly electric guitar, melodic bass, simple live drums, soft synth pad, light shaker, dry intimate verse, bright sing-along chorus, wistful optimism.",
+      "structure": "[Verse] → [Chorus]",
+      "structure_excerpt": "[Verse]\nI found a flower in the parking lot\nGrowing through the faded white line\nMaybe something small can beat the dark\nMaybe I can make it this time\n[Chorus]\nOpen the window, let the morning through\nEven the concrete holds a drop of blue\nOpen the window, I'm coming home to you",
+      "exclude_styles": "Broadway belting, EDM festival drums, heavy distortion, and abstract poetry.",
+      "evidence": {
+        "status": "unverified_example",
+        "source_label": "official-informed",
+        "independently_verified": false,
+        "model_scope": [
+          "v6"
+        ],
+        "test_count": null,
+        "context": "Source frontmatter: verified: false. Section sequence is normalized from the example lyrics; exclude wording is preserved, not endorsed."
+      }
+    }
+  ]
+}

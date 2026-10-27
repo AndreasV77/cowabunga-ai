@@ -1,0 +1,146 @@
+{
+  "schema_version": "1.2",
+  "source": {
+    "id": "musai",
+    "repository": "https://github.com/samuelgrupolimex-prog/suno-style-recipes",
+    "revision": "e34ad57e3450efccf792d1e4e1685ca089ce3c25",
+    "license": "CC0-1.0",
+    "retrieved_at": "2026-10-26T05:52:39.074240+00:00",
+    "files": {
+      "styles.json": "27b5bb0485f36d8c3681a24a9bad45cd774e02ac023c42eb842512b3a10be3d1",
+      "LICENSE": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499",
+      "README.md": "041633eaadf29408f25fdf588ee0afb05d87645d2ed1acefc46cdeb29bdd4a92",
+      "datapackage.json": "0aff358036c9e55526f89021eabc734abd04739df27b9d34688f70ced8e0ca59"
+    },
+    "attribution": null,
+    "license_url": null,
+    "license_text": null,
+    "changes": null,
+    "curation_sha256": null,
+    "orientation": "unspecified",
+    "orientation_basis": null
+  },
+  "recipes": [
+    {
+      "id": "musai:479089a94dc33733f529caf667ceaa528261e9a3937b8407f3b3e964cbc8a5a0",
+      "title": "Power Metal",
+      "prompt_language": "en",
+      "family": "Storm and Steel",
+      "style_prompt": "Power Metal, fast galloping guitars, double-kick drums, orchestral keyboards, soaring operatic clean vocals, epic fantasy metal, heroic and triumphant",
+      "structure": "[Intro] epic → [Verse] → [Pre-chorus] → [Chorus] heroic → [Verse 2] → [Solo] → [Final chorus]",
+      "settings": {
+        "bpm": 170,
+        "weirdness": 24,
+        "style_influence": 95,
+        "evidence": "publisher_recommendation",
+        "model_version": null
+      },
+      "source_record_url": "https://musaisong.app/en/style/power-metal",
+      "raw_record": {
+        "style": "Power Metal",
+        "family": "Storm and Steel",
+        "bpm": 170,
+        "weirdness": 24,
+        "style_influence": 95,
+        "style_prompt": "Power Metal, fast galloping guitars, double-kick drums, orchestral keyboards, soaring operatic clean vocals, epic fantasy metal, heroic and triumphant",
+        "structure": "[Intro] epic → [Verse] → [Pre-chorus] → [Chorus] heroic → [Verse 2] → [Solo] → [Final chorus]",
+        "url": "https://musaisong.app/en/style/power-metal"
+      },
+      "exclude_styles": null,
+      "evidence": null,
+      "citations": [],
+      "workflow": null
+    },
+    {
+      "id": "musai:757c1f9dd0131fcb2fbcb7c0e370042a1447dd746be6ee7ca8a40d6552495a00",
+      "title": "Folk Metal",
+      "prompt_language": "en",
+      "family": "Storm and Steel",
+      "style_prompt": "Folk Metal, heavy guitars with folk instruments (fiddle, flute, accordion), galloping rhythm, gang chant vocals, festive epic metal, rowdy and triumphant",
+      "structure": "[Intro] folk → [Verse] → [Chorus] festive → [Instrumental] folk → [Final chorus with shouts]",
+      "settings": {
+        "bpm": 150,
+        "weirdness": 30,
+        "style_influence": 91,
+        "evidence": "publisher_recommendation",
+        "model_version": null
+      },
+      "source_record_url": "https://musaisong.app/en/style/folk-metal",
+      "raw_record": {
+        "style": "Folk Metal",
+        "family": "Storm and Steel",
+        "bpm": 150,
+        "weirdness": 30,
+        "style_influence": 91,
+        "style_prompt": "Folk Metal, heavy guitars with folk instruments (fiddle, flute, accordion), galloping rhythm, gang chant vocals, festive epic metal, rowdy and triumphant",
+        "structure": "[Intro] folk → [Verse] → [Chorus] festive → [Instrumental] folk → [Final chorus with shouts]",
+        "url": "https://musaisong.app/en/style/folk-metal"
+      },
+      "exclude_styles": null,
+      "evidence": null,
+      "citations": [],
+      "workflow": null
+    },
+    {
+      "id": "musai:a1e8dfd40ead3daabaf4a5e61c57dc24667aba82145f8dbbc9cb7166c572e123",
+      "title": "Canto Difónico Mongol",
+      "prompt_language": "en",
+      "family": "Distant Worlds",
+      "style_prompt": "Mongolian Throat Singing, khoomei overtone vocals, morin khuur horsehead fiddle, deep drone, vast open phrasing, Central Asian, ancient and otherworldly",
+      "structure": "[Vocal drone] → [overtones] → [morin khuur enters] → [development] → [final echo]",
+      "settings": {
+        "bpm": 64,
+        "weirdness": 40,
+        "style_influence": 94,
+        "evidence": "publisher_recommendation",
+        "model_version": null
+      },
+      "source_record_url": "https://musaisong.app/en/style/mongolian-khoomei",
+      "raw_record": {
+        "style": "Canto Difónico Mongol",
+        "family": "Distant Worlds",
+        "bpm": 64,
+        "weirdness": 40,
+        "style_influence": 94,
+        "style_prompt": "Mongolian Throat Singing, khoomei overtone vocals, morin khuur horsehead fiddle, deep drone, vast open phrasing, Central Asian, ancient and otherworldly",
+        "structure": "[Vocal drone] → [overtones] → [morin khuur enters] → [development] → [final echo]",
+        "url": "https://musaisong.app/en/style/mongolian-khoomei"
+      },
+      "exclude_styles": null,
+      "evidence": null,
+      "citations": [],
+      "workflow": null
+    },
+    {
+      "id": "musai:dfe3a958024a5e6510d17f90d1fdbe674d75da768dd5d8f2bedf9a5b60ae267e",
+      "title": "Kawaii Future Pop",
+      "prompt_language": "en",
+      "family": "Summer Sun",
+      "style_prompt": "Kawaii Future Pop, hyper-bright future bass synths, chopped cute vocal chops, candy melodies, sugary high-energy J-pop, dazzling and playful",
+      "structure": "[Intro] → [Verse] → [Build] → [Kawaii drop] → [Verse 2] → [Final drop]",
+      "settings": {
+        "bpm": 140,
+        "weirdness": 38,
+        "style_influence": 91,
+        "evidence": "publisher_recommendation",
+        "model_version": null
+      },
+      "source_record_url": "https://musaisong.app/en/style/kawaii-future-pop",
+      "raw_record": {
+        "style": "Kawaii Future Pop",
+        "family": "Summer Sun",
+        "bpm": 140,
+        "weirdness": 38,
+        "style_influence": 91,
+        "style_prompt": "Kawaii Future Pop, hyper-bright future bass synths, chopped cute vocal chops, candy melodies, sugary high-energy J-pop, dazzling and playful",
+        "structure": "[Intro] → [Verse] → [Build] → [Kawaii drop] → [Verse 2] → [Final drop]",
+        "url": "https://musaisong.app/en/style/kawaii-future-pop"
+      },
+      "exclude_styles": null,
+      "evidence": null,
+      "citations": [],
+      "workflow": null
+    }
+  ],
+  "entries": []
+}

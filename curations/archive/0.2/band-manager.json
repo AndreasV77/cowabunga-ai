@@ -1,0 +1,306 @@
+{
+  "source_id": "band-manager",
+  "revision": "73c52379833af51e9d3ce7731746d3bfff3f5266",
+  "changes": "Selected source excerpts; added English explanatory adaptations, categories and explicit evidence limits; normalized recipe section order. No independent musical-effect verification.",
+  "entries": [
+    {
+      "id": "pre-chorus",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "| `[Pre-Chorus]` | Transitional build before chorus | Short — 2-4 lines, creates tension/lift toward chorus |",
+      "text": "[Pre-Chorus]",
+      "meaning": "A short transition that builds tension or lift before the chorus.",
+      "category": "structure",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "unmarked legacy tag catalogue",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "Tag usage is attributed to the publisher. This table does not establish a current-model test or sample size."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "post-chorus",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "| `[Post-Chorus]` | Section immediately after chorus | Extends chorus energy or provides cooldown. Genre-dependent: very effective in pop/EDM, may blend with chorus in rock/metal |",
+      "text": "[Post-Chorus]",
+      "meaning": "A section following the chorus that extends or relaxes its energy.",
+      "category": "structure",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "unmarked legacy tag catalogue",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "Tag usage is attributed to the publisher. This table does not establish a current-model test or sample size."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "bridge",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "| `[Bridge]` | Contrasting section — new harmonic content | Introduces NEW chords, melody, perspective. A bridge gives you something the song hasn't heard yet. Usually appears once |",
+      "text": "[Bridge]",
+      "meaning": "A contrasting section offering new harmonic or melodic material.",
+      "category": "structure",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "unmarked legacy tag catalogue",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "Tag usage is attributed to the publisher. This table does not establish a current-model test or sample size."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "instrumental-break",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "| `[Instrumental Break]` | Explicit instrumental mid-song break | Clearer intent than `[Break]` alone (HIGH) |",
+      "text": "[Instrumental Break]",
+      "meaning": "A mid-song passage intended to foreground instruments rather than sung lyrics.",
+      "category": "structure",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "HIGH (publisher grading)",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "Publisher grades agreement between sources as HIGH; model/version and test count remain unspecified."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "drum-break",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "| `[Drum Break]` | Percussion-only break section | Strips everything except drums (HIGH) |",
+      "text": "[Drum Break]",
+      "meaning": "A passage focused on drums, described here as a percussion-only break.",
+      "category": "structure",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "HIGH (publisher grading)",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "Publisher grades agreement between sources as HIGH; model/version and test count remain unspecified."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "interlude",
+      "kind": "term",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "| `[Interlude]` | Musical bridge between sections | 8-20 sec |",
+      "text": "[Interlude]",
+      "meaning": "A transitional instrumental passage between larger sections.",
+      "category": "structure",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "unmarked legacy tag catalogue",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "Tag usage is attributed to the publisher. This table does not establish a current-model test or sample size."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "riff-under-verse",
+      "kind": "phrase",
+      "path": "src/skills/suno-style-prompt-builder/references/v6-build-core.md",
+      "excerpt": "2. **Each instrument gets a job per section, in verbs:** \"the intro riff continues under the verse vocal, palm-muted and lower\", not \"big riffs\". A section the prompt skips is one where the instrument drops out (COMMUNITY + VENDOR).",
+      "text": "the intro riff continues under the verse vocal, palm-muted and lower",
+      "meaning": "Keep the opening guitar motif present underneath the verse singer, with muted articulation and reduced level.",
+      "category": "arrangement",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "COMMUNITY + VENDOR",
+        "independently_verified": false,
+        "model_scope": [
+          "v6",
+          "v6-wild",
+          "v6-mini"
+        ],
+        "test_count": null,
+        "context": "Wording and claimed effect belong to the source; no independent listening verification was performed."
+      },
+      "input_field": "style"
+    },
+    {
+      "id": "vocal-placement",
+      "kind": "phrase",
+      "path": "src/skills/suno-style-prompt-builder/references/v6-build-core.md",
+      "excerpt": "3. **Place the vocal instead of praising it:** \"vocal in front of the band, close-mic'd and dry, the loudest element; instruments sit behind and below the voice\"; thinning the arrangement under the verse is the most-reported fix for a buried vocal (VENDOR + COMMUNITY).",
+      "text": "vocal in front of the band, close-mic'd and dry, the loudest element; instruments sit behind and below the voice",
+      "meaning": "Specify foreground vocal placement and a supporting instrumental balance.",
+      "category": "production",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "VENDOR + COMMUNITY",
+        "independently_verified": false,
+        "model_scope": [
+          "v6",
+          "v6-wild",
+          "v6-mini"
+        ],
+        "test_count": null,
+        "context": "Wording and claimed effect belong to the source; no independent listening verification was performed."
+      },
+      "input_field": "style"
+    },
+    {
+      "id": "intro-length",
+      "kind": "phrase",
+      "path": "src/skills/suno-style-prompt-builder/references/v6-build-core.md",
+      "excerpt": "4. **State both edges, with lengths:** \"4-bar guitar intro, instrumental only\"; \"ends on a hard stop after the final chorus\". Unstated, the intro comes back as humming and the ending vamps or cuts off mid-lyric (VENDOR + COMMUNITY).",
+      "text": "4-bar guitar intro, instrumental only",
+      "meaning": "Request an opening guitar passage of four bars without a sung part; execution is not guaranteed.",
+      "category": "structure",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "VENDOR + COMMUNITY",
+        "independently_verified": false,
+        "model_scope": [
+          "v6",
+          "v6-wild",
+          "v6-mini"
+        ],
+        "test_count": null,
+        "context": "Wording and claimed effect belong to the source; no independent listening verification was performed."
+      },
+      "input_field": "style"
+    },
+    {
+      "id": "heavy-backbeat",
+      "kind": "phrase",
+      "path": "src/skills/suno-style-prompt-builder/references/v6-build-core.md",
+      "excerpt": "**Tempo as feel.** State one BPM for the whole song and pair every number with feel words (\"72 BPM feel with a slow heavy backbeat\"), since a bare number is often ignored (COMMUNITY). Carry section contrast as half-time or double-time drum feel and sparse or dense arrangement over that pulse, in the same scene-naming phrases in the style prompt and the lyric section cues (VENDOR + COMMUNITY; LOCAL: heard as \"a LOT better\"). A feel switch lands sometimes, not reliably.",
+      "text": "72 BPM feel with a slow heavy backbeat",
+      "meaning": "Pair a tempo target with the felt placement and weight of the drum accents.",
+      "category": "rhythm",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "COMMUNITY",
+        "independently_verified": false,
+        "model_scope": [
+          "v6",
+          "v6-wild",
+          "v6-mini"
+        ],
+        "test_count": null,
+        "context": "Wording and claimed effect belong to the source; no independent listening verification was performed."
+      },
+      "input_field": "style"
+    },
+    {
+      "id": "guitar-vocal-space",
+      "kind": "phrase",
+      "path": "src/skills/suno-style-prompt-builder/references/v6-build-core.md",
+      "excerpt": "3. **A band-side vocal-space clause** when the vocal must get in front: \"rhythm guitars leave midrange space for the lead vocal\" (LOCAL: no phrase alone has lifted a vocal; the arrangement decides).",
+      "text": "rhythm guitars leave midrange space for the lead vocal",
+      "meaning": "Ask the rhythm-guitar arrangement to leave room for the voice in the midrange.",
+      "category": "arrangement",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "LOCAL; no phrase alone lifted a vocal",
+        "independently_verified": false,
+        "model_scope": [
+          "v6",
+          "v6-wild",
+          "v6-mini"
+        ],
+        "test_count": null,
+        "context": "Wording and claimed effect belong to the source; no independent listening verification was performed."
+      },
+      "input_field": "style"
+    },
+    {
+      "id": "off-home-chord",
+      "kind": "phrase",
+      "path": "src/skills/suno-style-prompt-builder/references/v6-build-core.md",
+      "excerpt": "9. **Carry \"unresolved\" as harmony** (\"ends off the home chord\"), not as a mood word: a mood tag on a bare verse made it the loudest section (LOCAL, n=1).",
+      "text": "ends off the home chord",
+      "meaning": "Request a harmonically unresolved ending rather than an emotional adjective.",
+      "category": "harmony",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "LOCAL, n=1",
+        "independently_verified": false,
+        "model_scope": [
+          "v6",
+          "v6-wild",
+          "v6-mini"
+        ],
+        "test_count": 1,
+        "context": "Wording and claimed effect belong to the source; no independent listening verification was performed."
+      },
+      "input_field": "style"
+    },
+    {
+      "id": "refrain-legacy-limit",
+      "kind": "guidance",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "**Reserve `[Chorus]` for sections that are allowed to peak.** In a heavy-lane song where the loud material is in the verses, tagging any section `[Chorus]` reintroduces the problem you just solved. (Not yet re-tested on v6.)",
+      "text": "Not yet re-tested on v6.",
+      "meaning": "The publisher's quiet-refrain workaround for heavy genres predates v6 and is explicitly not re-tested on v6.",
+      "category": "structure",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "LOCAL-CONFIRMED, 2026-07; not re-tested on v6",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "Applies to the complete refrain/role/exclude workaround, not to every use of Refrain."
+      },
+      "input_field": null
+    },
+    {
+      "id": "line-end-comma-counterevidence",
+      "kind": "guidance",
+      "path": "src/skills/suno-lyric-transformer/references/metatag-reference.md",
+      "excerpt": "- **Mid-line commas make the singer stop** (ANECDOTAL-controlled). A reported stutter from end-of-line commas never showed up in production testing (2026-09-15, many v6 takes with line-ending commas), so leave the writer's line-end commas alone.",
+      "text": "leave the writer's line-end commas alone",
+      "meaning": "The publisher reports that line-end comma stuttering did not reproduce in its own v6 takes; preserve the distinction from mid-line commas.",
+      "category": "vocals",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "ANECDOTAL-controlled + production counter-evidence",
+        "independently_verified": false,
+        "model_scope": [
+          "v6",
+          "v6-wild",
+          "v6-mini"
+        ],
+        "test_count": null,
+        "context": "No exact production test count is supplied in this passage."
+      },
+      "input_field": "lyrics"
+    },
+    {
+      "id": "room-sound",
+      "kind": "phrase",
+      "path": "src/skills/suno-style-prompt-builder/references/safety-tables.md",
+      "excerpt": "**Say the quality, not the venue.** `unpolished room sound`, `natural room ambience`, `single-take band performance`, `minimal overdubs`, `dry close-mic drums with room bleed` all get the intended texture without the word.",
+      "text": "natural room ambience",
+      "meaning": "Describe the acoustic impression of a room without necessarily requesting an audience recording.",
+      "category": "production",
+      "evidence": {
+        "status": "source_claim",
+        "source_label": "LOCAL-CONFIRMED (section heading); model unspecified",
+        "independently_verified": false,
+        "model_scope": [],
+        "test_count": null,
+        "context": "The surrounding claim that every live-word form causes crowds is a publisher heuristic, not a general exclusion rule."
+      },
+      "input_field": "style"
+    }
+  ],
+  "recipes": []
+}
