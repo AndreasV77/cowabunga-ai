@@ -39,6 +39,9 @@ database or frontend build is required. Use a new report filename for each run.
   repeat-import idempotency, SQLite integrity and foreign keys.
 - Resolve all pinned crosschecks and catalog links; build and validate each
   concept packet both with and without supplementary sources.
+- Evaluate the [task and retrieval audit](foundation-tasks.md) against its pinned
+  sources. Its report retains known search losses and coverage gaps explicitly;
+  matching those observations is not acceptance of their musical sufficiency.
 - Run the complete Python suite, including real-source and web-adapter tests.
   Any failure, collection/runtime skip, deselected test or expected-failure marker
   makes the command unsuccessful. Missing pytest/web dependencies cannot count

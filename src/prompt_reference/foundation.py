@@ -10,6 +10,7 @@ import tempfile
 from .adapters.curated import load_curated_source
 from .adapters.musai import load_snapshot
 from .concepts import CatalogService, ContextPacket
+from .foundation_tasks import evaluate_tasks
 from .models import Source
 from .reviews import resolve_reviews
 from .store import Store
@@ -75,6 +76,7 @@ def rebuild(root: Path, database: Path, bundles):
                 packet = service.build_context([concept.id], supplementary=supplementary)
                 ContextPacket.model_validate_json(packet.model_dump_json())
         return {"sources": imported, "stats": store.stats(), "v6_core": store.stats(v6_core=True),
+                "task_audit": evaluate_tasks(store, root / "reviews/foundation-tasks.json"),
                 "concepts": len(service.catalog.concepts), "crosschecks": len(reviews["cases"])}
 
 

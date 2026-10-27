@@ -142,6 +142,20 @@ ignored; the implementation, negative tests and reproduction commands are tracke
 Source changes require rerunning this check. Coverage, retrieval and semantic
 editorial acceptance remain separate open work; Gate 1 stays OPEN.
 
+## Task-based follow-up — 2026-10-27
+
+Added eleven independently authored English briefs and 31 retrieval probes in
+`reviews/foundation-tasks.json`, evaluated by strict validation. The
+[task coverage/retrieval report](foundation-tasks.md) maps all eight categories
+to actual source records and records an initial semantic review of eight entries.
+Two query losses (`gallop`, `exclude`) are explicitly open; empty strict-core
+queries are separated from full-corpus absence. Candidate-source decisions,
+selection-versus-upstream gap review, fixes and the complete editorial review
+remain pending. **FND-01, FND-02 and FND-04 stay OPEN.**
+
+The tasks are synthetic examples. Private notebook source material was read to
+identify research questions, not copied into the public corpus or fixtures.
+
 ## Source-change control
 
 Before Gate 1 acceptance and whenever a source revision, license, imported file,

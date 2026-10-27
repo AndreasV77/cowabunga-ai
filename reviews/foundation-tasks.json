@@ -1,0 +1,817 @@
+{
+  "schema_version": "1.0",
+  "reviewed_on": "2026-10-27",
+  "provenance": "New synthetic English briefs authored for Cowabunga AI. Research questions were suggested by a private working notebook; no private lyrics, historical prompts, third-party examples or listening reports are reproduced. These are audit tasks, not generation evidence.",
+  "snapshots": {
+    "musai": "musai@e34ad57e3450efccf792d1e4e1685ca089ce3c25",
+    "band-manager": "band-manager@73c52379833af51e9d3ce7731746d3bfff3f5266+66845f72bb79bd409106b6537c75ba3ac5e58cf176c6a39ac293976ad490345b",
+    "cookbook": "cookbook@c8e40ff0b10636a7719cbc88bc5f58443ad19907+27bf877b0a6c9cc46b59edd16c5b4fd82cba295b9a042d72cf843f39060cb5fe",
+    "lil-synn": "lil-synn@6b805bf77a350e7fba00bfd2451273327482827c+5f540a315d9636345ad85c89b279f79d49611011ab8c25293d91207ce2e4861c"
+  },
+  "tasks": [
+    {
+      "id": "pulse-and-subdivision",
+      "brief": "Fast metal drums should keep moving while the singer follows a spacious, slower-feeling pulse.",
+      "dimensions": [
+        "rhythm",
+        "vocals",
+        "arrangement"
+      ],
+      "references": [
+        {
+          "record_id": "band-manager:half-time",
+          "contribution": "Definition of half-time feel, not an instruction to slow every layer."
+        },
+        {
+          "record_id": "cookbook:four-on-floor",
+          "contribution": "Quarter-note kick pulse."
+        },
+        {
+          "record_id": "musai:479089a94dc33733f529caf667ceaa528261e9a3937b8407f3b3e964cbc8a5a0",
+          "contribution": "Supplementary galloping vocabulary; model basis unspecified."
+        }
+      ],
+      "coverage": "partial",
+      "missing": [
+        "No selected entry directly specifies independent vocal pulse and drum subdivision.",
+        "Gallop does not currently retrieve the galloping recipe."
+      ],
+      "evidence_boundary": "Vocabulary and scoped arrangement proposals are separate; no evidence that these combined directions reliably execute.",
+      "future_assistant_check": "Keep vocal phrasing and drum movement as separate roles. Do not halve the entire tempo.",
+      "listening_question": "Does the voice gain space while fast drum movement continues?"
+    },
+    {
+      "id": "instrument-relationships",
+      "brief": "Align the rhythm guitar attacks with the kick; have the bass follow the guitar figure rather than simply duplicate the kick.",
+      "dimensions": [
+        "instrumentation",
+        "rhythm",
+        "arrangement"
+      ],
+      "references": [
+        {
+          "record_id": "cookbook:locked-bass",
+          "contribution": "General coordination with a groove; no specific guitar target."
+        },
+        {
+          "record_id": "band-manager:palm-muted",
+          "contribution": "Guitar articulation only."
+        }
+      ],
+      "coverage": "partial",
+      "missing": [
+        "No curated relation encodes the exact guitar-to-kick and bass-to-guitar links."
+      ],
+      "evidence_boundary": "Locked bass does not establish the intended dependency graph.",
+      "future_assistant_check": "Preserve both explicit relations and identify the added relational wording as an authored proposal.",
+      "listening_question": "Do guitar and bass follow their intended rhythmic partners?"
+    },
+    {
+      "id": "ensemble-and-section-scope",
+      "brief": "Use a broad sung ensemble in the chorus and alternating short vocal answers in the verses.",
+      "dimensions": [
+        "vocals",
+        "harmony",
+        "arrangement",
+        "structure"
+      ],
+      "references": [
+        {
+          "record_id": "band-manager:stacked-harmonies",
+          "contribution": "Layered harmonic parts."
+        },
+        {
+          "record_id": "band-manager:call-response",
+          "contribution": "Answering pattern; not necessarily a choir."
+        },
+        {
+          "record_id": "cookbook:wider-group-vocals",
+          "contribution": "Chorus-specific ensemble expansion."
+        },
+        {
+          "record_id": "lil-synn:expanded-chorus",
+          "contribution": "An example of section-specific added density."
+        }
+      ],
+      "coverage": "partial",
+      "missing": [
+        "No independently tested distinction between layered and stacked.",
+        "No admitted curated choir-versus-gang-shout comparison."
+      ],
+      "evidence_boundary": "Ensemble type, density and answering arrangement are different dimensions; inherited cross-model claims are not V6 verification.",
+      "future_assistant_check": "Do not silently substitute shouted group vocals for sung harmonies or apply chorus width to every section.",
+      "listening_question": "Are the chorus ensemble and verse answers audibly distinct?"
+    },
+    {
+      "id": "change-one-layer",
+      "brief": "Leave one bar of silence in the lead vocal before the last chorus while the dance kick and bass continue underneath.",
+      "dimensions": [
+        "vocals",
+        "rhythm",
+        "arrangement",
+        "structure"
+      ],
+      "references": [
+        {
+          "record_id": "cookbook:four-on-floor",
+          "contribution": "Continuing dance pulse vocabulary."
+        },
+        {
+          "record_id": "cookbook:locked-bass",
+          "contribution": "Bass coordination vocabulary."
+        },
+        {
+          "record_id": "band-manager:instrumental-break",
+          "contribution": "Broad instrumental passage; not equivalent to an exact one-bar vocal pause."
+        }
+      ],
+      "coverage": "partial",
+      "missing": [
+        "No selected example specifies the exact vocal-only pause with invariant kick and bass.",
+        "No guarantee of bar-exact rendering."
+      ],
+      "evidence_boundary": "A lyric instruction that looks plausible is not an execution test.",
+      "future_assistant_check": "State which layer stops and which layers continue; do not replace this with a full-band break.",
+      "listening_question": "Does only the lead pause, for the requested interval?"
+    },
+    {
+      "id": "rough-clear-vocal",
+      "brief": "Give the singer a rough-edged tone with understandable words, without turning the performance into a thin continuous shout.",
+      "dimensions": [
+        "vocals",
+        "production"
+      ],
+      "references": [
+        {
+          "record_id": "lil-synn:grainy",
+          "contribution": "Timbre, not register or loudness."
+        },
+        {
+          "record_id": "band-manager:raspy",
+          "contribution": "Rough texture without a prescribed register."
+        },
+        {
+          "record_id": "cookbook:clear-consonants",
+          "contribution": "Articulation."
+        },
+        {
+          "record_id": "cookbook:dry-close-vocal",
+          "contribution": "Placement and ambience, not a change of vocal technique."
+        }
+      ],
+      "coverage": "partial",
+      "missing": [
+        "No admitted controlled comparison establishes the desired roughness versus shouting outcome."
+      ],
+      "evidence_boundary": "Do not infer singer age, pitch register, voice identity or a slider optimum from a texture adjective.",
+      "future_assistant_check": "Keep timbre, delivery, intelligibility and placement separate.",
+      "listening_question": "Are words clear and tone rough without the unwanted shouted sound?"
+    },
+    {
+      "id": "cross-genre-drive",
+      "brief": "Make a roots-oriented groove move continuously using a broken drum pattern, while retaining its acoustic instrument roles.",
+      "dimensions": [
+        "rhythm",
+        "instrumentation",
+        "arrangement"
+      ],
+      "references": [
+        {
+          "record_id": "band-manager:breakbeat",
+          "contribution": "Broken or syncopated drum pattern."
+        },
+        {
+          "record_id": "band-manager:trap-hihats",
+          "contribution": "Trap subdivision vocabulary, not an interchangeable groove."
+        },
+        {
+          "record_id": "musai:5c2bdccf2c21c9212e0143a277f29837fde0d24bdf175db334fd836e4d154306",
+          "contribution": "A complete supplementary style recipe; do not transplant the whole genre package."
+        }
+      ],
+      "coverage": "partial",
+      "missing": [
+        "No controlled cross-genre demonstration establishes drive without genre drift."
+      ],
+      "evidence_boundary": "A vocabulary definition does not prove a genre-independent energy effect.",
+      "future_assistant_check": "Offer a scoped drum change rather than replacing every instrument with a breakbeat recipe.",
+      "listening_question": "Does forward movement improve without unwanted genre drift?"
+    },
+    {
+      "id": "exclusions-and-positive-roles",
+      "brief": "Keep a female lead, avoid male lead vocals, and ask for a clear low end without assuming all negative terms behave alike.",
+      "dimensions": [
+        "controls",
+        "vocals",
+        "production"
+      ],
+      "references": [
+        {
+          "record_id": "lil-synn:avoidance-experimental",
+          "contribution": "Avoidance technique explicitly described as experimental."
+        },
+        {
+          "record_id": "lil-synn:positive-replacement",
+          "contribution": "State a positive replacement."
+        },
+        {
+          "record_id": "lil-synn:centered-bass",
+          "contribution": "Low-end spatial intention, not measured mix quality."
+        }
+      ],
+      "coverage": "partial",
+      "missing": [
+        "The query exclude does not find the selected negative-wording guidance.",
+        "No selected controlled comparison establishes field equivalence or relative reliability of exclusion categories."
+      ],
+      "evidence_boundary": "Experimental avoidance is not a deterministic exclusion language; low-end wording is not measured audio quality.",
+      "future_assistant_check": "Separate casting, positive mix goals and uncertain exclusion behavior.",
+      "listening_question": "Which casting exclusions and mix intentions were actually audible?"
+    },
+    {
+      "id": "priority-and-conflicts",
+      "brief": "Keep the lead exposed in sparse verses, expand the chorus, and preserve the main motif; a bright extra synth is optional.",
+      "dimensions": [
+        "controls",
+        "arrangement",
+        "structure"
+      ],
+      "references": [
+        {
+          "record_id": "lil-synn:working-hierarchy",
+          "contribution": "Author heuristic, not an official parser specification."
+        },
+        {
+          "record_id": "lil-synn:sparse-verse",
+          "contribution": "Scoped sparse verse example."
+        },
+        {
+          "record_id": "lil-synn:expanded-chorus",
+          "contribution": "Scoped expansion example."
+        },
+        {
+          "record_id": "cookbook:repeated-melodic-phrase",
+          "contribution": "Recurring motif vocabulary."
+        },
+        {
+          "record_id": "lil-synn:single-success",
+          "contribution": "Single success is not repeatable-effect evidence."
+        },
+        {
+          "record_id": "lil-synn:test-variable",
+          "contribution": "Record controls and changed variables."
+        }
+      ],
+      "coverage": "partial",
+      "missing": [
+        "No tested universal precedence rule for prompt head, body and lyrics tags.",
+        "A revised prompt must not silently resolve incompatible mandatory instructions."
+      ],
+      "evidence_boundary": "Source heuristics and creative prioritization are separate from verified model implementation. Missing generation settings remain unknown.",
+      "future_assistant_check": "Preserve mandatory roles and optional status; ask about genuine conflicts rather than inventing an order of precedence.",
+      "listening_question": "Which mandatory roles survived, and which optional elements appeared?"
+    },
+    {
+      "id": "intimate-acoustic",
+      "brief": "Build an intimate acoustic song with fingerpicked guitar, restrained ornamentation and a small lift into the chorus.",
+      "dimensions": [
+        "instrumentation",
+        "vocals",
+        "production",
+        "structure"
+      ],
+      "references": [
+        {
+          "record_id": "cookbook:fingerpicked-guitar",
+          "contribution": "Articulation."
+        },
+        {
+          "record_id": "cookbook:restrained-ornament",
+          "contribution": "Vocal ornament density."
+        },
+        {
+          "record_id": "cookbook:dry-close-vocal",
+          "contribution": "Foreground vocal."
+        },
+        {
+          "record_id": "cookbook:verse-chorus-contrast",
+          "contribution": "Contrast dimension, not necessarily a loudness increase."
+        }
+      ],
+      "coverage": "partial",
+      "missing": [
+        "The intended small lift requires an authored choice of contrast dimension; general contrast alone is insufficient."
+      ],
+      "evidence_boundary": "V6-targeted community wording does not establish successful rendering.",
+      "future_assistant_check": "Avoid turning a small acoustic lift into a large ensemble by default.",
+      "listening_question": "Is the chorus distinct while the intimate scale remains?"
+    },
+    {
+      "id": "harmonic-ending",
+      "brief": "End with harmonic tension rather than a fully settled return to the home chord; keep this separate from whether the audio fades or stops abruptly.",
+      "dimensions": [
+        "harmony",
+        "structure"
+      ],
+      "references": [
+        {
+          "record_id": "band-manager:off-home-chord",
+          "contribution": "Unresolved harmonic ending."
+        },
+        {
+          "record_id": "band-manager:key-change",
+          "contribution": "New tonal center, not automatically an unresolved ending."
+        },
+        {
+          "record_id": "band-manager:hard-stop",
+          "contribution": "Abrupt ending, a separate dimension."
+        }
+      ],
+      "coverage": "partial",
+      "missing": [
+        "Only two curated harmony entries; neither gives a precise progression or voicing for this task.",
+        "No strict-core harmony entry currently covers the unresolved ending."
+      ],
+      "evidence_boundary": "Harmonic resolution and audio ending shape must not be treated as synonyms.",
+      "future_assistant_check": "Explain the separate choices without inventing a source-backed chord progression.",
+      "listening_question": "Is harmonic tension retained independently of the ending envelope?"
+    },
+    {
+      "id": "overtone-tradition",
+      "brief": "Combine a Mongolian overtone-singing drone with a separate bright pop lead and heavy guitars.",
+      "dimensions": [
+        "vocals",
+        "instrumentation",
+        "arrangement"
+      ],
+      "references": [
+        {
+          "record_id": "musai:a1e8dfd40ead3daabaf4a5e61c57dc24667aba82145f8dbbc9cb7166c572e123",
+          "contribution": "Supplementary Mongolian overtone vocabulary, model basis unspecified."
+        },
+        {
+          "record_id": "band-manager:palm-muted",
+          "contribution": "Heavy guitar articulation."
+        },
+        {
+          "record_id": "cookbook:sing-along-chorus",
+          "contribution": "Hook direction only, not a kawaii-metal recipe."
+        }
+      ],
+      "coverage": "partial",
+      "missing": [
+        "No strict-core Mongolian overtone reference.",
+        "No selected source proves the full three-role fusion."
+      ],
+      "evidence_boundary": "Do not substitute another throat-singing tradition, treat low growl as proof of overtones, or promote model-unspecified recipes to V6 evidence.",
+      "future_assistant_check": "Keep drone, overtone component and sung lead distinct; label the fusion arrangement as authored.",
+      "listening_question": "Are a drone and overtone component audible alongside the independent lead?"
+    }
+  ],
+  "probes": [
+    {
+      "id": "pulse-quarter-notes",
+      "task_id": "pulse-and-subdivision",
+      "query": "four-on-the-floor",
+      "scope": "v6_core",
+      "required_ids": [
+        "cookbook:four-on-floor"
+      ],
+      "forbidden_ids": [],
+      "desired_but_missing_ids": [],
+      "expect_empty": false,
+      "disposition": "supported",
+      "rationale": "Literal vocabulary retrieval; not a musical-effect assertion."
+    },
+    {
+      "id": "pulse-half-time",
+      "task_id": "pulse-and-subdivision",
+      "query": "half-time",
+      "scope": "all",
+      "required_ids": [
+        "band-manager:half-time"
+      ],
+      "forbidden_ids": [],
+      "desired_but_missing_ids": [],
+      "expect_empty": false,
+      "disposition": "supported",
+      "rationale": "Literal vocabulary retrieval; not a musical-effect assertion."
+    },
+    {
+      "id": "galloping-present",
+      "task_id": "pulse-and-subdivision",
+      "query": "galloping",
+      "scope": "all",
+      "required_ids": [
+        "musai:479089a94dc33733f529caf667ceaa528261e9a3937b8407f3b3e964cbc8a5a0"
+      ],
+      "forbidden_ids": [],
+      "desired_but_missing_ids": [],
+      "expect_empty": false,
+      "disposition": "supported",
+      "rationale": "Literal vocabulary retrieval; not a musical-effect assertion."
+    },
+    {
+      "id": "gallop-word-form-loss",
+      "task_id": "pulse-and-subdivision",
+      "query": "gallop",
+      "scope": "all",
+      "required_ids": [],
+      "forbidden_ids": [],
+      "desired_but_missing_ids": [
+        "musai:479089a94dc33733f529caf667ceaa528261e9a3937b8407f3b3e964cbc8a5a0"
+      ],
+      "expect_empty": true,
+      "disposition": "retrieval_loss",
+      "rationale": "The desired galloping vocabulary is indexed under a different word form; do not count the empty result as adequate retrieval."
+    },
+    {
+      "id": "locked-bass-general",
+      "task_id": "instrument-relationships",
+      "query": "locked bass",
+      "scope": "v6_core",
+      "required_ids": [
+        "cookbook:locked-bass"
+      ],
+      "forbidden_ids": [],
+      "desired_but_missing_ids": [],
+      "expect_empty": false,
+      "disposition": "supported",
+      "rationale": "Literal vocabulary retrieval; not a musical-effect assertion."
+    },
+    {
+      "id": "stacked-general",
+      "task_id": "ensemble-and-section-scope",
+      "query": "stacked harmonies",
+      "scope": "all",
+      "required_ids": [
+        "band-manager:stacked-harmonies",
+        "lil-synn:expanded-chorus"
+      ],
+      "forbidden_ids": [],
+      "desired_but_missing_ids": [],
+      "expect_empty": false,
+      "disposition": "supported",
+      "rationale": "Literal vocabulary retrieval; not a musical-effect assertion."
+    },
+    {
+      "id": "answers-general",
+      "task_id": "ensemble-and-section-scope",
+      "query": "call and response",
+      "scope": "all",
+      "required_ids": [
+        "band-manager:call-response"
+      ],
+      "forbidden_ids": [],
+      "desired_but_missing_ids": [],
+      "expect_empty": false,
+      "disposition": "supported",
+      "rationale": "Literal vocabulary retrieval; not a musical-effect assertion."
+    },
+    {
+      "id": "answers-outside-core",
+      "task_id": "ensemble-and-section-scope",
+      "query": "call and response",
+      "scope": "v6_core",
+      "required_ids": [],
+      "forbidden_ids": [
+        "band-manager:call-response"
+      ],
+      "desired_but_missing_ids": [],
+      "expect_empty": true,
+      "disposition": "scope_boundary",
+      "rationale": "A mixed-source vocabulary item is not promoted into the V6-native core."
+    },
+    {
+      "id": "continuing-kick",
+      "task_id": "change-one-layer",
+      "query": "four-on-the-floor",
+      "scope": "v6_core",
+      "required_ids": [
+        "cookbook:four-on-floor"
+      ],
+      "forbidden_ids": [],
+      "desired_but_missing_ids": [],
+      "expect_empty": false,
+      "disposition": "supported",
+      "rationale": "Literal vocabulary retrieval; not a musical-effect assertion."
+    },
+    {
+      "id": "broad-break-not-equivalence",
+      "task_id": "change-one-layer",
+      "query": "instrumental break",
+      "scope": "all",
+      "required_ids": [
+        "band-manager:instrumental-break"
+      ],
+      "forbidden_ids": [],
+      "desired_but_missing_ids": [],
+      "expect_empty": false,
+      "disposition": "supported",
+      "rationale": "Literal vocabulary retrieval; not a musical-effect assertion."
+    },
+    {
+      "id": "grainy-core",
+      "task_id": "rough-clear-vocal",
+      "query": "grainy",
+      "scope": "v6_core",
+      "required_ids": [
+        "lil-synn:grainy"
+      ],
+      "forbidden_ids": [],
+      "desired_but_missing_ids": [],
+      "expect_empty": false,
+      "disposition": "supported",
+      "rationale": "Literal vocabulary retrieval; not a musical-effect assertion."
+    },
+    {
+      "id": "raspy-supplement",
+      "task_id": "rough-clear-vocal",
+      "query": "raspy",
+      "scope": "all",
+      "required_ids": [
+        "band-manager:raspy"
+      ],
+      "forbidden_ids": [],
+      "desired_but_missing_ids": [],
+      "expect_empty": false,
+      "disposition": "supported",
+      "rationale": "Literal vocabulary retrieval; not a musical-effect assertion."
+    },
+    {
+      "id": "articulation-core",
+      "task_id": "rough-clear-vocal",
+      "query": "clear consonants",
+      "scope": "v6_core",
+      "required_ids": [
+        "cookbook:clear-consonants"
+      ],
+      "forbidden_ids": [],
+      "desired_but_missing_ids": [],
+      "expect_empty": false,
+      "disposition": "supported",
+      "rationale": "Literal vocabulary retrieval; not a musical-effect assertion."
+    },
+    {
+      "id": "breakbeat-supplement",
+      "task_id": "cross-genre-drive",
+      "query": "breakbeat",
+      "scope": "all",
+      "required_ids": [
+        "band-manager:breakbeat",
+        "musai:5c2bdccf2c21c9212e0143a277f29837fde0d24bdf175db334fd836e4d154306"
+      ],
+      "forbidden_ids": [],
+      "desired_but_missing_ids": [],
+      "expect_empty": false,
+      "disposition": "supported",
+      "rationale": "Literal vocabulary retrieval; not a musical-effect assertion."
+    },
+    {
+      "id": "breakbeat-core-empty",
+      "task_id": "cross-genre-drive",
+      "query": "breakbeat",
+      "scope": "v6_core",
+      "required_ids": [],
+      "forbidden_ids": [
+        "band-manager:breakbeat",
+        "musai:5c2bdccf2c21c9212e0143a277f29837fde0d24bdf175db334fd836e4d154306"
+      ],
+      "desired_but_missing_ids": [],
+      "expect_empty": true,
+      "disposition": "scope_boundary",
+      "rationale": "Supplementary rhythm vocabulary exists, but not in the strict core."
+    },
+    {
+      "id": "negative-guidance-found",
+      "task_id": "exclusions-and-positive-roles",
+      "query": "negative",
+      "scope": "v6_core",
+      "required_ids": [
+        "lil-synn:avoidance-experimental"
+      ],
+      "forbidden_ids": [],
+      "desired_but_missing_ids": [],
+      "expect_empty": false,
+      "disposition": "supported",
+      "rationale": "Literal vocabulary retrieval; not a musical-effect assertion."
+    },
+    {
+      "id": "exclude-wording-loss",
+      "task_id": "exclusions-and-positive-roles",
+      "query": "exclude",
+      "scope": "v6_core",
+      "required_ids": [],
+      "forbidden_ids": [],
+      "desired_but_missing_ids": [
+        "lil-synn:avoidance-experimental"
+      ],
+      "expect_empty": true,
+      "disposition": "retrieval_loss",
+      "rationale": "A plausible user query misses related avoidance guidance; semantic equivalence and any alias still need editorial review."
+    },
+    {
+      "id": "hierarchy-as-heuristic",
+      "task_id": "priority-and-conflicts",
+      "query": "working production model",
+      "scope": "v6_core",
+      "required_ids": [
+        "lil-synn:working-hierarchy"
+      ],
+      "forbidden_ids": [],
+      "desired_but_missing_ids": [],
+      "expect_empty": false,
+      "disposition": "supported",
+      "rationale": "Literal vocabulary retrieval; not a musical-effect assertion."
+    },
+    {
+      "id": "evidence-control",
+      "task_id": "priority-and-conflicts",
+      "query": "one generation worked",
+      "scope": "v6_core",
+      "required_ids": [
+        "lil-synn:single-success"
+      ],
+      "forbidden_ids": [],
+      "desired_but_missing_ids": [],
+      "expect_empty": false,
+      "disposition": "supported",
+      "rationale": "Literal vocabulary retrieval; not a musical-effect assertion."
+    },
+    {
+      "id": "unknown-query",
+      "task_id": "priority-and-conflicts",
+      "query": "qzxnonexistentmusic",
+      "scope": "all",
+      "required_ids": [],
+      "forbidden_ids": [],
+      "desired_but_missing_ids": [],
+      "expect_empty": true,
+      "disposition": "negative_control",
+      "rationale": "An unknown term must not produce fabricated references."
+    },
+    {
+      "id": "acoustic-core",
+      "task_id": "intimate-acoustic",
+      "query": "fingerpicked guitar",
+      "scope": "v6_core",
+      "required_ids": [
+        "cookbook:fingerpicked-guitar"
+      ],
+      "forbidden_ids": [],
+      "desired_but_missing_ids": [],
+      "expect_empty": false,
+      "disposition": "supported",
+      "rationale": "Literal vocabulary retrieval; not a musical-effect assertion."
+    },
+    {
+      "id": "acoustic-dry-core",
+      "task_id": "intimate-acoustic",
+      "query": "dry close vocal",
+      "scope": "v6_core",
+      "required_ids": [
+        "cookbook:dry-close-vocal"
+      ],
+      "forbidden_ids": [],
+      "desired_but_missing_ids": [],
+      "expect_empty": false,
+      "disposition": "supported",
+      "rationale": "Literal vocabulary retrieval; not a musical-effect assertion."
+    },
+    {
+      "id": "unresolved-supplement",
+      "task_id": "harmonic-ending",
+      "query": "off the home chord",
+      "scope": "all",
+      "required_ids": [
+        "band-manager:off-home-chord"
+      ],
+      "forbidden_ids": [],
+      "desired_but_missing_ids": [],
+      "expect_empty": false,
+      "disposition": "supported",
+      "rationale": "Literal vocabulary retrieval; not a musical-effect assertion."
+    },
+    {
+      "id": "unresolved-outside-core",
+      "task_id": "harmonic-ending",
+      "query": "off the home chord",
+      "scope": "v6_core",
+      "required_ids": [],
+      "forbidden_ids": [
+        "band-manager:off-home-chord"
+      ],
+      "desired_but_missing_ids": [],
+      "expect_empty": true,
+      "disposition": "scope_boundary",
+      "rationale": "A V6-targeted record from a mixed source remains outside the stricter source-orientation core."
+    },
+    {
+      "id": "mongolian-identity",
+      "task_id": "overtone-tradition",
+      "query": "Mongolian",
+      "scope": "all",
+      "required_ids": [
+        "musai:a1e8dfd40ead3daabaf4a5e61c57dc24667aba82145f8dbbc9cb7166c572e123"
+      ],
+      "forbidden_ids": [
+        "musai:f6ebdf9de42e500f3db639f0da58c55e46567b8dab0921a23b22f2e3ed22143f"
+      ],
+      "desired_but_missing_ids": [],
+      "expect_empty": false,
+      "disposition": "supported",
+      "rationale": "Literal vocabulary retrieval; not a musical-effect assertion."
+    },
+    {
+      "id": "khoomei-spelling",
+      "task_id": "overtone-tradition",
+      "query": "khoomei",
+      "scope": "all",
+      "required_ids": [
+        "musai:a1e8dfd40ead3daabaf4a5e61c57dc24667aba82145f8dbbc9cb7166c572e123"
+      ],
+      "forbidden_ids": [
+        "musai:f6ebdf9de42e500f3db639f0da58c55e46567b8dab0921a23b22f2e3ed22143f"
+      ],
+      "desired_but_missing_ids": [],
+      "expect_empty": false,
+      "disposition": "supported",
+      "rationale": "Literal vocabulary retrieval; not a musical-effect assertion."
+    },
+    {
+      "id": "khoomei-diacritics",
+      "task_id": "overtone-tradition",
+      "query": "khöömei",
+      "scope": "all",
+      "required_ids": [
+        "musai:a1e8dfd40ead3daabaf4a5e61c57dc24667aba82145f8dbbc9cb7166c572e123"
+      ],
+      "forbidden_ids": [
+        "musai:f6ebdf9de42e500f3db639f0da58c55e46567b8dab0921a23b22f2e3ed22143f"
+      ],
+      "desired_but_missing_ids": [],
+      "expect_empty": false,
+      "disposition": "supported",
+      "rationale": "Literal vocabulary retrieval; not a musical-effect assertion."
+    },
+    {
+      "id": "mongolian-core-empty",
+      "task_id": "overtone-tradition",
+      "query": "Mongolian",
+      "scope": "v6_core",
+      "required_ids": [],
+      "forbidden_ids": [
+        "musai:a1e8dfd40ead3daabaf4a5e61c57dc24667aba82145f8dbbc9cb7166c572e123",
+        "musai:f6ebdf9de42e500f3db639f0da58c55e46567b8dab0921a23b22f2e3ed22143f"
+      ],
+      "desired_but_missing_ids": [],
+      "expect_empty": true,
+      "disposition": "scope_boundary",
+      "rationale": "No strict-core hit; do not infer that the full corpus lacks vocabulary."
+    },
+    {
+      "id": "different-tradition-control",
+      "task_id": "overtone-tradition",
+      "query": "Tibetan",
+      "scope": "all",
+      "required_ids": [
+        "musai:f6ebdf9de42e500f3db639f0da58c55e46567b8dab0921a23b22f2e3ed22143f"
+      ],
+      "forbidden_ids": [
+        "musai:a1e8dfd40ead3daabaf4a5e61c57dc24667aba82145f8dbbc9cb7166c572e123"
+      ],
+      "desired_but_missing_ids": [],
+      "expect_empty": false,
+      "disposition": "supported",
+      "rationale": "A different tradition remains searchable in its own right, not globally banned or merged."
+    },
+    {
+      "id": "sax-sax",
+      "task_id": "instrument-relationships",
+      "query": "sax",
+      "scope": "all",
+      "required_ids": [
+        "band-manager:tenor-sax"
+      ],
+      "forbidden_ids": [],
+      "desired_but_missing_ids": [],
+      "expect_empty": false,
+      "disposition": "supported",
+      "rationale": "Both forms retrieve this record because its text and explanation cover them; this is not evidence of a general synonym-expansion engine."
+    },
+    {
+      "id": "sax-saxophone",
+      "task_id": "instrument-relationships",
+      "query": "saxophone",
+      "scope": "all",
+      "required_ids": [
+        "band-manager:tenor-sax"
+      ],
+      "forbidden_ids": [],
+      "desired_but_missing_ids": [],
+      "expect_empty": false,
+      "disposition": "supported",
+      "rationale": "Both forms retrieve this record because its text and explanation cover them; this is not evidence of a general synonym-expansion engine."
+    }
+  ]
+}

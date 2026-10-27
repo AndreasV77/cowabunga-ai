@@ -2,6 +2,8 @@
 
 ## Unreleased — public repository preparation
 
+- Added eleven synthetic musical audit tasks, 31 pinned retrieval probes and explicit open coverage/search findings to strict foundation validation. Recorded an initial eight-entry semantic review without importing private notebook material or claiming assistant/generation tests; FND-01, FND-02 and FND-04 remain open.
+
 - Added strict foundation validation against tracked source hashes, isolated corpus reconstruction, full round trips and the complete suite; missing inputs, skips, deselections and xfails cannot pass. Closed FND-03 after two 99-test runs, including a clean source copy with fresh pinned downloads; coverage, retrieval and editorial gates remain open.
 
 - Made delivery gates explicit: foundation acceptance before complete AI-assisted prompting, then user experience; corrected README/AGENTS status and documented the external creative work in the Tiny Bell example.
