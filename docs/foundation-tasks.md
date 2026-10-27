@@ -1,6 +1,6 @@
 # Musical task and retrieval audit — first pass
 
-Reviewed 2026-10-27. **FND-01, FND-02 and FND-04 remain OPEN.**
+Reviewed 2026-10-27. **FND-01 and FND-04 remain OPEN; FND-02 is closed for the current 36-probe scope.** See [the search/field review](search-and-field-review.md).
 
 The owner's private notebook suggested practical research questions. The public
 briefs in `reviews/foundation-tasks.json` are newly authored English examples;
@@ -14,9 +14,9 @@ Eleven briefs cover all eight reference categories. Each has explicit source
 record IDs and their limited contribution, missing information, an evidence
 boundary, a future assistant criterion and a separate listening question.
 
-Thirty-four lexical probes check required and forbidden records, two spellings of
+Thirty-six retrieval probes check required and forbidden records, two spellings of
 Mongolian overtone terminology, `sax/saxophone`, core versus supplementary scope,
-an unknown query and two known retrieval losses. Expected IDs are evaluated in
+an unknown query, two corrected retrieval losses and their literal baseline controls. Expected IDs are evaluated in
 the complete pinned corpus, not against the owner's working database. Every
 referenced record must exist in the declared active snapshots.
 
@@ -54,8 +54,8 @@ candidate-source decisions required by FND-01 remain pending.
 
 | Finding | Disposition |
 |---|---|
-| `gallop` misses the Power Metal recipe found by `galloping` | Open retrieval loss. Review a narrow word-form treatment; do not apply blanket semantic equivalence. |
-| `exclude` finds new Cookbook field guidance but still misses the experimental avoidance entry found by `negative` | The original query-vocabulary loss remains open. Adding a different useful record does not fix it; the source does not guarantee field equivalence. |
+| `gallop` previously missed the Power Metal recipe | Resolved by the explicit gallop/galloping expansion; the unexpanded baseline preserves the old miss. |
+| `exclude` previously missed the experimental avoidance entry | Resolved by a directional discovery expansion; the unexpanded baseline remains and field equivalence is not asserted. |
 | Call-and-response now has a V6-native core hit; the Band Manager entry remains supplementary | Explicit reviewed selection expansion, without upgrading the old entry's source/model scope. |
 | Breakbeat, Mongolian technique and unresolved harmony have empty strict-core queries in this set | Explicit scope boundaries, not missing full-corpus vocabulary. Some V6-targeted Band Manager material remains outside core because source orientation is mixed. |
 | `khoomei` and `khöömei` both find the Mongolian recipe | Supported for this pinned record; not proof of general transliteration support. |
@@ -63,7 +63,7 @@ candidate-source decisions required by FND-01 remain pending.
 | Tibetan material remains searchable but is excluded from the specific Mongolian query expectations | Tradition boundary, not a global ban on Tibetan references. |
 | Unknown query returns no references | Supported negative control; no invented fallback. |
 
-The evaluator deliberately reports open losses even when all observations match.
+The evaluator reports any open losses even when observations match. The current two losses have explicit fixes and literal baseline controls; the linked review records scoped FND-02 closure.
 If a missing record becomes findable, the observation fails until its disposition
 is explicitly reviewed and updated. Green tests preserve a known finding; they
 do not accept the defect or silently close FND-02.
@@ -113,5 +113,5 @@ The [first selected-source gap review](foundation-gap-review.md) distinguishes
 selection gaps from unresolved composition/effect questions. Its 25-file scope
 is narrower than a review of every upstream repository file. The subsequent
 [nine-entry expansion](foundation-expansion.md) passed **143 tests, zero skips**;
-the two retrieval losses remain open. Current counts are 159 entries and 567
+both retrieval losses were subsequently resolved in the 153-test search/field review. Current counts are 159 entries and 567
 recipes, including 68 strict-core entries and 3 strict-core recipes.

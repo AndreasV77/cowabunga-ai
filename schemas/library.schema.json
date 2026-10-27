@@ -300,7 +300,8 @@
               "enum": [
                 "style",
                 "lyrics",
-                "settings"
+                "settings",
+                "exclude_styles"
               ],
               "type": "string"
             },
@@ -333,6 +334,47 @@
         "citations"
       ],
       "title": "ReferenceEntry",
+      "type": "object"
+    },
+    "SearchPlan": {
+      "additionalProperties": false,
+      "properties": {
+        "policy": {
+          "const": "reviewed-query-aliases-1",
+          "default": "reviewed-query-aliases-1",
+          "title": "Policy",
+          "type": "string"
+        },
+        "query": {
+          "title": "Query",
+          "type": "string"
+        },
+        "term_groups": {
+          "items": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "title": "Term Groups",
+          "type": "array"
+        },
+        "expanded": {
+          "title": "Expanded",
+          "type": "boolean"
+        },
+        "note": {
+          "default": "AND between input terms; OR within reviewed expansions. Discovery aid, not musical equivalence or effect evidence.",
+          "title": "Note",
+          "type": "string"
+        }
+      },
+      "required": [
+        "query",
+        "term_groups",
+        "expanded"
+      ],
+      "title": "SearchPlan",
       "type": "object"
     },
     "SettingsRecommendation": {
@@ -532,8 +574,11 @@
   "additionalProperties": false,
   "properties": {
     "schema_version": {
-      "const": "1.0",
-      "default": "1.0",
+      "default": "1.1",
+      "enum": [
+        "1.0",
+        "1.1"
+      ],
       "title": "Schema Version",
       "type": "string"
     },
@@ -580,6 +625,17 @@
       },
       "title": "Items",
       "type": "array"
+    },
+    "search_plan": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/SearchPlan"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
     }
   },
   "required": [

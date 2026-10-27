@@ -5,6 +5,7 @@ from pydantic import Field, model_validator
 
 from .models import Bundle, Model, Recipe, ReferenceEntry, Source
 from .store import Store
+from .search import SearchPlan, plan_query
 
 RecordKind = Literal["recipe", "term", "phrase", "guidance"]
 LibraryScope = Literal["all", "v6_core"]
@@ -31,13 +32,14 @@ class LibraryHit(Model):
 
 
 class LibraryPage(Model):
-    schema_version: Literal["1.0"] = "1.0"
+    schema_version: Literal["1.0", "1.1"] = "1.1"
     query: str
     scope: LibraryScope
     kind: RecordKind | None
     limit: int
     has_more: bool
     items: list[LibraryHit]
+    search_plan: SearchPlan | None = None
 
 
 class RecordRequest(Model):
@@ -46,17 +48,18 @@ class RecordRequest(Model):
 
 
 def search_library(store: Store, query: str, scope: LibraryScope = "all", kind: RecordKind | None = None,
-                   limit: int = 20) -> LibraryPage:
+                   limit: int = 20, expand: bool = True) -> LibraryPage:
     if scope not in ("all", "v6_core"):
         raise ValueError("Unknown library scope")
     if not 1 <= limit <= 100:
         raise ValueError("Library limit must be between 1 and 100")
     if len(query) > 300:
         raise ValueError("Library query is too long")
-    rows = store.search(query, limit=limit + 1, kind=kind, v6_core=scope == "v6_core")
+    rows = store.search(query, limit=limit + 1, kind=kind, v6_core=scope == "v6_core", expand=expand)
     items = [LibraryHit(snapshot_id=row["snapshot_id"], kind=row["kind"], v6_core=row["v6_core"],
         source=Source.model_validate(row["source"]), record=row.get("recipe") or row["entry"]) for row in rows[:limit]]
-    return LibraryPage(query=query.strip(), scope=scope, kind=kind, limit=limit, has_more=len(rows) > limit, items=items)
+    return LibraryPage(query=query.strip(), scope=scope, kind=kind, limit=limit,
+                       has_more=len(rows) > limit, items=items, search_plan=plan_query(query, expand=expand))
 
 
 def export_record(store: Store, request: RecordRequest) -> Bundle:

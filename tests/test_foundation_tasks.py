@@ -31,7 +31,7 @@ SUITE = FoundationTasks.model_validate_json(TASKS.read_bytes())
 
 @pytest.mark.parametrize("probe", SUITE.probes, ids=lambda probe: probe.id)
 def test_pinned_task_retrieval(corpus, probe):
-    hits = corpus.search(probe.query, limit=1000, v6_core=probe.scope == "v6_core")
+    hits = corpus.search(probe.query, limit=1000, v6_core=probe.scope == "v6_core", expand=probe.expand)
     ids = {(hit.get("entry") or hit.get("recipe"))["id"] for hit in hits}
     assert set(probe.required_ids) <= ids
     assert not ids.intersection(probe.forbidden_ids)
@@ -40,10 +40,11 @@ def test_pinned_task_retrieval(corpus, probe):
         assert not hits
 
 
-def test_known_losses_stay_open_in_report(corpus):
+def test_resolved_losses_keep_literal_baseline_in_report(corpus):
     report = evaluate_tasks(corpus, TASKS)
     assert report["status"] == "observations_matched_not_foundation_acceptance"
-    assert set(report["open_retrieval_losses"]) == {"gallop-word-form-loss", "exclude-wording-loss"}
+    assert report["open_retrieval_losses"] == []
+    assert len([p for p in report["probes"] if p["disposition"] == "literal_baseline"]) == 2
     assert set(report["task_gaps"]) == {task.id for task in SUITE.tasks}
     assert all(report["task_gaps"].values())
 

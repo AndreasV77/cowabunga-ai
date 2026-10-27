@@ -130,7 +130,9 @@ The installed `prompt-ref` command is an equivalent entry point. The module form
 above also works where the Windows sandbox blocks console-script launchers.
 Use `--db path/to/database.sqlite3` **before** the subcommand to select a database.
 Search returns complete records with snapshot identifiers, not only prompt text.
-Words are matched literally with AND semantics; FTS operators are not exposed.
+Input terms use AND semantics, with two reviewed query expansions (`gallop` and
+`exclude`); FTS operators are not exposed. Use `search QUERY --explain` to inspect
+the groups or `--literal` to disable expansion. See [search and field review](docs/search-and-field-review.md).
 Search can be restricted with `--snapshot "musai@$revision"`. Multiple source
 revisions are retained; default search uses the active selection of each source.
 Use `--history` to include older selections. Export refuses to overwrite a file.
@@ -271,7 +273,7 @@ At the pinned revision, README/datapackage describe nine free-time styles but
 the actual JSON has three null BPM values. The importer preserves the JSON
 values and does not fill in or remove tempos to match that prose claim.
 
-Contract 1.2 separates recipes, settings, terms, phrases and application guidance,
+Contract 1.3 separates recipes, settings, terms, phrases and application guidance,
 and adds source orientation, per-record model basis and optional workflow.
 English explanations are editorial adaptations, not verbatim source definitions.
 Entries retain source-specific identity; similarly named concepts from different
@@ -280,7 +282,7 @@ The old 1.0 and 1.1 formats remain readable. Missing model-basis and orientation
 fields default to unspecified. Source records remain untouched; source activation
 uses schema 3, local workspace documents add schema 4 and authored text histories
 add schema 5. Exports use the current
-1.2 bundle contract.
+1.3 bundle contract (older 1.0–1.2 bundles remain readable).
 
 Band Manager is MIT-licensed; its full notice travels with derived exports.
 Cookbook is CC BY 4.0; author credit, source links, license link and change notice

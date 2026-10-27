@@ -5,7 +5,7 @@
   "snapshots": {
     "musai": "musai@e34ad57e3450efccf792d1e4e1685ca089ce3c25",
     "band-manager": "band-manager@73c52379833af51e9d3ce7731746d3bfff3f5266+1bc9695422688940db418718b5feed271bab623b5e268621214d03af5e943768",
-    "cookbook": "cookbook@c8e40ff0b10636a7719cbc88bc5f58443ad19907+94c2f582ab7731a39419487ab8a877e968cacaf325ced81d43662a69e087be46",
+    "cookbook": "cookbook@c8e40ff0b10636a7719cbc88bc5f58443ad19907+86b24c2e989c663aba9036cc370bd2657941708bb579cc163af344a7789551db",
     "lil-synn": "lil-synn@6b805bf77a350e7fba00bfd2451273327482827c+a988382717642a720653a651326843e103e40199ba84ed902c71d0907bb3c845"
   },
   "tasks": [
@@ -37,8 +37,7 @@
       ],
       "coverage": "partial",
       "missing": [
-        "No selected entry directly specifies independent vocal pulse and drum subdivision.",
-        "Gallop does not currently retrieve the galloping recipe."
+        "No selected entry directly specifies independent vocal pulse and drum subdivision."
       ],
       "evidence_boundary": "Vocabulary and scoped arrangement proposals are separate; no evidence that these combined directions reliably execute.",
       "future_assistant_check": "Keep vocal phrasing and drum movement as separate roles. Do not halve the entire tempo.",
@@ -237,7 +236,6 @@
       ],
       "coverage": "partial",
       "missing": [
-        "The query exclude does not find the selected negative-wording guidance.",
         "No selected controlled comparison establishes field equivalence or relative reliability of exclusion categories."
       ],
       "evidence_boundary": "Experimental avoidance is not a deterministic exclusion language; low-end wording is not measured audio quality.",
@@ -428,18 +426,18 @@
       "rationale": "Literal vocabulary retrieval; not a musical-effect assertion."
     },
     {
-      "id": "gallop-word-form-loss",
+      "id": "reviewed-expansion-gallop",
       "task_id": "pulse-and-subdivision",
       "query": "gallop",
       "scope": "all",
-      "required_ids": [],
-      "forbidden_ids": [],
-      "desired_but_missing_ids": [
+      "required_ids": [
         "musai:479089a94dc33733f529caf667ceaa528261e9a3937b8407f3b3e964cbc8a5a0"
       ],
-      "expect_empty": true,
-      "disposition": "retrieval_loss",
-      "rationale": "The desired galloping vocabulary is indexed under a different word form; do not count the empty result as adequate retrieval."
+      "forbidden_ids": [],
+      "desired_but_missing_ids": [],
+      "expect_empty": false,
+      "disposition": "supported",
+      "rationale": "Reviewed directional query expansion finds the formerly missed record; this is retrieval, not an effect or equivalence claim."
     },
     {
       "id": "locked-bass-general",
@@ -615,18 +613,18 @@
       "rationale": "Literal vocabulary retrieval; not a musical-effect assertion."
     },
     {
-      "id": "exclude-wording-loss",
+      "id": "reviewed-expansion-exclude",
       "task_id": "exclusions-and-positive-roles",
       "query": "exclude",
       "scope": "v6_core",
-      "required_ids": [],
-      "forbidden_ids": [],
-      "desired_but_missing_ids": [
+      "required_ids": [
         "lil-synn:avoidance-experimental"
       ],
+      "forbidden_ids": [],
+      "desired_but_missing_ids": [],
       "expect_empty": false,
-      "disposition": "retrieval_loss",
-      "rationale": "New field guidance is findable, but this query still misses the related selected avoidance entry. The original loss remains open."
+      "disposition": "supported",
+      "rationale": "Reviewed directional query expansion finds the formerly missed record; this is retrieval, not an effect or equivalence claim."
     },
     {
       "id": "hierarchy-as-heuristic",
@@ -873,6 +871,36 @@
       "expect_empty": false,
       "disposition": "supported",
       "rationale": "Newly selected source vocabulary/guidance; no generation-effect claim."
+    },
+    {
+      "id": "literal-baseline-gallop",
+      "task_id": "pulse-and-subdivision",
+      "query": "gallop",
+      "scope": "all",
+      "required_ids": [],
+      "forbidden_ids": [],
+      "desired_but_missing_ids": [
+        "musai:479089a94dc33733f529caf667ceaa528261e9a3937b8407f3b3e964cbc8a5a0"
+      ],
+      "expect_empty": true,
+      "disposition": "literal_baseline",
+      "rationale": "The unexpanded baseline preserves the original missed target; default reviewed expansion must find it.",
+      "expand": false
+    },
+    {
+      "id": "literal-baseline-exclude",
+      "task_id": "exclusions-and-positive-roles",
+      "query": "exclude",
+      "scope": "v6_core",
+      "required_ids": [],
+      "forbidden_ids": [],
+      "desired_but_missing_ids": [
+        "lil-synn:avoidance-experimental"
+      ],
+      "expect_empty": false,
+      "disposition": "literal_baseline",
+      "rationale": "The unexpanded baseline preserves the original missed target; default reviewed expansion must find it.",
+      "expand": false
     }
   ]
 }

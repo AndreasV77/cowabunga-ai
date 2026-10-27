@@ -13,8 +13,8 @@ Audit the admitted sources, editorial quality, musical coverage, evidence grades
 reuse terms, retrieval behavior, source-change handling and reproducible real-source
 tests. Keep actual evidence separate from assumed completeness. The current
 [foundation audit](foundation-audit.md) records checks and blocking work FND-01–04.
-FND-03 (strict reproducible validation) is closed for the current pins; resource
-coverage, task-based retrieval and editorial review remain open.
+FND-03 (strict reproducible validation) and FND-02 (the current 36-probe retrieval
+scope) are closed; resource coverage and full editorial review remain open.
 Do not begin Gate 2 until the blocking work has documented closure. UI polish,
 branding, app packaging and other visible enhancements wait; diagnostic changes
 needed to resolve foundation defects are permitted.
@@ -73,7 +73,7 @@ change the integration priority above.
 Reference import/search, source-bound context, saved drafts, listening assessments,
 durable reference choices and immutable exact style/lyrics versions are implemented.
 That is not a closed foundation gate or an implemented prompt-composition assistant.
-The remaining foundation work is FND-01, FND-02 and FND-04, not another user-visible
+The remaining foundation work is FND-01 and FND-04, not another user-visible
 feature or MCP transport. Rerun the closed FND-03 control when inputs change.
 
 After Gate 1, deliver the MCP adapter and tested skill/plugin workflows together

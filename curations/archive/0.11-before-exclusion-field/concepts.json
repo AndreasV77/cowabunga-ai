@@ -1,0 +1,436 @@
+{
+  "schema_version": "1.0",
+  "version": "0.5.1",
+  "reviewed_on": "2026-10-27",
+  "snapshots": {
+    "band-manager": "band-manager@73c52379833af51e9d3ce7731746d3bfff3f5266+1bc9695422688940db418718b5feed271bab623b5e268621214d03af5e943768",
+    "cookbook": "cookbook@c8e40ff0b10636a7719cbc88bc5f58443ad19907+94c2f582ab7731a39419487ab8a877e968cacaf325ced81d43662a69e087be46",
+    "lil-synn": "lil-synn@6b805bf77a350e7fba00bfd2451273327482827c+a988382717642a720653a651326843e103e40199ba84ed902c71d0907bb3c845"
+  },
+  "reviews_sha256": "b1429e5249fff75137ee09d092fd8b56e6703034aa6a88464f83a6b82223c495",
+  "concepts": [
+    {
+      "id": "vocal-placement",
+      "label": "Vocal placement and intimacy",
+      "aliases": [
+        "close singer",
+        "foreground voice",
+        "intimate vocal"
+      ],
+      "description": "Choose apparent distance and foreground/background balance independently of voice register or texture.",
+      "links": [
+        {
+          "record_id": "cookbook:dry-close-vocal",
+          "relation": "wording",
+          "note": "A direct close/dry vocal description."
+        },
+        {
+          "record_id": "lil-synn:foreground-depth",
+          "relation": "dimension",
+          "note": "Adds depth contrast between foreground and ambience; not a synonym for dry."
+        },
+        {
+          "record_id": "band-manager:vocal-placement",
+          "relation": "alternative",
+          "note": "Mixed-source band/voice balance wording; not independently verified."
+        },
+        {
+          "record_id": "band-manager:guitar-vocal-space",
+          "relation": "alternative",
+          "note": "Leave instrumental midrange room rather than merely increasing vocal adjectives."
+        }
+      ],
+      "crosscheck_ids": []
+    },
+    {
+      "id": "vocal-phrasing",
+      "label": "Vocal phrasing and syllable density",
+      "aliases": [
+        "melisma",
+        "syllabic",
+        "long notes",
+        "short phrases"
+      ],
+      "description": "Keep phrase length, note-to-syllable relationship and ornamentation separate instead of treating them as equivalent.",
+      "links": [
+        {
+          "record_id": "lil-synn:sustained-phrases",
+          "relation": "wording",
+          "note": "Long phrase shape; does not by itself specify ornamentation."
+        },
+        {
+          "record_id": "lil-synn:clipped-phrases",
+          "relation": "alternative",
+          "note": "Short phrase endings, offered as an alternative to sustained phrasing."
+        },
+        {
+          "record_id": "lil-synn:melismatic",
+          "relation": "dimension",
+          "note": "Multiple pitches on one syllable; not the same as simply singing a long note."
+        },
+        {
+          "record_id": "lil-synn:syllabic",
+          "relation": "alternative",
+          "note": "One-note-per-syllable tendency rather than melismatic ornamentation."
+        },
+        {
+          "record_id": "cookbook:restrained-ornament",
+          "relation": "dimension",
+          "note": "Limits embellishment without forcing all phrases to be short."
+        },
+        {
+          "record_id": "band-manager:legato",
+          "relation": "dimension",
+          "note": "Articulation across notes, not a synonym for sustained or melismatic."
+        }
+      ],
+      "crosscheck_ids": []
+    },
+    {
+      "id": "vocal-timing",
+      "label": "Vocal timing and conversational delivery",
+      "aliases": [
+        "laid back singer",
+        "behind beat",
+        "speech like"
+      ],
+      "description": "Separate rhythmic placement from speech-like character and intelligibility.",
+      "links": [
+        {
+          "record_id": "lil-synn:behind-beat",
+          "relation": "wording",
+          "note": "Timing relative to the pulse."
+        },
+        {
+          "record_id": "lil-synn:forward-rhythm",
+          "relation": "alternative",
+          "note": "A more pushing rhythmic intention."
+        },
+        {
+          "record_id": "cookbook:conversational-vocal",
+          "relation": "dimension",
+          "note": "Delivery character; may coexist with different timing placements."
+        },
+        {
+          "record_id": "cookbook:clear-consonants",
+          "relation": "dimension",
+          "note": "Intelligibility is an additional choice, not a timing substitute."
+        }
+      ],
+      "crosscheck_ids": [
+        "vocal-facets"
+      ]
+    },
+    {
+      "id": "vocal-texture",
+      "label": "Vocal texture",
+      "aliases": [
+        "grainy voice",
+        "husky singer",
+        "rough voice"
+      ],
+      "description": "Describe timbre separately from register, emotional intensity and microphone distance.",
+      "links": [
+        {
+          "record_id": "lil-synn:grainy",
+          "relation": "wording",
+          "note": "A grain-like roughness description."
+        },
+        {
+          "record_id": "lil-synn:husky",
+          "relation": "alternative",
+          "note": "A breath-rough or darker color; not declared equivalent to grainy."
+        },
+        {
+          "record_id": "band-manager:raspy",
+          "relation": "alternative",
+          "note": "Legacy catalogue term with related musical meaning but uncertain current tag reliability."
+        },
+        {
+          "record_id": "band-manager:breathy",
+          "relation": "dimension",
+          "note": "Airflow component rather than necessarily roughness."
+        }
+      ],
+      "crosscheck_ids": []
+    },
+    {
+      "id": "verse-chorus-contrast",
+      "label": "Verse-to-chorus arrangement contrast",
+      "aliases": [
+        "chorus lift",
+        "sparse verse",
+        "bigger chorus"
+      ],
+      "description": "Assign different instrumental and vocal jobs to sections instead of applying every characteristic globally.",
+      "links": [
+        {
+          "record_id": "lil-synn:sparse-verse",
+          "relation": "wording",
+          "note": "A deliberately sparse verse scene."
+        },
+        {
+          "record_id": "lil-synn:expanded-chorus",
+          "relation": "wording",
+          "note": "A separate expanded chorus scene; not intended to describe the verse simultaneously."
+        },
+        {
+          "record_id": "cookbook:verse-chorus-contrast",
+          "relation": "dimension",
+          "note": "The overall contrast goal."
+        },
+        {
+          "record_id": "cookbook:wider-group-vocals",
+          "relation": "alternative",
+          "note": "A chorus expansion for songs that want multiple voices; unsuitable as an automatic solo-vocal default."
+        },
+        {
+          "record_id": "cookbook:break-the-silence",
+          "relation": "example",
+          "note": "An unverified complete V6 rock example, not proof of the smaller wording effects."
+        },
+        {
+          "record_id": "lil-synn:call-response",
+          "relation": "alternative",
+          "note": "An answering arrangement, not a synonym for ensemble width."
+        }
+      ],
+      "crosscheck_ids": []
+    },
+    {
+      "id": "kick-bass-space",
+      "label": "Kick and bass relationship",
+      "aliases": [
+        "low end separation",
+        "ducking",
+        "bass groove"
+      ],
+      "description": "Choose timing coordination, level interaction and spatial bass behavior as distinct dimensions.",
+      "links": [
+        {
+          "record_id": "lil-synn:kick-ducking",
+          "relation": "wording",
+          "note": "A level interaction triggered by the kick."
+        },
+        {
+          "record_id": "cookbook:locked-bass",
+          "relation": "dimension",
+          "note": "Rhythmic coordination; not equivalent to sidechain processing."
+        },
+        {
+          "record_id": "cookbook:bass-synth",
+          "relation": "dimension",
+          "note": "The sound-producing role, independent of its kick interaction."
+        },
+        {
+          "record_id": "lil-synn:centered-bass",
+          "relation": "dimension",
+          "note": "A spatial intention; does not guarantee a mono-compatibility measurement."
+        }
+      ],
+      "crosscheck_ids": []
+    },
+    {
+      "id": "stereo-depth",
+      "label": "Stereo width and apparent depth",
+      "aliases": [
+        "wide mix",
+        "near far",
+        "soundstage"
+      ],
+      "description": "Distinguish left-right spread, near-far distance and low-end placement.",
+      "links": [
+        {
+          "record_id": "cookbook:wide-sweep",
+          "relation": "wording",
+          "note": "Stereo movement or width."
+        },
+        {
+          "record_id": "lil-synn:foreground-depth",
+          "relation": "dimension",
+          "note": "Foreground/background distance, not width alone."
+        },
+        {
+          "record_id": "lil-synn:centered-bass",
+          "relation": "dimension",
+          "note": "Keep the low-end spatial role separate from wide upper elements."
+        }
+      ],
+      "crosscheck_ids": []
+    },
+    {
+      "id": "acoustic-drums",
+      "label": "Acoustic drum character",
+      "aliases": [
+        "live drums",
+        "room drums",
+        "natural percussion"
+      ],
+      "description": "Choose the intended performance, density and room impression without automatically importing a crowd-noise prohibition.",
+      "links": [
+        {
+          "record_id": "cookbook:propulsive-drums",
+          "relation": "wording",
+          "note": "The V6 recipe deliberately uses the word live for driving drums."
+        },
+        {
+          "record_id": "cookbook:light-percussion",
+          "relation": "alternative",
+          "note": "A restrained percussion role rather than necessarily a driving kit."
+        },
+        {
+          "record_id": "band-manager:brushed-drums",
+          "relation": "alternative",
+          "note": "A specific softer articulation from a mixed-model catalogue."
+        },
+        {
+          "record_id": "band-manager:room-sound",
+          "relation": "alternative",
+          "note": "An alternate room-description phrase, with the source's trigger concern retained."
+        }
+      ],
+      "crosscheck_ids": [
+        "live-drums"
+      ]
+    },
+    {
+      "id": "hook-focus",
+      "label": "Hook focus",
+      "aliases": [
+        "repeatable chorus",
+        "memorable phrase",
+        "sing along"
+      ],
+      "description": "Choose a clear repeated idea and enough space for it; phrase length is a related choice rather than a guaranteed hook recipe.",
+      "links": [
+        {
+          "record_id": "cookbook:repeated-melodic-phrase",
+          "relation": "wording",
+          "note": "A repeated melodic idea."
+        },
+        {
+          "record_id": "cookbook:sing-along-chorus",
+          "relation": "dimension",
+          "note": "A participation-oriented chorus goal."
+        },
+        {
+          "record_id": "cookbook:pre-drop-phrase",
+          "relation": "alternative",
+          "note": "A short identifying idea placed before an electronic payoff."
+        },
+        {
+          "record_id": "lil-synn:clipped-phrases",
+          "relation": "dimension",
+          "note": "A phrase-shape option that can leave space; it is not inherently more memorable."
+        }
+      ],
+      "crosscheck_ids": []
+    },
+    {
+      "id": "positive-replacement",
+      "label": "Avoidance and positive replacement",
+      "aliases": [
+        "negative prompt",
+        "exclude styles",
+        "avoid instruments"
+      ],
+      "description": "Keep desired replacements and source exclusions distinct; no automatic negation rule is assumed.",
+      "links": [
+        {
+          "record_id": "lil-synn:positive-replacement",
+          "relation": "wording",
+          "note": "A method for describing the replacement role, not a literal style command."
+        },
+        {
+          "record_id": "lil-synn:avoidance-experimental",
+          "relation": "dimension",
+          "note": "The source's explicit uncertainty about avoidance syntax."
+        },
+        {
+          "record_id": "cookbook:break-the-silence",
+          "relation": "example",
+          "note": "A recipe with separate source exclusions; those exclusions remain separate from its style text."
+        },
+        {
+          "record_id": "cookbook:exclude-field-guidance",
+          "relation": "dimension",
+          "note": "Separate field guidance; do not paste the heading into a style prompt."
+        },
+        {
+          "record_id": "band-manager:negation-context-caveat",
+          "relation": "dimension",
+          "note": "Supplementary unresolved-context caveat, not a universal prohibition."
+        }
+      ],
+      "crosscheck_ids": [
+        "exclusions",
+        "negation-context"
+      ]
+    },
+    {
+      "id": "model-routing",
+      "label": "Exploration and controlled refinement",
+      "aliases": [
+        "wild model",
+        "discovery",
+        "bridge idea"
+      ],
+      "description": "Use model roles to structure an experiment without promising identical reconstruction across models.",
+      "links": [
+        {
+          "record_id": "lil-synn:wild-discovery",
+          "relation": "wording",
+          "note": "A model-role workflow, not an audible style descriptor."
+        },
+        {
+          "record_id": "cookbook:cassette-highway",
+          "relation": "example",
+          "note": "An unverified v6-wild bridge exercise followed by v6 refinement."
+        }
+      ],
+      "crosscheck_ids": [
+        "model-routing"
+      ]
+    },
+    {
+      "id": "acoustic-room",
+      "label": "Acoustic room impression",
+      "aliases": [
+        "room sound",
+        "breath",
+        "wooden room"
+      ],
+      "description": "Describe environmental texture and distance separately from a literal live-audience recording.",
+      "links": [
+        {
+          "record_id": "cookbook:room-breath",
+          "relation": "wording",
+          "note": "Retain breath and room cues."
+        },
+        {
+          "record_id": "cookbook:wooden-room",
+          "relation": "alternative",
+          "note": "A woody room-color association, not a measured acoustic property."
+        },
+        {
+          "record_id": "lil-synn:foreground-depth",
+          "relation": "dimension",
+          "note": "A separate near-far arrangement of direct sound and ambience."
+        },
+        {
+          "record_id": "band-manager:room-sound",
+          "relation": "alternative",
+          "note": "Mixed-source room wording with explicit limits on its surrounding trigger claim."
+        },
+        {
+          "record_id": "cookbook:acoustic-section-entrances",
+          "relation": "example",
+          "note": "Scoped acoustic entrance example, not guaranteed rendering."
+        }
+      ],
+      "crosscheck_ids": [
+        "live-drums"
+      ]
+    }
+  ]
+}

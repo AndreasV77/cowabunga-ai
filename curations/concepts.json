@@ -1,13 +1,13 @@
 {
   "schema_version": "1.0",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "reviewed_on": "2026-10-27",
   "snapshots": {
     "band-manager": "band-manager@73c52379833af51e9d3ce7731746d3bfff3f5266+1bc9695422688940db418718b5feed271bab623b5e268621214d03af5e943768",
-    "cookbook": "cookbook@c8e40ff0b10636a7719cbc88bc5f58443ad19907+94c2f582ab7731a39419487ab8a877e968cacaf325ced81d43662a69e087be46",
+    "cookbook": "cookbook@c8e40ff0b10636a7719cbc88bc5f58443ad19907+86b24c2e989c663aba9036cc370bd2657941708bb579cc163af344a7789551db",
     "lil-synn": "lil-synn@6b805bf77a350e7fba00bfd2451273327482827c+a988382717642a720653a651326843e103e40199ba84ed902c71d0907bb3c845"
   },
-  "reviews_sha256": "b1429e5249fff75137ee09d092fd8b56e6703034aa6a88464f83a6b82223c495",
+  "reviews_sha256": "e4b98df0e372b6446c48f2858126bf2c09e30ed41dfc4dcfb559b81b682648e3",
   "concepts": [
     {
       "id": "vocal-placement",

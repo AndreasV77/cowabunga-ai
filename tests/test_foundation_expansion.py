@@ -74,12 +74,12 @@ def test_new_context_and_gaps_keep_evidence_boundaries(corpus):
     for record_id in NEW_IDS:
         assert records[record_id].evidence.independently_verified is False
         assert records[record_id].evidence.test_count is None
-    assert records["cookbook:exclude-field-guidance"].input_field is None
+    assert records["cookbook:exclude-field-guidance"].input_field == "exclude_styles"
     assert "not" in records["band-manager:tempo-feel-limits"].meaning
     assert records["band-manager:negation-context-caveat"].evidence.model_basis == "unspecified"
     assert records["band-manager:choir"].evidence.model_scope == []
     report = evaluate_tasks(corpus, ROOT / "reviews/foundation-tasks.json")
-    assert set(report["open_retrieval_losses"]) == {"gallop-word-form-loss", "exclude-wording-loss"}
+    assert report["open_retrieval_losses"] == []
     reviews = resolve_reviews(corpus, ROOT / "reviews/v6-crosschecks.json")
     caveat = next(case for case in reviews["cases"] if case["id"] == "negation-context")
     assert caveat["assessment"] == "tension"

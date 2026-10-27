@@ -86,7 +86,7 @@ produces the human-readable view. The module performs no network or AI calls.
 the newer reviewed catalog. Use current curated JSON and strict foundation
 validation; reproduce the historical generator in a separate historical checkout.
 
-The source Bundle remains contract 1.2; current SQLite migrations reach schema 5. ConceptCatalog
+The source Bundle is contract 1.3; current SQLite migrations reach schema 5. ConceptCatalog
 and ContextPacket are separate version-1.0 contracts. Catalog links stay in
 reviewable JSON at this scale; relational concept storage can be introduced
 behind this interface if larger relationships or editing workflows require it.

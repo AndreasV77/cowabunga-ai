@@ -1,5 +1,7 @@
 # Reviewed foundation expansion — 2026-10-27
 
+This records the nine-entry expansion before the subsequent [search/field correction](search-and-field-review.md). That correction resolves the two retrieval losses and supplies Bundle 1.3 exclusion-field metadata; open-loss/null-field statements below describe this earlier step.
+
 Added nine entries from already pinned files, following the
 [selected-source gap review](foundation-gap-review.md). No upstream revision,
 license, source file or existing normalized reference record was changed.

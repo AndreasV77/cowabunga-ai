@@ -62,7 +62,7 @@ class ReferenceEntry(Model):
     meaning: str = Field(min_length=1)
     category: Literal["instrumentation", "rhythm", "vocals", "structure", "production", "arrangement", "controls", "harmony", "genre"]
     language: Literal["en"] = "en"
-    input_field: Literal["style", "lyrics", "settings"] | None = None
+    input_field: Literal["style", "lyrics", "settings", "exclude_styles"] | None = None
     evidence: Evidence
     citations: list[Citation] = Field(min_length=1)
 
@@ -92,7 +92,7 @@ class Recipe(Model):
 
 
 class Bundle(Model):
-    schema_version: Literal["1.0", "1.1", "1.2"] = "1.2"
+    schema_version: Literal["1.0", "1.1", "1.2", "1.3"] = "1.3"
     source: Source
     recipes: list[Recipe] = Field(default_factory=list)
     entries: list[ReferenceEntry] = Field(default_factory=list)

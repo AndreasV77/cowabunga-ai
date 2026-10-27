@@ -27,7 +27,8 @@ def test_library_search_prioritizes_v6_and_exposes_unlinked_recipes(setup_catalo
         assert recipe.source.id == "musai" and not recipe.v6_core
         assert recipe.record.settings.model_version is None
         assert recipe.record.evidence is None
-        assert search_library(store, "gallop").items == []
+        assert len(search_library(store, "gallop").items) == 1
+        assert search_library(store, "gallop", expand=False).items == []
         assert len(search_library(store, "galloping").items) == 1
         assert search_library(store, '" OR pad --').items == []
         assert search_library(store, " ").items == []

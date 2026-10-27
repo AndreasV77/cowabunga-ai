@@ -665,7 +665,8 @@
               "enum": [
                 "style",
                 "lyrics",
-                "settings"
+                "settings",
+                "exclude_styles"
               ],
               "type": "string"
             },

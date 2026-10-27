@@ -3,6 +3,7 @@ import sqlite3
 from pathlib import Path
 
 from .models import Bundle, Recipe, ReferenceEntry, Source
+from .search import plan_query
 from .workspace import WORKSPACE_MIGRATION
 from .prompt_text import PROMPT_TEXT_MIGRATION
 
@@ -136,7 +137,8 @@ class Store:
 
     def search(self, query: str, limit: int = 20, snapshot: str | None = None, kind: str | None = None,
                history: bool = False, category: str | None = None,
-               v6_core: bool = False, model_basis: str | None = None) -> list[dict]:
+               v6_core: bool = False, model_basis: str | None = None,
+               expand: bool = True) -> list[dict]:
         if not 1 <= limit <= 1000:
             raise ValueError("limit must be between 1 and 1000")
         if kind not in (None, "recipe", "term", "phrase", "guidance"):
@@ -146,11 +148,11 @@ class Store:
         if category is not None and category not in categories:
             raise ValueError("Unknown category")
         filters, filter_params = evidence_filters(v6_core, model_basis)
-        # Treat user input as literal words, not as FTS operators or SQL.
-        terms = query.split()
-        if not terms:
+        # Quote every term, including reviewed aliases; never expose FTS operators.
+        plan = plan_query(query, expand=expand)
+        if not plan.term_groups:
             return []
-        match = " AND ".join('"' + word.replace('"', '""') + '"' for word in terms)
+        match = plan.match_expression()
         core_clauses, _ = evidence_filters(v6_core=True)
         priority = "CASE WHEN " + " AND ".join(core_clauses) + " THEN 0 ELSE 1 END"
         sql = f"""SELECT r.snapshot_id AS snapshot_id, r.id AS id, r.payload, 'recipe' AS kind, bm25(recipe_search) AS rank, {priority} AS core_priority FROM recipe_search s

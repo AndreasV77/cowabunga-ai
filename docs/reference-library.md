@@ -15,7 +15,7 @@ recipes outside the reviewed concept catalog. Search **Mongolian**, **kawaii** o
   If more remain, refine the words or type. Counts describe displayed matches,
   not an inferred total or number of distinct genres.
 
-Search uses literal words with AND semantics over titles, families, prompts,
+Search uses AND semantics with explicitly reviewed gallop/exclude query expansions over titles, families, prompts,
 structures and entry text/meaning/categories as indexed by the existing store.
 It does not interpret an expression as FTS operators, infer synonyms or promise
 stemming. For example, `gallop` does not currently find `galloping`. A `metal` match
@@ -35,7 +35,7 @@ They do not change personal defaults or workbench settings.
 
 ## Portable single-record export
 
-**Export reference JSON** returns the existing Bundle 1.2 contract containing
+**Export reference JSON** returns the Bundle 1.3 contract containing
 exactly that record and its complete original source metadata. Exclusions, raw
 records, settings, evidence, citations and notices remain separate original fields.
 The active source snapshot and record ID are checked again at export time. An
@@ -59,6 +59,7 @@ record kind and the V6 classification against its actual source evidence.
 | Endpoint | Behavior |
 |---|---|
 | `GET /api/library?q=...&scope=all&kind=recipe&limit=20` | Typed active-record search; scope all/v6_core; kind optional |
+| `GET /api/library?q=gallop&expand=false` | Literal comparison with reviewed query expansions disabled |
 | `POST /api/library/export` | Body: snapshot_id and record_id; returns one-record Bundle JSON |
 
 Queries are limited to 300 characters and displayed limits to 1–100. Invalid
@@ -80,3 +81,9 @@ Portable search response schema:
 No new imports, database migration, runtime dependency, AI calls or source edits
 are part of this feature. The library uses the schema-4 foundation; authored text history subsequently adds
 migration 5.
+
+The [2026-10-27 search correction](search-and-field-review.md) adds two explicit
+query expansions and LibraryPage 1.1 query-plan metadata. Current views display
+those groups. Bundle 1.3 also distinguishes `exclude_styles` field guidance;
+this is not automatically composed style text. Legacy library pages/bundles remain
+readable. The SQLite schema remains 5.

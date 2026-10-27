@@ -35,7 +35,8 @@ class RetrievalProbe(Model):
     forbidden_ids: list[str] = Field(default_factory=list)
     desired_but_missing_ids: list[str] = Field(default_factory=list)
     expect_empty: bool = False
-    disposition: Literal["supported", "retrieval_loss", "scope_boundary", "negative_control"]
+    expand: bool = True
+    disposition: Literal["supported", "retrieval_loss", "scope_boundary", "negative_control", "literal_baseline"]
     rationale: str = Field(min_length=1)
 
     @model_validator(mode="after")
@@ -46,7 +47,7 @@ class RetrievalProbe(Model):
             raise ValueError("Contradictory retrieval expectations")
         if self.disposition == "retrieval_loss" and not missing:
             raise ValueError("A retrieval loss needs a desired missing record")
-        if missing and self.disposition not in ("retrieval_loss", "scope_boundary"):
+        if missing and self.disposition not in ("retrieval_loss", "scope_boundary", "literal_baseline"):
             raise ValueError("Missing records require an explicit loss or scope disposition")
         return self
 
@@ -89,7 +90,7 @@ def evaluate_tasks(store: Store, path: Path) -> dict:
         raise ValueError(f"Unknown task references: {sorted(referenced - records.keys())}")
     observations = []
     for probe in suite.probes:
-        hits = store.search(probe.query, limit=1000, v6_core=probe.scope == "v6_core")
+        hits = store.search(probe.query, limit=1000, v6_core=probe.scope == "v6_core", expand=probe.expand)
         hit_ids = {(hit.get("entry") or hit.get("recipe"))["id"] for hit in hits}
         missing_required = set(probe.required_ids) - hit_ids
         forbidden_found = set(probe.forbidden_ids) & hit_ids
@@ -99,7 +100,7 @@ def evaluate_tasks(store: Store, path: Path) -> dict:
                              f"missing={sorted(missing_required)}, forbidden={sorted(forbidden_found)}, "
                              f"previous_gap_now_found={sorted(closed_gap)}, hits={len(hits)}")
         observations.append({"id": probe.id, "query": probe.query, "scope": probe.scope,
-                             "hit_ids": sorted(hit_ids), "disposition": probe.disposition,
+                             "hit_ids": sorted(hit_ids), "disposition": probe.disposition, "expand": probe.expand,
                              "desired_but_missing_ids": probe.desired_but_missing_ids})
     return {"status": "observations_matched_not_foundation_acceptance",
             "tasks": len(suite.tasks), "probes": observations,

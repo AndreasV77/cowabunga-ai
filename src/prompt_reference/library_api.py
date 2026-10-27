@@ -15,9 +15,9 @@ def library_router(connect):
 
     @router.get("", response_model=LibraryPage)
     def search(q: str = Query(default="", max_length=300), scope: LibraryScope = "all",
-               kind: RecordKind | None = None, limit: int = Query(default=20, ge=1, le=100)):
+               kind: RecordKind | None = None, limit: int = Query(default=20, ge=1, le=100), expand: bool = True):
         with connect() as store:
-            return search_library(store, q, scope, kind, limit)
+            return search_library(store, q, scope, kind, limit, expand=expand)
 
     @router.post("/export")
     def export(request: RecordRequest):

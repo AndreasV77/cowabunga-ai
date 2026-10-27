@@ -15,6 +15,7 @@ from .library import LibraryPage
 from .reference_selection import LibrarySelection, DraftReferencePack
 from .prompt_text import PromptText, PromptVersion, PromptVersionPage
 from .store import Store
+from .search import plan_query
 from .reviews import resolve_reviews
 from .concepts import CatalogService, ConceptCatalog, ContextPacket, render_context
 
@@ -37,6 +38,8 @@ def main():
     reference_import.add_argument("curation", type=Path)
     search = sub.add_parser("search")
     search.add_argument("query")
+    search.add_argument("--literal", action="store_true", help="Disable reviewed query expansions")
+    search.add_argument("--explain", action="store_true", help="Include the explicit query expansion plan")
     search.add_argument("--limit", type=int, default=20)
     search.add_argument("--snapshot")
     search.add_argument("--kind", choices=["recipe", "term", "phrase", "guidance"])
@@ -110,7 +113,9 @@ def main():
                                   "total_in_source": len(bundle.recipes) + len(bundle.entries),
                                   "recipes": len(bundle.recipes), "entries": len(bundle.entries)}))
             elif args.command == "search":
-                print(json.dumps(store.search(args.query, args.limit, args.snapshot, args.kind, args.history, args.category, args.v6_core, args.model_basis), indent=2, ensure_ascii=False))
+                hits = store.search(args.query, args.limit, args.snapshot, args.kind, args.history, args.category, args.v6_core, args.model_basis, expand=not args.literal)
+                payload = {"search_plan": plan_query(args.query, expand=not args.literal).model_dump(), "items": hits} if args.explain else hits
+                print(json.dumps(payload, indent=2, ensure_ascii=False))
             elif args.command == "snapshots":
                 print(json.dumps(store.snapshots(), indent=2))
             elif args.command == "activate":

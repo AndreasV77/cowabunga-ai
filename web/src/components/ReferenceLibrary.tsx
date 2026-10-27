@@ -15,7 +15,8 @@ export default function ReferenceLibrary({ library: l, onInspect, selected, onTo
     <div aria-live="polite">{l.error && <p className="error" role="alert">{l.error}</p>}{l.notice && <p className="notice" role="status">{l.notice}</p>}{l.changed && <p className="changed">Search inputs changed. Search again to apply them; the results below still belong to the previous search.</p>}</div>
     {!l.page ? <p className="library-empty">Search the collection directly, including vocabulary outside the reviewed concept palette.</p> : <>
       <p className="library-result-count" role="status">{l.page.items.length} {l.page.items.length === 1 ? 'result' : 'results'} shown for “{l.page.query}” · {l.page.scope === 'v6_core' ? 'V6-targeted core' : 'all active references'}{l.page.has_more ? ' · more matches available' : ''}</p>
-      {!l.page.items.length && <p className="library-empty">No matches in this scope. Try fewer words, another spelling{l.page.scope === 'v6_core' ? ', or all active references' : ''}. Search uses literal words, not inferred synonyms.</p>}
+      {l.page.search_plan?.expanded && <p className="quiet">Reviewed search expansion: {l.page.search_plan.term_groups.map(group => group.join(' / ')).join(' + ')}. Related vocabulary is not evidence of equivalent musical effects.</p>}
+      {!l.page.items.length && <p className="library-empty">No matches in this scope. Try fewer words, another spelling{l.page.scope === 'v6_core' ? ', or all active references' : ''}. Only explicitly reviewed query expansions are applied.</p>}
       <div className="library-results">{l.page.items.map(hit => <article className="library-result" key={`${hit.snapshot_id}:${hit.record.id}`}>
         <div className="library-result-meta"><span>{sourceNames[hit.source.id] || hit.source.id}</span><span>{recordField(hit.record)}</span><span>{hit.source.license}</span></div>
         <h3>{recordTitle(hit.record)}</h3>

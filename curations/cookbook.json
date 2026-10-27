@@ -1,7 +1,7 @@
 {
   "source_id": "cookbook",
   "revision": "c8e40ff0b10636a7719cbc88bc5f58443ad19907",
-  "changes": "Selected source excerpts; added English explanatory adaptations, categories and explicit evidence limits; normalized recipe section order. No independent musical-effect verification. Source orientation and record-level model basis reviewed for the 0.4 V6 core; targeting is not test evidence. Foundation expansion 2026-10-27: selected missing vocabulary and scoped guidance; retained uncertainty, field distinctions and negation/tempo limitations. Previous selection archived; no independent effects verified.",
+  "changes": "Selected source excerpts; added English explanatory adaptations, categories and explicit evidence limits; normalized recipe section order. No independent musical-effect verification. Source orientation and record-level model basis reviewed for the 0.4 V6 core; targeting is not test evidence. Foundation expansion 2026-10-27: selected missing vocabulary and scoped guidance; retained uncertainty, field distinctions and negation/tempo limitations. Previous selection archived; no independent effects verified. Exclusion-field metadata review: associated exclude-field-guidance with the separate exclude_styles input; preserved wording, original passages and uncertainty. Older selection remains archived.",
   "entries": [
     {
       "id": "fingerpicked-guitar",
@@ -962,7 +962,7 @@
       "text": "Exclude Styles",
       "meaning": "Keep exclusions short and specific in the separate Exclude Styles field when available. This is workflow guidance, not proof of suppression or equivalence to inline negative wording.",
       "category": "controls",
-      "input_field": null,
+      "input_field": "exclude_styles",
       "evidence": {
         "status": "working_hypothesis",
         "source_label": "V6 cookbook editorial guidance; untested",
@@ -971,7 +971,7 @@
           "v6"
         ],
         "test_count": null,
-        "context": "V6-native prompting guidance. The current reference contract has no exclude-field enum; this method has no direct input_field rather than being falsely labeled as style wording.",
+        "context": "V6-native prompting guidance for the separate Exclude Styles input. This field association does not make the guidance heading a literal exclusion term or establish reliable suppression.",
         "model_basis": "v6_targeted"
       }
     },

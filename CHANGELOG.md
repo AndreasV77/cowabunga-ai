@@ -2,6 +2,8 @@
 
 ## Unreleased — public repository preparation
 
+- Closed the two known retrieval losses with explicit, directional query expansions, inspectable API/CLI search plans and literal comparison controls; closed FND-02 for the current 36-probe scope after 153 tests without skips and a successful frontend build. Added backward-readable Bundle 1.3 exclusion-field metadata, archived the prior Cookbook selection and preserved all local user data/historical snapshots during backed-up activation. Coverage and full editorial review remain open.
+
 - Added nine source-bound vocabulary/guidance entries (159 entries, 567 recipes; V6 core 68 entries and 3 recipes), two caveat crosschecks and 34 retrieval probes. Archived the exact previous selections/catalog/reviews, verified 143 tests without skips, and activated the reviewed local snapshots after a consistent backup with all user tables and eight historical snapshots preserved. Both known query losses and Gate 1 remain open.
 
 - Reviewed task gaps against all 25 admitted source files; documented concrete vocabulary/guidance selection candidates and internal scope tensions around tempo, negation and vocal registers. No curations, active snapshots or search behavior changed; foundation acceptance remains open.
