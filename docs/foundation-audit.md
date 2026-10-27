@@ -12,6 +12,14 @@ FND-01 and FND-04 remain open.
 
 ## Owner's priority and meaning of completion
 
+The [coverage-scope review](coverage-scope.md) now records 22 requirements, twelve
+source decisions and three holdout briefs. Six general/specialist definition gaps
+remain; three relationships belong to explicit composition reasoning. Strict
+validation passed 160 tests without skips, with coverage explicitly reported open.
+The owner wants a reusable general-music theory area beyond the first Suno task.
+Non-Git page/journal provenance is an additional foundation-contract question
+before such sources are admitted; no source/data activation occurred in this pass.
+
 1. Resolve foundation questions and establish tested controls first, even when
    that produces no visible product progress.
 2. Only after Gate 1, implement and test the complete assistant-supported workflow.

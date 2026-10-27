@@ -1,0 +1,724 @@
+{
+  "schema_version": "1.0",
+  "reviewed_on": "2026-10-27",
+  "profile": "English brief to source-informed musical direction: distinguish musical vocabulary, authored relationships and Suno-specific application claims. Eleven existing briefs plus three independently authored coverage holdouts; no exhaustive genre encyclopedia or guaranteed generation behavior.",
+  "exclusions": [
+    "Video, lyrics alignment and mastering tools",
+    "Audio/MIDI analysis or a new theory runtime dependency",
+    "Complete composition textbooks and bulk commercial prompt databases",
+    "Guaranteed execution of chord progressions, local timing or fusion roles"
+  ],
+  "snapshots": {
+    "musai": "musai@e34ad57e3450efccf792d1e4e1685ca089ce3c25",
+    "band-manager": "band-manager@73c52379833af51e9d3ce7731746d3bfff3f5266+1bc9695422688940db418718b5feed271bab623b5e268621214d03af5e943768",
+    "cookbook": "cookbook@c8e40ff0b10636a7719cbc88bc5f58443ad19907+86b24c2e989c663aba9036cc370bd2657941708bb579cc163af344a7789551db",
+    "lil-synn": "lil-synn@6b805bf77a350e7fba00bfd2451273327482827c+a988382717642a720653a651326843e103e40199ba84ed902c71d0907bb3c845"
+  },
+  "requirements": [
+    {
+      "id": "genre-examples",
+      "dimension": "genre",
+      "need": "Find contextual genre vocabulary without transplanting complete recipes.",
+      "task_ids": [
+        "cross-genre-drive",
+        "overtone-tradition"
+      ],
+      "references": [
+        {
+          "record_id": "musai:479089a94dc33733f529caf667ceaa528261e9a3937b8407f3b3e964cbc8a5a0",
+          "support": "example",
+          "contribution": "Metal recipe vocabulary."
+        },
+        {
+          "record_id": "musai:a1e8dfd40ead3daabaf4a5e61c57dc24667aba82145f8dbbc9cb7166c572e123",
+          "support": "example",
+          "contribution": "Mongolian technique terms within a complete recipe."
+        }
+      ],
+      "disposition": "references_available",
+      "next_action": "Retain model-unspecified supplement status and select vocabulary deliberately.",
+      "evidence_limit": "Recipes are examples, not definitions of every genre or proof of V6 execution."
+    },
+    {
+      "id": "instrument-families",
+      "dimension": "instrumentation",
+      "need": "Name distinct instrument families and their roles.",
+      "task_ids": [
+        "intimate-acoustic",
+        "instrument-relationships"
+      ],
+      "references": [
+        {
+          "record_id": "band-manager:rhodes",
+          "support": "definition",
+          "contribution": "Electric-keyboard timbre."
+        },
+        {
+          "record_id": "band-manager:cello",
+          "support": "definition",
+          "contribution": "Bowed string instrument."
+        },
+        {
+          "record_id": "band-manager:brushed-drums",
+          "support": "definition",
+          "contribution": "Percussion articulation."
+        }
+      ],
+      "disposition": "references_available",
+      "next_action": "Check definitions and tradition specificity in FND-04.",
+      "evidence_limit": "Selected families are available; no exhaustive world-instrument coverage is claimed."
+    },
+    {
+      "id": "instrument-articulation",
+      "dimension": "instrumentation",
+      "need": "Separate an instrument from its attack/articulation.",
+      "task_ids": [
+        "instrument-relationships",
+        "intimate-acoustic"
+      ],
+      "references": [
+        {
+          "record_id": "band-manager:palm-muted",
+          "support": "definition",
+          "contribution": "Damped guitar attack."
+        },
+        {
+          "record_id": "band-manager:pizzicato",
+          "support": "definition",
+          "contribution": "Plucked string articulation."
+        },
+        {
+          "record_id": "cookbook:fingerpicked-guitar",
+          "support": "definition",
+          "contribution": "Finger-plucked guitar notes."
+        }
+      ],
+      "disposition": "references_available",
+      "next_action": "Keep technique separate from genre and rendered sound.",
+      "evidence_limit": "Definitions are editorial source adaptations; generator effects unverified."
+    },
+    {
+      "id": "vocal-facets",
+      "dimension": "vocals",
+      "need": "Separate register, registration, texture and mic placement.",
+      "task_ids": [
+        "rough-clear-vocal"
+      ],
+      "references": [
+        {
+          "record_id": "band-manager:raspy",
+          "support": "definition",
+          "contribution": "Rough texture without a pitch/loudness guarantee."
+        },
+        {
+          "record_id": "lil-synn:head-dominant",
+          "support": "definition",
+          "contribution": "Registration."
+        },
+        {
+          "record_id": "cookbook:dry-close-vocal",
+          "support": "definition",
+          "contribution": "Placement and ambience."
+        }
+      ],
+      "disposition": "references_available",
+      "next_action": "Complete semantic review; do not restore simplified register equations from tag tables.",
+      "evidence_limit": "Vocabulary does not guarantee voice identity, age or an audible result."
+    },
+    {
+      "id": "vocal-delivery",
+      "dimension": "vocals",
+      "need": "Describe articulation, phrase density and pitch-to-syllable relation.",
+      "task_ids": [
+        "rough-clear-vocal",
+        "pulse-and-subdivision"
+      ],
+      "references": [
+        {
+          "record_id": "lil-synn:clipped-phrases",
+          "support": "definition",
+          "contribution": "Short curtailed phrases."
+        },
+        {
+          "record_id": "lil-synn:melismatic",
+          "support": "definition",
+          "contribution": "Several pitches per syllable."
+        },
+        {
+          "record_id": "cookbook:clear-consonants",
+          "support": "guidance",
+          "contribution": "Intelligibility direction."
+        }
+      ],
+      "disposition": "references_available",
+      "next_action": "Keep timbre and delivery separate in later composition.",
+      "evidence_limit": "Source guidance is not a measured success rate."
+    },
+    {
+      "id": "ensemble-function",
+      "dimension": "vocals",
+      "need": "Distinguish a choir, layered harmonies and answering arrangement.",
+      "task_ids": [
+        "ensemble-and-section-scope"
+      ],
+      "references": [
+        {
+          "record_id": "band-manager:choir",
+          "support": "definition",
+          "contribution": "Sung ensemble."
+        },
+        {
+          "record_id": "band-manager:stacked-harmonies",
+          "support": "definition",
+          "contribution": "Layering dimension."
+        },
+        {
+          "record_id": "lil-synn:call-response",
+          "support": "definition",
+          "contribution": "Answering arrangement."
+        }
+      ],
+      "disposition": "references_available",
+      "next_action": "Review ensemble definitions without assuming equivalent rendering.",
+      "evidence_limit": "Layered/stacked/gang-shouted effect distinctions remain open."
+    },
+    {
+      "id": "rhythm-pattern",
+      "dimension": "rhythm",
+      "need": "Distinguish pulse, subdivisions and named grooves.",
+      "task_ids": [
+        "pulse-and-subdivision",
+        "cross-genre-drive"
+      ],
+      "references": [
+        {
+          "record_id": "cookbook:four-on-floor",
+          "support": "definition",
+          "contribution": "Quarter-note kick pulse."
+        },
+        {
+          "record_id": "band-manager:breakbeat",
+          "support": "definition",
+          "contribution": "Broken drum pattern."
+        },
+        {
+          "record_id": "band-manager:triplet",
+          "support": "definition",
+          "contribution": "Three subdivisions."
+        }
+      ],
+      "disposition": "references_available",
+      "next_action": "Retain narrow query aliases and field/model scope.",
+      "evidence_limit": "Triplets are not by themselves a complete definition of compound meter."
+    },
+    {
+      "id": "meter-and-grouping",
+      "dimension": "rhythm",
+      "need": "Distinguish 6/8 compound grouping from 3/4 and swung subdivisions.",
+      "task_ids": [
+        "pulse-and-subdivision",
+        "cross-genre-drive"
+      ],
+      "references": [
+        {
+          "record_id": "band-manager:triplet",
+          "support": "example",
+          "contribution": "Related subdivision term, insufficient to define meter."
+        }
+      ],
+      "disposition": "definition_gap",
+      "next_action": "Add a licensed general-music explanation of meter/grouping; compare structured time-signature sources.",
+      "evidence_limit": "A 6/8 mention in one recipe or the word compound in a bracket caveat is not a meter reference."
+    },
+    {
+      "id": "chord-quality",
+      "dimension": "harmony",
+      "need": "Define major/minor triads, suspended chords and extensions.",
+      "task_ids": [
+        "harmonic-ending"
+      ],
+      "references": [],
+      "disposition": "definition_gap",
+      "next_action": "Review a small general-music definition set and chord structures with provenance.",
+      "evidence_limit": "Recipe occurrence of suspended does not supply a standalone definition."
+    },
+    {
+      "id": "tonal-modal-color",
+      "dimension": "harmony",
+      "need": "Distinguish key, major/minor and modal color such as Dorian.",
+      "task_ids": [
+        "harmonic-ending",
+        "intimate-acoustic"
+      ],
+      "references": [
+        {
+          "record_id": "band-manager:key-change",
+          "support": "example",
+          "contribution": "Tonal-center change, not a definition of modes."
+        }
+      ],
+      "disposition": "definition_gap",
+      "next_action": "Assess theory definitions and structured scale vocabulary.",
+      "evidence_limit": "Existing key-change wording does not establish modal context or generator behavior."
+    },
+    {
+      "id": "harmonic-function",
+      "dimension": "harmony",
+      "need": "Explain tonic, dominant, cadence and unresolved endings.",
+      "task_ids": [
+        "harmonic-ending"
+      ],
+      "references": [
+        {
+          "record_id": "band-manager:off-home-chord",
+          "support": "guidance",
+          "contribution": "Unresolved-ending direction."
+        }
+      ],
+      "disposition": "definition_gap",
+      "next_action": "Add functional vocabulary and bounded cadence definitions.",
+      "evidence_limit": "One source example about an unresolved ending is not a coherent functional-harmony reference."
+    },
+    {
+      "id": "harmonic-pedal",
+      "dimension": "harmony",
+      "need": "Distinguish a sustained/repeated pedal tone from an audio-effect pedal.",
+      "task_ids": [
+        "harmonic-ending",
+        "change-one-layer"
+      ],
+      "references": [],
+      "disposition": "definition_gap",
+      "next_action": "Review an explicit theory definition with a role-level example.",
+      "evidence_limit": "Lexical pedal matches cannot establish the intended harmonic meaning."
+    },
+    {
+      "id": "instrument-dependencies",
+      "dimension": "arrangement",
+      "need": "Express bass-following-guitar and guitar-to-kick relations independently.",
+      "task_ids": [
+        "instrument-relationships"
+      ],
+      "references": [
+        {
+          "record_id": "cookbook:locked-bass",
+          "support": "example",
+          "contribution": "General coordination only."
+        },
+        {
+          "record_id": "band-manager:riff-under-verse",
+          "support": "example",
+          "contribution": "An instrument job bound to a section."
+        }
+      ],
+      "disposition": "authored_relation",
+      "next_action": "Use explicit subjects/actions/targets in the later assistant workflow; do not require a stored sentence for every relation.",
+      "evidence_limit": "No claim that a general locked-bass entry proves the exact target relation."
+    },
+    {
+      "id": "change-and-invariants",
+      "dimension": "arrangement",
+      "need": "State a local change and the layers that must continue.",
+      "task_ids": [
+        "change-one-layer"
+      ],
+      "references": [
+        {
+          "record_id": "band-manager:riff-under-verse",
+          "support": "example",
+          "contribution": "Continuing underlying instrument."
+        },
+        {
+          "record_id": "band-manager:positive-instrument-filling",
+          "support": "guidance",
+          "contribution": "Positive section jobs."
+        }
+      ],
+      "disposition": "authored_relation",
+      "next_action": "Represent changed layer, unchanged layers and temporal scope in composition requirements.",
+      "evidence_limit": "Independent instructions and exact timing are not demonstrated generation effects."
+    },
+    {
+      "id": "secondary-melody",
+      "dimension": "arrangement",
+      "need": "Assign a countermelody without replacing the principal line.",
+      "task_ids": [
+        "intimate-acoustic",
+        "ensemble-and-section-scope"
+      ],
+      "references": [
+        {
+          "record_id": "cookbook:countermelody",
+          "support": "definition",
+          "contribution": "Secondary complementary melodic line."
+        },
+        {
+          "record_id": "band-manager:cello",
+          "support": "definition",
+          "contribution": "Possible instrument role."
+        }
+      ],
+      "disposition": "references_available",
+      "next_action": "Use the instrumental holdout to check role distinctions later.",
+      "evidence_limit": "Source terms do not supply a fully authored contrapuntal texture."
+    },
+    {
+      "id": "section-function",
+      "dimension": "structure",
+      "need": "Distinguish section identity, contrast and transitions.",
+      "task_ids": [
+        "priority-and-conflicts",
+        "intimate-acoustic"
+      ],
+      "references": [
+        {
+          "record_id": "band-manager:pre-chorus",
+          "support": "definition",
+          "contribution": "Transitional build."
+        },
+        {
+          "record_id": "band-manager:interlude",
+          "support": "definition",
+          "contribution": "Instrumental transition."
+        },
+        {
+          "record_id": "cookbook:groove-reset",
+          "support": "guidance",
+          "contribution": "Reorganize groove before a lift."
+        }
+      ],
+      "disposition": "references_available",
+      "next_action": "Keep convention, desired role and reliable execution separate.",
+      "evidence_limit": "No universal tag hierarchy or bar-accurate execution is claimed."
+    },
+    {
+      "id": "small-contrast",
+      "dimension": "structure",
+      "need": "Choose a restrained acoustic lift rather than automatic maximal density.",
+      "task_ids": [
+        "intimate-acoustic"
+      ],
+      "references": [
+        {
+          "record_id": "cookbook:verse-chorus-contrast",
+          "support": "guidance",
+          "contribution": "Contrast dimensions."
+        },
+        {
+          "record_id": "cookbook:acoustic-section-entrances",
+          "support": "example",
+          "contribution": "Scoped entrance."
+        }
+      ],
+      "disposition": "authored_relation",
+      "next_action": "Make contrast scale and dimension explicit; do not search for a universal small-lift tag.",
+      "evidence_limit": "The choice is creative reasoning; its audible effect needs listening."
+    },
+    {
+      "id": "production-dimensions",
+      "dimension": "production",
+      "need": "Separate proximity, stereo position, dynamics and timbral edge.",
+      "task_ids": [
+        "rough-clear-vocal",
+        "intimate-acoustic"
+      ],
+      "references": [
+        {
+          "record_id": "lil-synn:foreground-depth",
+          "support": "definition",
+          "contribution": "Near/far contrast."
+        },
+        {
+          "record_id": "lil-synn:centered-bass",
+          "support": "guidance",
+          "contribution": "Low-end spatial intention."
+        },
+        {
+          "record_id": "lil-synn:upper-mid-edge",
+          "support": "guidance",
+          "contribution": "Spectral impression."
+        }
+      ],
+      "disposition": "references_available",
+      "next_action": "Review descriptions as intentions, not measured engineering settings.",
+      "evidence_limit": "No promise of mono compatibility or a numeric EQ/compression outcome."
+    },
+    {
+      "id": "field-routing",
+      "dimension": "controls",
+      "need": "Keep style, lyrics, settings and Exclude Styles associations explicit.",
+      "task_ids": [
+        "exclusions-and-positive-roles"
+      ],
+      "references": [
+        {
+          "record_id": "cookbook:exclude-field-guidance",
+          "support": "guidance",
+          "contribution": "Separate exclusion input."
+        },
+        {
+          "record_id": "lil-synn:positive-replacement",
+          "support": "guidance",
+          "contribution": "Specify desired role instead of only a prohibition."
+        }
+      ],
+      "disposition": "references_available",
+      "next_action": "Retain Bundle 1.3 field metadata and existing raw recipe exclusions.",
+      "evidence_limit": "Field placement is not a guarantee of suppression or semantic equivalence."
+    },
+    {
+      "id": "test-provenance",
+      "dimension": "controls",
+      "need": "Retain known controls, failures and the distinction between a single success and repeatability.",
+      "task_ids": [
+        "priority-and-conflicts"
+      ],
+      "references": [
+        {
+          "record_id": "lil-synn:test-variable",
+          "support": "guidance",
+          "contribution": "Record changed variable and controls."
+        },
+        {
+          "record_id": "lil-synn:single-success",
+          "support": "guidance",
+          "contribution": "Single output does not establish a repeatable effect."
+        }
+      ],
+      "disposition": "references_available",
+      "next_action": "Continue FND-04 and future assistant acceptance; unknown controls stay unknown.",
+      "evidence_limit": "No automatic promotion from publisher labels to independent evidence."
+    },
+    {
+      "id": "overtone-technique",
+      "dimension": "vocals",
+      "need": "Explain the intended Mongolian technique and distinguish drone, overtone and low growl.",
+      "task_ids": [
+        "overtone-tradition"
+      ],
+      "references": [
+        {
+          "record_id": "musai:a1e8dfd40ead3daabaf4a5e61c57dc24667aba82145f8dbbc9cb7166c572e123",
+          "support": "example",
+          "contribution": "Tradition-specific wording in a model-unspecified recipe."
+        }
+      ],
+      "disposition": "definition_gap",
+      "next_action": "Find an explicit reusable specialist reference; Western theory dictionaries alone cannot close this need.",
+      "evidence_limit": "A recipe label is not a technical or ethnomusicological definition."
+    },
+    {
+      "id": "rendering-questions",
+      "dimension": "controls",
+      "need": "Keep uncertain exclusion, timing, fusion and genre-transfer effects separate from vocabulary coverage.",
+      "task_ids": [
+        "exclusions-and-positive-roles",
+        "change-one-layer",
+        "overtone-tradition"
+      ],
+      "references": [
+        {
+          "record_id": "lil-synn:avoidance-experimental",
+          "support": "guidance",
+          "contribution": "Experimental status."
+        },
+        {
+          "record_id": "band-manager:tempo-feel-limits",
+          "support": "guidance",
+          "contribution": "Reliability limits."
+        }
+      ],
+      "disposition": "effect_question",
+      "next_action": "Retain as optional separate listening questions; no paid generations required for this audit.",
+      "evidence_limit": "Vocabulary coverage cannot demonstrate musical execution."
+    }
+  ],
+  "source_decisions": [
+    {
+      "id": "musai",
+      "url": "https://github.com/samuelgrupolimex-prog/suno-style-recipes",
+      "revision": "e34ad57e3450efccf792d1e4e1685ca089ce3c25",
+      "checked_on": "2026-10-27",
+      "decision": "retain",
+      "evidence_urls": [
+        "https://github.com/samuelgrupolimex-prog/suno-style-recipes/blob/e34ad57e3450efccf792d1e4e1685ca089ce3c25/README.md"
+      ],
+      "license_observation": "CC0-1.0 retained in the admitted source bundle; no upstream refresh in this pass.",
+      "reason": "Keep the selected role and exact provenance; retain V6-native, mixed and model-unspecified distinctions."
+    },
+    {
+      "id": "band-manager",
+      "url": "https://github.com/zarlor/suno-band-manager",
+      "revision": "73c52379833af51e9d3ce7731746d3bfff3f5266",
+      "checked_on": "2026-10-27",
+      "decision": "retain",
+      "evidence_urls": [
+        "https://github.com/zarlor/suno-band-manager/blob/73c52379833af51e9d3ce7731746d3bfff3f5266/README.md"
+      ],
+      "license_observation": "MIT retained in the admitted source bundle; no upstream refresh in this pass.",
+      "reason": "Keep the selected role and exact provenance; retain V6-native, mixed and model-unspecified distinctions."
+    },
+    {
+      "id": "cookbook",
+      "url": "https://github.com/MJorgin/suno-v6-cookbook",
+      "revision": "c8e40ff0b10636a7719cbc88bc5f58443ad19907",
+      "checked_on": "2026-10-27",
+      "decision": "retain",
+      "evidence_urls": [
+        "https://github.com/MJorgin/suno-v6-cookbook/blob/c8e40ff0b10636a7719cbc88bc5f58443ad19907/README.md"
+      ],
+      "license_observation": "CC-BY-4.0 retained in the admitted source bundle; no upstream refresh in this pass.",
+      "reason": "Keep the selected role and exact provenance; retain V6-native, mixed and model-unspecified distinctions."
+    },
+    {
+      "id": "lil-synn",
+      "url": "https://github.com/LILSYNNOFFICIAL/LIL-SYNN-s-Complete-Suno-V6-Guide",
+      "revision": "6b805bf77a350e7fba00bfd2451273327482827c",
+      "checked_on": "2026-10-27",
+      "decision": "retain",
+      "evidence_urls": [
+        "https://github.com/LILSYNNOFFICIAL/LIL-SYNN-s-Complete-Suno-V6-Guide/blob/6b805bf77a350e7fba00bfd2451273327482827c/README.md"
+      ],
+      "license_observation": "CC0-1.0 retained in the admitted source bundle; no upstream refresh in this pass.",
+      "reason": "Keep the selected role and exact provenance; retain V6-native, mixed and model-unspecified distinctions."
+    },
+    {
+      "id": "awesome-suno",
+      "url": "https://github.com/Zizwar/Awesome-Suno",
+      "revision": "afd51fe0c161dcd6c150f5fa5e33d586f5f202fe",
+      "checked_on": "2026-10-27",
+      "decision": "discovery_only",
+      "evidence_urls": [
+        "https://github.com/Zizwar/Awesome-Suno/blob/afd51fe0c161dcd6c150f5fa5e33d586f5f202fe/README.md"
+      ],
+      "license_observation": "GitHub metadata did not identify a license; no list text imported.",
+      "reason": "Start point rechecked. Mostly tools/APIs; discovery inclusion does not establish data reuse rights or V6 evidence."
+    },
+    {
+      "id": "stayen-reference",
+      "url": "https://github.com/stayen/suno-reference",
+      "revision": "4fd18c1c91fc36b6904880713a3e4111c94f5673",
+      "checked_on": "2026-10-27",
+      "decision": "defer_legacy",
+      "evidence_urls": [
+        "https://github.com/stayen/suno-reference/blob/4fd18c1c91fc36b6904880713a3e4111c94f5673/README.md",
+        "https://github.com/stayen/suno-reference/blob/4fd18c1c91fc36b6904880713a3e4111c94f5673/LICENSE"
+      ],
+      "license_observation": "MIT file read; copyright Konstantin Boyandin 2025.",
+      "reason": "README dates tag update November 2025 and names v5.0. Potential later vocabulary deduplication; not a V6-native fix for the present harmony gaps."
+    },
+    {
+      "id": "songtags",
+      "url": "https://github.com/develephant/suno-songtags",
+      "revision": "d5455258b044abe863004554d694b6e9f97275e2",
+      "checked_on": "2026-10-27",
+      "decision": "defer_legacy",
+      "evidence_urls": [
+        "https://github.com/develephant/suno-songtags/blob/d5455258b044abe863004554d694b6e9f97275e2/README.md",
+        "https://github.com/develephant/suno-songtags/blob/d5455258b044abe863004554d694b6e9f97275e2/LICENSE"
+      ],
+      "license_observation": "MIT license file read.",
+      "reason": "Index link inspected; latest commit July 2025 and minimal README gives no V6 basis. No demonstrated unique answer to current coverage needs in this limited review."
+    },
+    {
+      "id": "korean-lyrics-skill",
+      "url": "https://github.com/previtlab/suno-lyrics-skill",
+      "revision": "1339571d4ff0d1cc6399b824f39b2d116dbea1cd",
+      "checked_on": "2026-10-27",
+      "decision": "outside_scope",
+      "evidence_urls": [
+        "https://github.com/previtlab/suno-lyrics-skill/blob/1339571d4ff0d1cc6399b824f39b2d116dbea1cd/README.md",
+        "https://github.com/previtlab/suno-lyrics-skill/blob/1339571d4ff0d1cc6399b824f39b2d116dbea1cd/LICENSE"
+      ],
+      "license_observation": "CC BY 4.0 license file and README attribution read.",
+      "reason": "Current English-first reference coverage does not require Korean lyric-writing rules. May revisit workflow ideas after the foundation gate; no skill installed."
+    },
+    {
+      "id": "suno-gpt",
+      "url": "https://sunogpt.ai/",
+      "revision": null,
+      "checked_on": "2026-10-27",
+      "decision": "research_only",
+      "evidence_urls": [
+        "https://sunogpt.ai/"
+      ],
+      "license_observation": "No reusable corpus license established by the public landing-page review.",
+      "reason": "Landing page claims V6 and producer experience, but does not expose an auditable database assembly method. Narrow observation, not a search of every interview or private resource; no output examples imported."
+    },
+    {
+      "id": "tonal",
+      "url": "https://github.com/tonaljs/tonal",
+      "revision": "e555422aef910daa87cb924028f71f0a013f3ed7",
+      "checked_on": "2026-10-27",
+      "decision": "shortlist",
+      "evidence_urls": [
+        "https://github.com/tonaljs/tonal/blob/e555422aef910daa87cb924028f71f0a013f3ed7/docs/LICENSE",
+        "https://github.com/tonaljs/tonal/blob/e555422aef910daa87cb924028f71f0a013f3ed7/packages/chord-type/data.ts",
+        "https://github.com/tonaljs/tonal/blob/e555422aef910daa87cb924028f71f0a013f3ed7/packages/time-signature/README.md"
+      ],
+      "license_observation": "MIT license confirmed at docs/LICENSE despite no GitHub-detected root license. Chord/scale tables cite upstream Wikibooks/Wikipedia sources; follow provenance before wholesale data reuse.",
+      "reason": "Potential general-music structures for chords/scales/meter. Does not explain all harmonic function or Suno behavior. No dependency installed, table copied or adapter admitted."
+    },
+    {
+      "id": "open-music-theory",
+      "url": "https://viva.pressbooks.pub/openmusictheory/",
+      "revision": null,
+      "checked_on": "2026-10-27",
+      "decision": "shortlist",
+      "evidence_urls": [
+        "https://viva.pressbooks.pub/openmusictheory/front-matter/introduction/",
+        "https://viva.pressbooks.pub/openmusictheory/part/fundamentals/",
+        "https://viva.pressbooks.pub/openmusictheory/chapter/modal-schemas/",
+        "https://creativecommons.org/licenses/by-sa/4.0/"
+      ],
+      "license_observation": "Primary-page indexed text identifies CC BY-SA 4.0 except where noted; direct introduction/home fetch returned 403. Per-material and ShareAlike review remains before importing adaptations; no global code-license conclusion.",
+      "reason": "Strong explanatory coverage candidate for fundamentals, harmony and modes. Not V6 evidence. Version-specific page capture, attribution and material exceptions still needed; no text/examples imported."
+    },
+    {
+      "id": "elife-overtone-mechanism",
+      "url": "https://elifesciences.org/articles/50476",
+      "revision": "10.7554/eLife.50476",
+      "checked_on": "2026-10-27",
+      "decision": "shortlist",
+      "evidence_urls": [
+        "https://elifesciences.org/articles/50476#abstract",
+        "https://elifesciences.org/articles/50476#copyright"
+      ],
+      "license_observation": "Article copyright section states Creative Commons Attribution with author/source credit; no text, figures or audio imported.",
+      "reason": "Primary acoustic/MRI study of Tuvan singing can inform the distinction between drone and focused overtones. Not a Mongolian tradition reference, not a Suno test; no cultural equivalence or V6 effect inferred. Age is acceptable for a bounded general mechanism, not model-current prompting evidence."
+    }
+  ],
+  "holdouts": [
+    {
+      "id": "suspension-over-pedal",
+      "brief": "Keep a tonic pedal under changing suspended harmonies and leave the ending harmonically open.",
+      "requirement_ids": [
+        "chord-quality",
+        "harmonic-function",
+        "harmonic-pedal",
+        "change-and-invariants"
+      ],
+      "finding": "Specific theory definitions are missing; a pedal word match may instead name an audio effect. Authored arrangement and generator execution remain separate."
+    },
+    {
+      "id": "compound-lilt",
+      "brief": "Use an acoustic 6/8 lilt with two broad beats per bar; distinguish it from 3/4 and swing.",
+      "requirement_ids": [
+        "meter-and-grouping",
+        "rhythm-pattern"
+      ],
+      "finding": "Triplet vocabulary and one 6/8 recipe are insufficient as a meter explanation. The compound query currently finds a bracket-context caveat, not meter guidance."
+    },
+    {
+      "id": "cello-counterline",
+      "brief": "Let a cello carry a countermelody under a simple lead, then trade foreground roles without making the whole arrangement louder.",
+      "requirement_ids": [
+        "instrument-families",
+        "secondary-melody",
+        "instrument-dependencies",
+        "production-dimensions"
+      ],
+      "finding": "Useful instrument/countermelody definitions exist; foreground role exchange is an authored relationship, not necessarily a missing recipe."
+    }
+  ]
+}

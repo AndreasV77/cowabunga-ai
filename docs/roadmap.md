@@ -19,6 +19,12 @@ Do not begin Gate 2 until the blocking work has documented closure. UI polish,
 branding, app packaging and other visible enhancements wait; diagnostic changes
 needed to resolve foundation defects are permitted.
 
+The [resource coverage review](coverage-scope.md) defines 22 information needs,
+six definition gaps and a reusable general-music theory reference area. The owner
+wants that area useful beyond Suno prompting, with provider-independent interfaces.
+Keep general meaning, platform application evidence and authored relationships
+separate. No candidate source is admitted merely by being shortlisted.
+
 ### Gate 2 — complete AI-assisted work, not just connectivity
 
 After Gate 1, implement MCP/skills/host packaging as the preferred integration.
